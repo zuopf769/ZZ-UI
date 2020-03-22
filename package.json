@@ -21,6 +21,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
+    "commit": "git add -A && npx git-cz",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
   },
   "dependencies": {
