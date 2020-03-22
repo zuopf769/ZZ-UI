@@ -75,7 +75,8 @@ const types = [
   'build', // 构建
   'release', // 发版
   'revert', // 回滚
-  'deps'// 升级依赖
+  'deps',// 升级依赖
+  'ci' // CI 配置，脚本文件等更新
 ];
 
 
