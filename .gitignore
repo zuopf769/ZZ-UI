@@ -14,7 +14,6 @@ lerna-debug.log*
 *.ntvs*
 *.njsproj
 *.sln
-/.npmrc
 
 # dependencies
 node_modules/
