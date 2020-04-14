@@ -21,6 +21,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
+    "build:entry": "node build/bin/build-entry.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "lint": "eslint src --ext .ts,.vue",
     "commit": "git add -A && npx git-cz",
@@ -83,6 +84,7 @@
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "uppercamelcase": "^3.0.0",
     "url-loader": "^0.5.8",
     "vue-loader": "^15.9.1",
     "vue-style-loader": "^4.1.2",
@@ -114,8 +116,8 @@
   },
   "lint-staged": {
     "src/**/*.{ts,vue}": [
-       "prettier --write",
-       "eslint"
+      "prettier --write",
+      "eslint"
     ]
- }
+  }
 }

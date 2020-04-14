@@ -42,11 +42,10 @@
   },
   // 需要编译的文件
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "src/**/*",
+    "components/**/*",
+    "tests/**/*",
+    "types/*"
   ],
   "exclude": [
     "node_modules",

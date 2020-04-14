@@ -1,0 +1,272 @@
+$namespace: 'zz' !default;
+// component
+@mixin c($component) {
+  $B: $namespace + '-' + $component !global;
+  $E: $namespace + '-' + $component !global;
+  .#{$B} {
+    @content;
+  }
+}
+
+/*
+@param {string} $element 元素名
+@param {bool} $append 是否加载在当前类下,一般在 theme 中为 true
+
+// example1
+// sass
+@include c('component') {
+  @include e('element') {
+		color: black;
+	}
+}
+// css
+.zz-component-element {
+  color: black;
+}
+
+// example 2
+// sass
+@include c('component') {
+  @include theme('dark') {
+    @include e('element', true) {
+      color: black;
+    }
+  }
+}
+// css
+.zz-component-dark .zz-component-element {
+  color: black;
+}
+*/
+
+// element
+@mixin e($element, $append: false) {
+  $E: $B + '-' + $element !global;
+  @if $append {
+    .#{$E} {
+      @content;
+    }
+  }
+  @else {
+    @at-root .#{$E} {
+      @content;
+    }
+  }
+}
+
+/*
+// example1
+// sass
+@include c('component'){
+  @include theme('dark') {
+    @include when('active') {
+      color: black;
+    }
+  }
+}
+// css
+.zz-component-dark .zz-component-active {
+  color: black;
+}
+
+// example2
+// sass
+@include c('component') {
+  @include e('element') {
+    @include when('active') {
+      color: white;
+    }
+  }
+}
+// css
+.zz-component-element-active {
+  color: white;
+}
+
+// example3
+// sass
+@include c('component') {
+  @include when('active') {
+    @include e('element') {
+      color: white;
+    }
+  }
+}
+// css
+.zz-component-active .zz-component-element{
+  color: white;
+}
+*/
+
+@mixin when ($state) {
+  $THEME: '' !default;
+  $prefix: if($THEME !='', $THEME + ' .', '');
+  $STATE: $E + '-' + $state !global;
+  @at-root {
+    .#{$prefix + $STATE} {
+      @content;
+    }
+  }
+}
+
+@mixin theme($themeName) {
+  $THEME: $B + '-' + $themeName !global;
+  @at-root .#{$THEME} {
+    @content;
+  }
+}
+
+// sidenav
+@mixin sidenavStyle($component, $bgc, $width) {
+  $B: $namespace + '-' + $component !global;
+  .#{$B} {
+    width: $width;
+    background-color: $bgc;
+    @content;
+  }
+}
+
+@mixin clearfix {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: "";
+    }
+    #{$selector}::after {
+      clear: both
+    }
+  }
+}
+
+// 文字超出省略号
+@mixin text-ellipsis () {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+@mixin res($key, $map: $breakpoints) {
+  // 循环断点Map，如果存在则返回
+  @if map-has-key($map, $key) {
+    @media only screen and #{inspect(map-get($map, $key))} {
+      @content;
+    }
+  } @else {
+    @warn "Undefeined points: `#{$map}`";
+  }
+}
+
+
+/* hsv_to_hsl.scss | MIT License | https://gist.github.com/voxpelli/1069204 */
+@function max($v1, $v2) {
+	@return if($v1 > $v2, $v1, $v2);
+}
+@function min($v1, $v2) {
+	@return if($v1 < $v2, $v1, $v2);
+}
+
+@function hsv_to_hsl($h, $s: 0, $v: 0) {
+	@if type_of($h) == 'list' {
+		$v: nth($h, 3);
+		$s: nth($h, 2);
+		$h: nth($h, 1);
+	}
+
+	@if unit($h) == 'deg' {
+		$h: 3.1415 * 2 * ($h / 360deg);
+	}
+	@if unit($s) == '%' {
+		$s: 0 + ($s / 100%);
+	}
+	@if unit($v) == '%' {
+		$v: 0 + ($v / 100%);
+	}
+
+	$ss: $s * $v;
+	$ll: (2 - $s) * $v;
+
+	@if $ll <= 1 {
+		$ss: $ss / $ll;
+	} @else if ($ll == 2) {
+		$ss: 0;
+	} @else {
+		$ss: $ss / (2 - $ll);
+	}
+
+	$ll: $ll / 2;
+
+	@return 360deg * $h / (3.1415 * 2), percentage(max(0, min(1, $ss))), percentage(max(0, min(1, $ll)));
+}
+
+@function hsl_to_hsv($h, $ss: 0, $ll: 0) {
+	@if type_of($h) == 'list' {
+		$ll: nth($h, 3);
+		$ss: nth($h, 2);
+		$h: nth($h, 1);
+	} @else if type_of($h) == 'color' {
+		$ll: lightness($h);
+		$ss: saturation($h);
+		$h: hue($h);
+	}
+
+	@if unit($h) == 'deg' {
+		$h: 3.1415 * 2 * ($h / 360deg);
+	}
+	@if unit($ss) == '%' {
+		$ss: 0 + ($ss / 100%);
+	}
+	@if unit($ll) == '%' {
+		$ll: 0 + ($ll / 100%);
+	}
+
+	$ll: $ll * 2;
+
+  @if $ll == 0 {
+    $ss: 0;
+  } @else if $ll <= 1 {
+		$ss: $ss * $ll;
+	} @else {
+		$ss: $ss * (2 - $ll);
+	}
+
+  $v: ($ll + $ss) / 2;
+  $s: 0;
+  @if $ss > 0 {
+    $s: (2 * $ss) / ($ll + $ss);
+  }
+
+	@return 360deg * $h / (3.1415 * 2), percentage(max(0, min(1, $s))), percentage(max(0, min(1, $v)));
+}
+
+@function color_to_hsv($color) {
+	@return hsl_to_hsv($color);
+}
+
+@function hsv_to_color($h, $s: 0, $v: 0) {
+	$hsl: hsv_to_hsl($h, $s, $v);
+	@return hsl(nth($hsl, 1), nth($hsl, 2), nth($hsl, 3));
+}
+
+@function hover-color ($color, $sPercent: 10%, $bPercent: 10%) {
+  // hsb color
+  $hsb: hsl_to_hsv($color);
+  $h: nth($hsb, 1);
+  $s: nth($hsb, 2);
+  $b: nth($hsb, 3);
+
+  @if ($s < 50% and $b > 60%) {
+    // 浅色系， 变深
+    @return hsv_to_color($h, min(100%, $s + $sPercent), max(0%, $b + $bPercent));
+  }
+  @else {
+    // 深色系， 变浅
+    @return hsv_to_color($h, max(0%, $s - $sPercent), min(100%, $b + $bPercent));
+  }
+}
+
+@function active-color ($color, $sPercent: 6, $bPercent: 6) {
+  @return hover-color($color);
+}

@@ -1,0 +1,278 @@
+// Icon
+// -----------------
+@import '../mixins/mixins.scss';
+// Base
+// =======================================
+
+// Icon
+$icon-font-path: 'fonts'!default;
+
+// Radius
+// -----------------
+// like button、tooltips、raidoButton、message....
+$radius-component-normal: 2px !default;
+$radius-component-small: 1px !default;
+$radius-component-large: 4px !default;
+// like list、accordion、table
+$radius-container-normal: 0px !default;
+$radius-container-large: 1px !default;
+$radius-container-huge: 2px !default;
+
+// Font
+// ------------------
+$font-family: PingFang SC,Helvetica Neue,Helvetica,STHeitiSC-Light, Hiragino Sans GB, Arial,Microsoft YaHei ,sans-serif!default;
+$code-family: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+$font-size-normal: 14px!default;
+$font-size-small: 12px!default;
+$font-size-large: 16px!default;
+
+$line-height-normal: 20px!default;
+$line-height-small: 16px!default;
+$line-height-large: 22px!default;
+
+$h1-font-size: 22px!default;
+$h2-font-size: 18px!default;
+$h3-font-size: 16px!default;
+
+$h1-line-height: 30px!default;
+$h2-line-height: 24px!default;
+$h3-line-height: 22px!default;
+
+$font-weight-regular: 400!default;
+$font-weight-medium: 500!default;
+$font-weight-semi-bold: 600!default;
+$font-weight-bold: 700!default;
+
+// Break-point
+$screen-xs: 480px!default;
+$screen-sm: 576px !default;
+$screen-md: 768px !default;
+$screen-lg: 992px !default;
+$screen-xl: 1200px !default;
+$screen-xxl: 1600px !default;
+
+$breakpoints: (
+  'xs' : (max-width: $screen-sm),
+  'sm' : (min-width: $screen-sm),
+  'md' : (min-width: $screen-md),
+  'lg' : (min-width: $screen-lg),
+  'xl' : (min-width: $screen-xl),
+  'xxl' : (min-width: $screen-xxl)
+);
+
+// Z-Index
+$mtd-sidenav-z-index: 10 !default;
+$topnav-dropdown-z-index: 100 !default;
+$topnav-block-info-list-z-index: $topnav-dropdown-z-index !default;
+$navbar-zIndex: 1000 !default; // 顶部导航条
+
+// Colors
+$color-white: #fff!default;
+$color-black: #000!default;
+
+// gray color
+$color-gray50: #FAFAFA!default; // 模块浅色背景
+$color-gray150: #EBEBEB!default; // 备用灰色
+$color-gray300: #D1D1D1!default; // 引用文字等
+$color-gray450: #ADADAD!default; // 辅助文案
+$color-gray600: #6F6F6F!default; // 次级文案
+$color-gray750: #464646!default; // 正文
+$color-gray900: #1F1F1F!default; // 标题
+
+// silvery color
+$color-silvery100: #F7F8FC!default; // 浅色背景
+$color-silvery200: #F1F3F6!default; // 禁用态背景
+$color-silvery300: #EDF0F7!default; // 浅色边框
+$color-silvery500: #D3D8E4!default; // 深色边框
+$color-silvery700: #B5BBD1!default; // 默认文字禁用颜色
+$color-silvery900: #808AB1!default; // tip 背景色
+
+$color-blue: #4E73FF!default;
+$color-red: #FF6459!default;
+$color-green: #5ABB3C!default;
+$color-orange: #FF9801!default;
+
+// 语义色
+$color-primary: #4E73FF!default; // 主色
+$color-secondary1: #5D6EAC!default; // 辅色
+$color-secondary2: #849DFF!default; // 辅色
+$color-secondary3: #E6EBFF!default; // 辅色
+$color-warning: #FF9801!default;
+$color-success: #5ABB3C!default;
+$color-danger: #FF6459!default;
+$color-warning-light: #FFF6E5!default;
+$color-success-light: #E9FAE5!default;
+$color-danger-light: #FFF0EF!default;
+
+$color-light-border-color: $color-silvery300!default;
+$color-disabled-bgc: $color-silvery200!default;
+$color-disabled: $color-silvery700!default;
+$color-darken-border-color: $color-silvery500!default;
+
+// 字体颜色
+$text-disabled-color: $color-gray450!default; // 禁用状态文字
+$text-annotate-color: $color-gray600!default; // 非重要注释
+$text-color: $color-gray750!default; // 正文颜色
+$text-title-color: $color-gray900!default; // 标题文字;
+$placeholder-color: $color-silvery700!default; // 组件内规则说明
+
+// Link
+$link-color: $color-blue !default; // 不与主色联动
+$link-hover-color: $link-color !default; // hover 颜色不动
+$link-active-color: active-color($link-color, 16%, 16%) !default;
+$link-disabled-color: $text-disabled-color !default;
+$link-text-decoration: none!default;
+$link-hover-text-decoration: underline!default;
+
+// Base Component Size
+$control-height: 34px!default;
+$control-small-height: 26px!default;
+$control-large-height: 42px!default;
+
+// 容器阴影
+$box-shadow: 0 1px 5px 0 rgba(20, 37, 66, 0.16)!default;
+
+// Components
+// =======================================
+// button
+$button-radius: 2px !default;
+
+$mtd-sidenav-z-index: 10!default;
+$topnav-dropdown-z-index: 100!default;
+$topnav-block-info-list-z-index: $topnav-dropdown-z-index!default;
+$navbar-zIndex: 1000!default; // 顶部导航条
+
+// Button
+// ----------------------
+$btn-font-weight: $font-weight-regular!default;
+
+$btn-width: 66px!default;
+$btn-height: $control-height!default;
+$btn-padding-horizontal: 13px!default;
+$btn-font-size: $font-size-normal!default;
+$btn-icon-color: $color-primary!default;
+
+$btn-small-width: 48px!default;
+$btn-small-height: $control-small-height!default;
+$btn-small-padding-horizontal: 9px !default;
+$btn-small-font-size: $font-size-small!default;
+
+$btn-large-width: 80px!default;
+$btn-large-height: $control-large-height!default;
+$btn-large-padding-horizontal: 15px!default;
+$btn-large-font-size: $font-size-large!default;
+
+$btn-disabled-color: $color-disabled!default;
+$btn-disabled-icon-color: #E2E2E2!default;
+$btn-disabled-bgc: $color-disabled-bgc!default;
+$btn-disabled-border-color: $color-light-border-color!default;
+
+$btn-loading-color: $color-primary!default;
+$btn-loading-border-color: #8CA5FF!default;
+
+$btn-default-color: $text-color!default;
+$btn-default-bgc: $color-white!default;
+$btn-default-border-color: $color-darken-border-color!default;
+$btn-default-hover-color: $color-primary!default;
+$btn-default-active-color: $color-primary!default;
+$btn-default-loading-color: $color-primary!default;
+
+$btn-primary-color: #fff!default;
+$btn-primary-bgc: $color-primary!default;
+$btn-primary-hover-bgc: hover-color($btn-primary-bgc) !default;
+$btn-primary-active-bgc: active-color($btn-primary-bgc) !default;
+
+$btn-success-color: #fff !default;
+$btn-success-bgc: $color-success !default;
+$btn-success-hover-bgc: hover-color($btn-success-bgc) !default;
+$btn-success-active-bgc: active-color($btn-success-bgc) !default;
+
+$btn-warning-color: #fff !default;
+$btn-warning-bgc: $color-warning !default;
+$btn-warning-hover-bgc: hover-color($btn-warning-bgc) !default;
+$btn-warning-active-bgc: active-color($btn-warning-bgc) !default;
+
+$btn-danger-color: #fff !default;
+$btn-danger-bgc: $color-danger !default;
+$btn-danger-hover-bgc: hover-color($btn-danger-bgc) !default;
+$btn-danger-active-bgc: active-color($btn-danger-bgc) !default;
+
+$btn-text-color: $text-color!default;
+$btn-text-active-color: $color-primary!default;
+
+$btn-text-primary-color: $color-primary!default;
+$btn-text-primary-active-color: hover-color($color-primary)!default;
+
+// Icon Button
+// ------------------
+$iconbtn-spacing: 12px!default;
+$iconbtn-font-size: 20px!default;
+$iconbtn-small-font-size: 16px!default;
+$iconbtn-large-font-size: 24px!default;
+$iconbtn-each-spacing: 10px!default;
+$iconbtn-hover-bgc: #F1F4FF!default;
+$iconbtn-secondary-hover-bgc: #F3F4F9!default;
+
+// Tag
+$tag-border-radius: 2px!default;
+$tag-gray-color: #939DB2!default;
+$tag-gray-bc: rgba($tag-gray-color, .5)!default;
+$tag-gray-bgc: rgba($tag-gray-color, .1)!default;
+$tag-gray-pure-bgc: $tag-gray-color!default;
+$tag-gray-pure-color: #fff!default;
+
+$tag-blue-color: $color-blue!default;
+$tag-blue-bc: rgba($tag-blue-color, .5)!default;
+$tag-blue-bgc: rgba($tag-blue-color, .1)!default;
+$tag-blue-pure-bgc: $tag-blue-color!default;
+$tag-blue-pure-color: #fff!default;
+
+$tag-green-color: $color-green!default;
+$tag-green-bc: rgba($tag-green-color, .5)!default;
+$tag-green-bgc: rgba($tag-green-color, .1)!default;
+$tag-green-pure-bgc: $tag-green-color!default;
+$tag-green-pure-color: #fff!default;
+
+$tag-orange-color: $color-orange!default;
+$tag-orange-bc: rgba($tag-orange-color, .5)!default;
+$tag-orange-bgc: rgba($tag-orange-color, .1)!default;
+$tag-orange-pure-bgc: $tag-orange-color!default;
+$tag-orange-pure-color: #fff!default;
+
+$tag-red-color: $color-red!default;
+$tag-red-bc: rgba($tag-red-color, .5)!default;
+$tag-red-bgc: rgba($tag-red-color, .1)!default;
+$tag-red-pure-bgc: $tag-red-color!default;
+$tag-red-pure-color: #fff!default;
+
+$tag-purple-color: #C75AEF!default;
+$tag-purple-bc: rgba($tag-purple-color, .5)!default;
+$tag-purple-bgc: rgba($tag-purple-color, .1)!default;
+$tag-purple-pure-bgc: $tag-purple-color!default;
+$tag-purple-pure-color: #fff!default;
+
+$tag-text-color: $color-primary!default;
+
+$tag-disabled-bgc: $color-disabled-bgc!default;
+$tag-disabled-color: $text-disabled-color!default;
+$tag-disabled-border-color: #E2E6ED!default;
+$tag-disabled-colse-icon-color: #D7DBE2!default;
+
+$tag-small-min-width: 32px!default;
+$tag-small-max-width: 170px!default;
+$tag-small-height: 20px!default;
+$tag-small-padding: 3px!default;
+$tag-small-font-size: 12px!default;
+
+$tag-normal-min-width: 40px!default;
+$tag-normal-max-width: 220px!default;
+$tag-normal-height: 24px!default;
+$tag-normal-padding: 7px!default;
+$tag-normal-font-size: 12px!default;
+
+$tag-large-min-width: 52px!default;
+$tag-large-max-width: 270px!default;
+$tag-large-height: 36px!default;
+$tag-large-padding: 13px!default;
+$tag-large-font-size: 14px!default;

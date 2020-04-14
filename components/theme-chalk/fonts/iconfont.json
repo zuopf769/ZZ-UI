@@ -1,0 +1,51 @@
+{
+  "id": "1754529",
+  "name": "zz-ui",
+  "font_family": "zzicon",
+  "css_prefix_text": "zzicon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11474220",
+      "name": "bussiness-man",
+      "font_class": "bussiness-man",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "11488000",
+      "name": "category",
+      "font_class": "category",
+      "unicode": "e747",
+      "unicode_decimal": 59207
+    },
+    {
+      "icon_id": "11488001",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e748",
+      "unicode_decimal": 59208
+    },
+    {
+      "icon_id": "11488026",
+      "name": "double-arro- right",
+      "font_class": "double-arro-right",
+      "unicode": "e74c",
+      "unicode_decimal": 59212
+    },
+    {
+      "icon_id": "11488028",
+      "name": "double-arrow-left",
+      "font_class": "double-arrow-left",
+      "unicode": "e74d",
+      "unicode_decimal": 59213
+    },
+    {
+      "icon_id": "11488230",
+      "name": "bussiness-man-fill",
+      "font_class": "bussiness-man-fill",
+      "unicode": "e779",
+      "unicode_decimal": 59257
+    }
+  ]
+}

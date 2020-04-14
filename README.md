@@ -1,6 +1,6 @@
 # ZZ-UI
 
-> 一套 Vue.js 的组件库. http://ss.sankuai.com/mtd/vue/
+> 一套 Vue.js 的组件库.
 
 
 # 命令集成
