@@ -1,11 +1,11 @@
-language: js
 sudo: false
-cache: 
-  apt: true
-  directories: 
-    -node_modules
-node_js: stable
+language: node_js
+node_js:
+  - "6"
+cache:
+  directories:
+    - node_modules
 install: 
-  -npm install
+  - npm install
 script:
-  -npm run changelog
+  - npm run changelog
