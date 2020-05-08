@@ -5,16 +5,16 @@ import CollapseTransition from './transitions/collapse-transition'
 const components = [Icon, CollapseTransition]
 
 export function install(Vue: any) {
-	components.map(component => {
+	components.forEach(component => {
 		Vue.component(component.name, component)
 	})
-	const $mtd = {
-		confirm: Confirm,
-		notify: Notification,
-		message: Message,
-	}
+	// const $zz = {
+	//   confirm: Confirm,
+	//   notify: Notification,
+	//   message: Message,
+	// };
 
-	Vue.prototype.$mtd = $mtd
+	// Vue.prototype.$zz = $zz;
 }
 
 /* istanbul ignore if */

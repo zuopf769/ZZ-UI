@@ -1,83 +1,85 @@
-@import './var.scss';
+@import './var';
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // 1
+	box-sizing: border-box; // 1
 }
-
 
 body {
-  font-family: $font-family;
-  font-weight: $font-weight-regular;
-  font-size: $font-size-normal;
-  line-height: 1.42858;  // 20 / 14
-  -webkit-font-smoothing: antialiased;
-  color: $text-color;
-  margin: 0;
+	font-family: $font-family;
+	font-weight: $font-weight-regular;
+	font-size: $font-size-normal;
+	line-height: 1.42858; // 20 / 14
+	-webkit-font-smoothing: antialiased;
+	color: $text-color;
+	margin: 0;
 }
 
-code, pre {
-  font-family: $code-family;
+code,
+pre {
+	font-family: $code-family;
 }
 
 button,
 input {
-  overflow: visible; // Show the overflow in Edge
-  padding: 0; // input default is padding 1 in chrome
-  font-family: inherit;
+	overflow: visible; // Show the overflow in Edge
+	padding: 0; // input default is padding 1 in chrome
+	font-family: inherit;
 }
 // remove the clear button of a text input control in IE10+
 input::-ms-clear,
 input::-ms-reveal {
-  display: none;
+	display: none;
 }
 
 ::placeholder {
-  color: $placeholder-color;
+	color: $placeholder-color;
 }
 
 button,
 select {
-  text-transform: none; // remove the inheritance of text transform in Firefox
+	text-transform: none; // remove the inheritance of text transform in Firefox
 }
 
 a {
-  color: $link-color;
-  background-color: transparent; // remove the gray background on active links in IE 10.
-  -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
-  transition: color .3s;
-  text-decoration: $link-text-decoration;
-  &:hover{
-    color: $link-hover-color;
-    text-decoration: $link-hover-text-decoration;
-  }
-  &:active{
-    color: $link-active-color;
-  }
-  &[disabled] {
-    color: $link-disabled-color;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+	color: $link-color;
+	background-color: transparent; // remove the gray background on active links in IE 10.
+	-webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
+	transition: color 0.3s;
+	text-decoration: $link-text-decoration;
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-text-decoration;
+	}
+	&:active {
+		color: $link-active-color;
+	}
+	&[disabled] {
+		color: $link-disabled-color;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
 }
 
 h1 {
-  font-size: $h1-font-size;
-  line-height: $h1-line-height;
-  font-weight: $font-weight-bold;
+	font-size: $h1-font-size;
+	line-height: $h1-line-height;
+	font-weight: $font-weight-bold;
 }
 h2 {
-  font-size: $h2-font-size;
-  line-height: $h2-line-height;
-  font-weight: $font-weight-medium;
+	font-size: $h2-font-size;
+	line-height: $h2-line-height;
+	font-weight: $font-weight-medium;
 }
 h3 {
-  font-size: $h3-font-size;
-  line-height: $h3-line-height;
-  font-weight: $font-weight-regular;
+	font-size: $h3-font-size;
+	line-height: $h3-line-height;
+	font-weight: $font-weight-regular;
 }
-h4, h5, h6 {
-  font-size: inherit;
-  line-height: 20px;
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	line-height: 20px;
 }

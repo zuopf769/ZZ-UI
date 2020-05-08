@@ -1,11 +1,11 @@
 $namespace: 'zz' !default;
 // component
 @mixin c($component) {
-  $B: $namespace + '-' + $component !global;
-  $E: $namespace + '-' + $component !global;
-  .#{$B} {
-    @content;
-  }
+	$B: $namespace + '-' + $component !global;
+	$E: $namespace + '-' + $component !global;
+	.#{$B} {
+		@content;
+	}
 }
 
 /*
@@ -41,17 +41,16 @@ $namespace: 'zz' !default;
 
 // element
 @mixin e($element, $append: false) {
-  $E: $B + '-' + $element !global;
-  @if $append {
-    .#{$E} {
-      @content;
-    }
-  }
-  @else {
-    @at-root .#{$E} {
-      @content;
-    }
-  }
+	$E: $B + '-' + $element !global;
+	@if $append {
+		.#{$E} {
+			@content;
+		}
+	} @else {
+		@at-root .#{$E} {
+			@content;
+		}
+	}
 }
 
 /*
@@ -98,67 +97,66 @@ $namespace: 'zz' !default;
 }
 */
 
-@mixin when ($state) {
-  $THEME: '' !default;
-  $prefix: if($THEME !='', $THEME + ' .', '');
-  $STATE: $E + '-' + $state !global;
-  @at-root {
-    .#{$prefix + $STATE} {
-      @content;
-    }
-  }
+@mixin when($state) {
+	$THEME: '' !default;
+	$prefix: if($THEME != '', $THEME + ' .', '');
+	$STATE: $E + '-' + $state !global;
+	@at-root {
+		.#{$prefix + $STATE} {
+			@content;
+		}
+	}
 }
 
 @mixin theme($themeName) {
-  $THEME: $B + '-' + $themeName !global;
-  @at-root .#{$THEME} {
-    @content;
-  }
+	$THEME: $B + '-' + $themeName !global;
+	@at-root .#{$THEME} {
+		@content;
+	}
 }
 
 // sidenav
 @mixin sidenavStyle($component, $bgc, $width) {
-  $B: $namespace + '-' + $component !global;
-  .#{$B} {
-    width: $width;
-    background-color: $bgc;
-    @content;
-  }
+	$B: $namespace + '-' + $component !global;
+	.#{$B} {
+		width: $width;
+		background-color: $bgc;
+		@content;
+	}
 }
 
 @mixin clearfix {
-  $selector: &;
+	$selector: &;
 
-  @at-root {
-    #{$selector}::before,
-    #{$selector}::after {
-      display: table;
-      content: "";
-    }
-    #{$selector}::after {
-      clear: both
-    }
-  }
+	@at-root {
+		#{$selector}::before,
+		#{$selector}::after {
+			display: table;
+			content: '';
+		}
+		#{$selector}::after {
+			clear: both;
+		}
+	}
 }
 
 // 文字超出省略号
-@mixin text-ellipsis () {
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
+@mixin text-ellipsis() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 @mixin res($key, $map: $breakpoints) {
-  // 循环断点Map，如果存在则返回
-  @if map-has-key($map, $key) {
-    @media only screen and #{inspect(map-get($map, $key))} {
-      @content;
-    }
-  } @else {
-    @warn "Undefeined points: `#{$map}`";
-  }
+	// 循环断点Map，如果存在则返回
+	@if map-has-key($map, $key) {
+		@media only screen and #{inspect(map-get($map, $key))} {
+			@content;
+		}
+	} @else {
+		@warn "Undefeined points: `#{$map}`";
+	}
 }
-
 
 /* hsv_to_hsl.scss | MIT License | https://gist.github.com/voxpelli/1069204 */
 @function max($v1, $v2) {
@@ -224,19 +222,19 @@ $namespace: 'zz' !default;
 
 	$ll: $ll * 2;
 
-  @if $ll == 0 {
-    $ss: 0;
-  } @else if $ll <= 1 {
+	@if $ll == 0 {
+		$ss: 0;
+	} @else if $ll <= 1 {
 		$ss: $ss * $ll;
 	} @else {
 		$ss: $ss * (2 - $ll);
 	}
 
-  $v: ($ll + $ss) / 2;
-  $s: 0;
-  @if $ss > 0 {
-    $s: (2 * $ss) / ($ll + $ss);
-  }
+	$v: ($ll + $ss) / 2;
+	$s: 0;
+	@if $ss > 0 {
+		$s: (2 * $ss) / ($ll + $ss);
+	}
 
 	@return 360deg * $h / (3.1415 * 2), percentage(max(0, min(1, $s))), percentage(max(0, min(1, $v)));
 }
@@ -250,23 +248,22 @@ $namespace: 'zz' !default;
 	@return hsl(nth($hsl, 1), nth($hsl, 2), nth($hsl, 3));
 }
 
-@function hover-color ($color, $sPercent: 10%, $bPercent: 10%) {
-  // hsb color
-  $hsb: hsl_to_hsv($color);
-  $h: nth($hsb, 1);
-  $s: nth($hsb, 2);
-  $b: nth($hsb, 3);
+@function hover-color($color, $sPercent: 10%, $bPercent: 10%) {
+	// hsb color
+	$hsb: hsl_to_hsv($color);
+	$h: nth($hsb, 1);
+	$s: nth($hsb, 2);
+	$b: nth($hsb, 3);
 
-  @if ($s < 50% and $b > 60%) {
-    // 浅色系， 变深
-    @return hsv_to_color($h, min(100%, $s + $sPercent), max(0%, $b + $bPercent));
-  }
-  @else {
-    // 深色系， 变浅
-    @return hsv_to_color($h, max(0%, $s - $sPercent), min(100%, $b + $bPercent));
-  }
+	@if ($s < 50% and $b > 60%) {
+		// 浅色系， 变深
+		@return hsv_to_color($h, min(100%, $s + $sPercent), max(0%, $b + $bPercent));
+	} @else {
+		// 深色系， 变浅
+		@return hsv_to_color($h, max(0%, $s - $sPercent), min(100%, $b + $bPercent));
+	}
 }
 
-@function active-color ($color, $sPercent: 6, $bPercent: 6) {
-  @return hover-color($color);
+@function active-color($color, $sPercent: 6, $bPercent: 6) {
+	@return hover-color($color);
 }

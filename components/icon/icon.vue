@@ -1,14 +1,14 @@
 <template>
-  <i :class="'zzdicon zzicon-' + name" v-on="$listeners" />
+	<i :class="'zzdicon zzicon-' + name" v-on="$listeners"></i>
 </template>
 <script>
 export default {
-  name: 'ZZIcon',
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
-  }
-};
+	name: 'ZzIcon',
+	props: {
+		name: {
+			type: String,
+			required: true,
+		},
+	},
+}
 </script>

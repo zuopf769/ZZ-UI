@@ -1,12 +1,12 @@
 import { addClass, removeClass } from '../utils/dom'
 
 const Transition = {
-	'before-enter'(el) {
+	'before-enter'(el: HTMLElement) {
 		addClass(el, 'collapse-transition')
 		el.style.height = '0'
 	},
 
-	enter(el) {
+	enter(el: HTMLElement) {
 		if (el.scrollHeight !== 0) {
 			el.style.height = el.scrollHeight + 'px'
 		} else {
@@ -15,19 +15,19 @@ const Transition = {
 		addClass(el, 'collapse-overflow')
 	},
 
-	'after-enter'(el) {
+	'after-enter'(el: HTMLElement) {
 		// for safari: remove class then reset height is necessary
 		removeClass(el, 'collapse-transition collapse-overflow')
 		el.style.height = ''
 	},
 
-	beforeLeave(el) {
+	beforeLeave(el: any) {
 		if (!el.dataset) el.dataset = {}
 		el.style.height = el.scrollHeight + 'px'
 		addClass(el, 'collapse-overflow')
 	},
 
-	leave(el) {
+	leave(el: any) {
 		if (el.scrollHeight !== 0) {
 			// for safari: add class after set height,
 			// or it will jump to zero height suddenly, weired
@@ -36,7 +36,7 @@ const Transition = {
 		}
 	},
 
-	'after-leave'(el) {
+	'after-leave'(el: HTMLElement) {
 		removeClass(el, 'collapse-transition collapse-overflow')
 		el.style.height = ''
 	},
@@ -45,7 +45,7 @@ const Transition = {
 export default {
 	name: 'MtdCollapseTransition',
 	functional: true,
-	render(h, { children }) {
+	render(h: any, { children }: any) {
 		const data = {
 			on: Transition,
 		}

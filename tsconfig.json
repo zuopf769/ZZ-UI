@@ -4,6 +4,7 @@
     "module": "esnext",
     // 启动严格模式
     "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
     "jsx": "preserve",
     "jsxFactory": "h",
     "importHelpers": true,
@@ -21,9 +22,9 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [],
+    // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
     "paths": {
-        "@/*": ["src/*"],
+        "@/*": ["src/*"], // 指定后可以在文件之直接 import * from '@/xxx'
         "@components/*": ["components/*"],
     },
     // 编译过程中需要引入的库文件的列表
@@ -45,11 +46,13 @@
     "src/**/*",
     "components/**/*",
     "tests/**/*",
+    "examples/**/*",
     "types/*"
   ],
   "exclude": [
     "node_modules",
     "build",
-    "dist"
+    "dist",
+    "components/theme-chalk/fonts/iconfont.js"
   ]
 }

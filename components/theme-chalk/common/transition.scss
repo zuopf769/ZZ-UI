@@ -1,0 +1,20 @@
+@import './var';
+
+.collapse-transition {
+	transition: 0.2s height ease-in-out, 0.2s padding-top ease-in-out, 0.2s padding-bottom ease-in-out;
+}
+
+.collapse-overflow {
+	overflow: hidden;
+}
+
+.fade-in {
+	&-enter-active,
+	&-leave-active {
+		transition: opacity linear 0.3s;
+	}
+	&-enter,
+	&-leave-active {
+		opacity: 0;
+	}
+}

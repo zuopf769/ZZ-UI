@@ -11,7 +11,7 @@ function noop() {}
 /* istanbul ignore next */
 export const off = (function () {
 	if (!isServer && document.removeEventListener) {
-		return function (node, event, handler) {
+		return function (node: any, event: Event, handler: EventListener) {
 			// 判断 node 为 vnode
 			const element = node && node.$el ? node.$el : node
 			if (element && event) {
@@ -19,7 +19,7 @@ export const off = (function () {
 			}
 		}
 	} else {
-		return function (node, event, handler) {
+		return function (node: any, event: Event, handler: EventListener) {
 			const element = node && node.$el ? node.$el : node
 			if (element && event) {
 				element.detachEvent('on' + event, handler)
@@ -31,7 +31,7 @@ export const off = (function () {
 /* istanbul ignore next */
 export const on = (function () {
 	if (!isServer && document.addEventListener) {
-		return function (node, event, handler) {
+		return function (node: any, event: Event, handler: EventListener) {
 			// 判断 node 为 vnode
 			const element = node && node.$el ? node.$el : node
 			if (element && event && handler) {
@@ -41,7 +41,7 @@ export const on = (function () {
 			return noop
 		}
 	} else {
-		return function (node, event, handler) {
+		return function (node: any, event: Event, handler: EventListener) {
 			const element = node && node.$el ? node.$el : node
 			if (element && event && handler) {
 				element.attachEvent('on' + event, handler)
@@ -52,7 +52,7 @@ export const on = (function () {
 	}
 })()
 
-export function hasClass(el, className) {
+export function hasClass(el: HTMLElement, className: string) {
 	if (!el || !className) {
 		return false
 	}
@@ -63,7 +63,7 @@ export function hasClass(el, className) {
 	}
 }
 
-export function addClass(el, className) {
+export function addClass(el: HTMLElement, className: string) {
 	if (!el) return
 	let curClass = el.className
 	const classes = (className || '').split(' ')
@@ -83,7 +83,7 @@ export function addClass(el, className) {
 	}
 }
 
-export function removeClass(el, className) {
+export function removeClass(el: HTMLElement, className: string) {
 	if (!el || !className) return
 	const classes = className.split(' ')
 	let curClass = ' ' + el.className + ' '
@@ -103,7 +103,7 @@ export function removeClass(el, className) {
 	}
 }
 
-export function getStyle(el, styleName) {
+export function getStyle(el: HTMLElement, styleName: any) {
 	if (isServer) return
 	if (!el) {
 		return {}

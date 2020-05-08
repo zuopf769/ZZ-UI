@@ -1,0 +1,11 @@
+@import './common/reset';
+@import './fonts/icon';
+@import './common/transition';
+
+.zz-lock-scroll {
+	overflow: hidden;
+}
+
+.zz-visible-hidden {
+	visibility: hidden;
+}
