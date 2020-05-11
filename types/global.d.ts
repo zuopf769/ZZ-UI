@@ -1,7 +1,5 @@
-
 interface Window {
-  mozRequestAnimationFrame: any;
-  msRequestAnimationFrame: any
-  Vue: any;
+	mozRequestAnimationFrame: any
+	msRequestAnimationFrame: any
+	Vue: any
 }
-

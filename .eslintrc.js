@@ -13,7 +13,7 @@ module.exports = {
 		},
 		sourceType: 'module',
 	},
-	plugins: ['vue', '@typescript-eslint'],
+	plugins: ['prettier', 'vue', '@typescript-eslint'],
 	extends: [
 		'plugin:vue/recommended',
 		'plugin:prettier/recommended', // 使用prettier中的样式规范
@@ -25,6 +25,8 @@ module.exports = {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'array-bracket-spacing': 2,
+		// prettier方法名后面会自动去掉空格，为了避免冲突只能
+		'space-before-function-paren': 0,
 		'no-var': 2,
 		'no-eval': 2,
 		'arrow-spacing': 2,

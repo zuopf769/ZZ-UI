@@ -15,7 +15,10 @@ module.exports = {
 	output: {
 		path: config.build.assetsRoot,
 		filename: '[name].[hash:7].js',
-		publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
+		publicPath:
+			process.env.NODE_ENV === 'production'
+				? config.build.assetsPublicPath
+				: config.dev.assetsPublicPath,
 	},
 	resolve: {
 		extensions: ['.js', '.vue', '.json', '.ts'],
@@ -56,7 +59,7 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'eslint-loader',
 				options: {
-					fix: true,
+					fix: false,
 					extensions: ['.js', '.jsx', '.vue', '.ts', '.tsx'],
 					cache: false,
 					emitWarning: true,

@@ -2,6 +2,27 @@
 // ------------------
 $min-width: 1200px;
 
+// @name 白色
+$color-white: #fff !default;
+// @name 黑色
+$color-black: #000 !default;
+// @name 黄色
+$color-yellow: #ffce32 !default;
+// @name 透明
+$color-transparent: transparent !default;
+
+// @category text 文字
+$color-text-1: #1f1f1f !default; // 含义
+$color-text-2: #464646 !default;
+$color-text-3: #6f6f6f !default;
+$color-text-4: #adadad !default;
+$color-text-5: #d1d1d1 !default;
+$color-text-6: #b5bbd1 !default;
+
+// @category line 线条
+$color-line-1: #d3d8e4 !default;
+$color-line-2: #edf0f7 !default;
+
 // Header
 // ------------------
 $header-height: 60px;
@@ -11,3 +32,18 @@ $header-box-shadow: 0 2px 8px 0 rgba(93, 98, 106, 0.1);
 // index
 // ------------------
 $header-index: 1899;
+
+// Sidebar
+// ------------------
+$sidebar-width: 240px + 15px;
+$sidebar-padding: 20px;
+$sidebar-expand-index: 1999;
+$sidebar-index: 1799;
+
+// border
+// ------------------
+$border: 1px solid $color-line-2;
+
+// content
+// ------------------
+$content-width: 860px;

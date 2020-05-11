@@ -1,0 +1,289 @@
+[
+	{
+		"name": "组件",
+		"path": "/components",
+		"redirect": "/components/icon",
+		"groups": [
+			{
+				"groupName": "通用",
+				"list": [
+					{
+						"path": "icon",
+						"name": "Icon",
+						"cnName": "图标"
+					},
+					{
+						"path": "button",
+						"name": "Button",
+						"cnName": "按钮"
+					},
+					{
+						"path": "container",
+						"name": "Layout",
+						"cnName": "布局容器"
+					},
+					{
+						"path": "row",
+						"name": "Grid",
+						"cnName": "布局"
+					}
+				]
+			},
+			{
+				"groupName": "导航",
+				"list": [
+					{
+						"path": "pagination",
+						"name": "Pagination",
+						"cnName": "分页"
+					},
+					{
+						"path": "breadcrumb",
+						"name": "Breadcrumb",
+						"cnName": "面包屑"
+					},
+					{
+						"path": "dropdown-menu",
+						"name": "DropdownMenu",
+						"cnName": "下拉面板"
+					},
+					{
+						"path": "steps",
+						"name": "Steps",
+						"cnName": "步骤条"
+					},
+					{
+						"path": "menu",
+						"name": "Menu",
+						"cnName": "导航菜单"
+					},
+					{
+						"path": "sidebar",
+						"name": "Sidebar",
+						"cnName": "侧边栏"
+					}
+				]
+			},
+			{
+				"groupName": "数据录入",
+				"list": [
+					{
+						"path": "form",
+						"name": "Form",
+						"cnName": "表单"
+					},
+					{
+						"path": "checkbox",
+						"name": "Checkbox",
+						"cnName": "复选框"
+					},
+					{
+						"path": "upload",
+						"name": "Upload",
+						"cnName": "上传"
+					},
+					{
+						"path": "input",
+						"name": "Input",
+						"cnName": "文本输入框"
+					},
+					{
+						"path": "radio",
+						"name": "RadioButton",
+						"cnName": "单选按钮组"
+					},
+					{
+						"path": "slider",
+						"name": "Slider",
+						"cnName": "滑块"
+					},
+					{
+						"path": "select",
+						"name": "Select",
+						"cnName": "选择框"
+					},
+					{
+						"path": "switch",
+						"name": "Switch",
+						"cnName": "开关"
+					},
+					{
+						"path": "color-picker",
+						"name": "ColorPicker",
+						"cnName": "颜色选择器"
+					},
+					{
+						"path": "cascader",
+						"name": "Cascader",
+						"cnName": "级联"
+					},
+					{
+						"path": "date-picker",
+						"name": "DatePicker",
+						"cnName": "日期选择器"
+					},
+					{
+						"path": "time-picker",
+						"name": "TimePicker",
+						"cnName": "时间选择器"
+					},
+					{
+						"path": "autocomplete",
+						"name": "Autocomplete",
+						"cnName": "自动完成"
+					},
+					{
+						"path": "transfer",
+						"name": "Transfer",
+						"cnName": "穿梭框"
+					},
+					{
+						"path": "rate",
+						"name": "Rate",
+						"cnName": "评分"
+					},
+					{
+						"path": "input-number",
+						"name": "InputNumber",
+						"cnName": "数字输入框"
+					},
+					{
+						"path": "picker",
+						"name": "Picker",
+						"cnName": "选择器"
+					}
+				]
+			},
+			{
+				"groupName": "数据展示",
+				"list": [
+					{
+						"path": "table",
+						"name": "Table",
+						"cnName": "表格"
+					},
+					{
+						"path": "tag",
+						"name": "Tag",
+						"cnName": "标签"
+					},
+					{
+						"path": "tooltip",
+						"name": "Tooltip",
+						"cnName": "文字提示"
+					},
+					{
+						"path": "tabs",
+						"name": "Tabs",
+						"cnName": "标签页"
+					},
+					{
+						"path": "link",
+						"name": "Link",
+						"cnName": "链接"
+					},
+					{
+						"path": "timeline",
+						"name": "Timeline",
+						"cnName": "时间轴"
+					},
+					{
+						"path": "list",
+						"name": "List",
+						"cnName": "列表"
+					},
+					{
+						"path": "card",
+						"name": "Card",
+						"cnName": "卡片"
+					},
+					{
+						"path": "tree",
+						"name": "Tree",
+						"cnName": "树"
+					},
+					{
+						"path": "badge",
+						"name": "Badge",
+						"cnName": "徽标"
+					},
+					{
+						"path": "collapse",
+						"name": "Collapse",
+						"cnName": "折叠面板"
+					},
+					{
+						"path": "drawer",
+						"name": "Drawer",
+						"cnName": "抽屉"
+					},
+					{
+						"path": "carousel",
+						"name": "Carousel",
+						"cnName": "走马灯"
+					}
+				]
+			},
+			{
+				"groupName": "反馈",
+				"list": [
+					{
+						"path": "modal",
+						"name": "Modal",
+						"cnName": "对话框"
+					},
+					{
+						"path": "confirm",
+						"name": "Confirm",
+						"cnName": "确认框"
+					},
+					{
+						"path": "announcement",
+						"name": "Announcement",
+						"cnName": "公告"
+					},
+					{
+						"path": "notification",
+						"name": "Notification",
+						"cnName": "通知提醒框"
+					},
+					{
+						"path": "message",
+						"name": "Message",
+						"cnName": "全局提示"
+					},
+					{
+						"path": "popover",
+						"name": "Popover",
+						"cnName": "弹出框"
+					},
+					{
+						"path": "progress",
+						"name": "Progress",
+						"cnName": "进度条"
+					},
+					{
+						"path": "loading",
+						"name": "Loading",
+						"cnName": "加载"
+					}
+				]
+			},
+			{
+				"groupName": "其他",
+				"list": [
+					{
+						"path": "anchor",
+						"name": "Anchor",
+						"cnName": "锚点"
+					},
+					{
+						"path": "affix",
+						"name": "Affix",
+						"cnName": "固钉"
+					}
+				]
+			}
+		]
+	}
+]

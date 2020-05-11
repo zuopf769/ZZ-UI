@@ -1,58 +1,61 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    // 启动严格模式
-    "strict": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "jsx": "preserve",
-    "jsxFactory": "h",
-    "importHelpers": true,
-    // 模块处理
-    "moduleResolution": "node",
-    // 将每个文件作为单独的模块
-    "isolatedModules": true,
-    // 启用装饰器
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    // 允许编译javascript文件
-    "allowJs": true,
-    "esModuleInterop": true,
-    // 允许从没有设置默认导出的模块中默认导入
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
-    "paths": {
-        "@/*": ["src/*"], // 指定后可以在文件之直接 import * from '@/xxx'
-        "@components/*": ["components/*"],
-    },
-    // 编译过程中需要引入的库文件的列表
-    "lib": [
-        "es5",
-        "es6",
-        "es7",
-        "es2015.promise",
-        "esnext",
-        "dom",
-        "dom.iterable",
-        "scripthost"
-    ],
-    // 给错误和消息设置样式，使用颜色和上下文
-    "pretty": true,
-  },
-  // 需要编译的文件
-  "include": [
-    "src/**/*",
-    "components/**/*",
-    "tests/**/*",
-    "examples/**/*",
-    "types/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "components/theme-chalk/fonts/iconfont.js"
-  ]
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		// 启动严格模式
+		"strict": true,
+		"noImplicitAny": false,
+		"suppressImplicitAnyIndexErrors": true,
+		"jsx": "preserve",
+		"jsxFactory": "h",
+		"importHelpers": true,
+		// 模块处理
+		"moduleResolution": "node",
+		// json后缀模块处理
+		"resolveJsonModule": true,
+		// 将每个文件作为单独的模块
+		"isolatedModules": true,
+		// 启用装饰器
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		// 允许编译javascript文件
+		"allowJs": true,
+		"esModuleInterop": true,
+		// 允许从没有设置默认导出的模块中默认导入
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"baseUrl": ".",
+		// 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+		"paths": {
+			"@/*": ["src/*"], // 指定后可以在文件之直接 import * from '@/xxx'
+			"@components/*": ["components/*"]
+		},
+		// 编译过程中需要引入的库文件的列表
+		"lib": [
+			"es5",
+			"es6",
+			"es7",
+			"es2015.promise",
+			"esnext",
+			"dom",
+			"dom.iterable",
+			"scripthost"
+		],
+		// 给错误和消息设置样式，使用颜色和上下文
+		"pretty": true
+	},
+	// 需要编译的文件
+	"include": [
+		"src/**/*",
+		"components/**/*",
+		"tests/**/*",
+		"examples/**/*",
+		"types/*"
+	],
+	"exclude": [
+		"node_modules",
+		"build",
+		"dist",
+		"components/theme-chalk/fonts/iconfont.js"
+	]
 }

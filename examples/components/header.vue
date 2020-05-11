@@ -6,7 +6,7 @@
 					<router-link to="/components">组件</router-link>
 				</li>
 				<li class="nav-list-item">
-					<router-link to="/resource">资源</router-link>
+					<router-link to="/resource">代码仓库</router-link>
 				</li>
 			</ul>
 		</div>
@@ -26,14 +26,13 @@ export default class Header extends Vue {}
 
 .header {
 	display: block;
-	background-color: #fff;
+	background-color: $color-white;
 	overflow: hidden;
-	box-shadow: $header-box-shadow;
 	position: fixed;
+	border-bottom: $border;
 	width: 100%;
 	background: transparent;
 	z-index: $header-index;
-	padding-left: 240px;
 	min-width: $min-width;
 
 	.nav-list {
@@ -44,7 +43,7 @@ export default class Header extends Vue {}
 		width: 100%;
 		padding: $header-padding;
 		height: $header-height;
-		background: #fff;
+		background: $color-white;
 	}
 }
 
@@ -67,7 +66,7 @@ export default class Header extends Vue {}
 	float: left;
 	padding: 10px 34px;
 	line-height: 20px;
-	color: darken(#fff, 10%);
+	color: darken($color-white, 10%);
 	> a {
 		text-decoration: none;
 		font-family: PingFangSC-Regular;
@@ -83,7 +82,7 @@ export default class Header extends Vue {}
 			width: 8px;
 			height: 8px;
 			border-radius: 4px;
-			background: #ffce32;
+			background: $color-yellow;
 			margin-right: 4px;
 		}
 	}
