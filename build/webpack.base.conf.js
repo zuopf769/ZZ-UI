@@ -15,10 +15,7 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].[hash:7].js',
-    publicPath:
-      process.env.NODE_ENV === 'production'
-        ? config.build.assetsPublicPath
-        : config.dev.assetsPublicPath,
+    publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
   },
   resolve: {
     extensions: ['.js', '.vue', '.json', '.ts'],
@@ -33,12 +30,25 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                whitespace: 'condense',
+                preserveWhitespace: false,
+              },
+            },
+          },
+          {
+            loader: path.resolve(__dirname, './source-doc-loader/index.js'),
+          },
+        ],
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('components')],
+        include: [resolve('src'), resolve('test'), resolve('examples'), resolve('components')],
       },
       {
         test: /\.tsx?$/,

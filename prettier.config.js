@@ -1,5 +1,6 @@
 module.exports = {
   eslintIntegration: true, //让prettier使用eslint的代码格式进行校验
+  printWidth: 120, // 超过最大值换行
   tabWidth: 2, // 每个tab相当于多少个空格（默认2）
   useTabs: false, // 是否使用tab进行缩进（默认false）
   singleQuote: true, // 使用单引号（默认false）

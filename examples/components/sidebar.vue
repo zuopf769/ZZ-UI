@@ -31,29 +31,19 @@
           <div class="sidebar-nav-title">
             组件 / Components
           </div>
-          <div
-            v-for="(group, index) in navs"
-            :key="index"
-            class="sidebar-bar-nav-content"
-          >
+          <div v-for="(group, index) in navs" :key="index" class="sidebar-bar-nav-content">
             <div v-if="group.groupName" class="sidebar-nav-item-text">
               {{ group.groupName }}
             </div>
             <ul v-if="group.list" class="sidebar-nest-nav">
-              <li
-                v-for="item in group.list"
-                :key="item.path"
-                class="sidebar-nest-nav-item"
-              >
+              <li v-for="item in group.list" :key="item.path" class="sidebar-nest-nav-item">
                 <router-link
                   :to="{
                     path: `/components/${item.path}`,
                     query: $route.query,
                   }"
                 >
-                  {{
-                    item.cnName ? `${item.name} / ${item.cnName}` : item.name
-                  }}
+                  {{ item.cnName ? `${item.name} / ${item.cnName}` : item.name }}
                 </router-link>
               </li>
             </ul>
