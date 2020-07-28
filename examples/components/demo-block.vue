@@ -96,6 +96,7 @@ $color-text-2: rgba(0, 0, 0, 0.75);
   border: 1px solid $color-line-2;
   border-radius: 6px;
   overflow: hidden;
+  margin-bottom: 45px;
   // &.demo-active, &:hover {
   //   box-shadow: 0 5px 10px 0 rgba(205,208,212,0.16);
   // }
