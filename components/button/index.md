@@ -39,7 +39,7 @@
 :::include(src="./doc/type.vue")
 :::
 
-> 文字按钮的形式和链接的形式非常像但用法不同,请参考
+> 文字按钮的形式和链接的形式非常像但用法不同,请参考 [链接/Link <i class="mtdicon mtdicon-link-o"></i>](/components/icon)
 
 ### 状态 <design-tag></design-tag>
 

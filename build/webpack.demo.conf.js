@@ -9,7 +9,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const portfinder = require('portfinder')
 
 const md = require('markdown-it')()
@@ -56,6 +55,14 @@ function parseRef(str) {
     })
   }
   return ret
+}
+
+function attrRemove(token, attrName) {
+  const index = token.attrIndex(attrName)
+  if (index > -1) {
+    token.attrs.splice(index, 1)
+  }
+  return token
 }
 
 const resolveMds = {}
@@ -162,13 +169,12 @@ const devWebpackConfig = merge(overrideEntryConfig, {
                     token.attrPush(['target', '_blank'])
                   } else if (/^\//.test(href)) {
                     // relative path
-                    const to = publicPath !== '/' ? `${publicPath}${href}` : href
-                    token.attrSet('herf', '')
-                    token.attrPush(['to', to])
+                    attrRemove(token, 'href')
+                    token.attrPush(['to', href])
                     token.tag = 'router-link'
                   } else if (/^#/.test(href)) {
                     // anchor
-                    token.attrSet('herf', '')
+                    attrRemove(token, 'href')
                     token.attrPush([':to', `{ ...$route, hash: "${href}" }`])
                     token.tag = 'router-link'
                   }
