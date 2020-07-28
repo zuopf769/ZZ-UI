@@ -13,6 +13,7 @@ import 'highlight.js/styles/default.css'
 // components
 import DemoBlok from './components/demo-block.vue'
 import ApiDoc from './components/api-doc.vue'
+import DesignTag from './components/design-tag.vue'
 
 Vue.use(ZZUI)
 Vue.use<Options>(VueHighlightJS, {
@@ -25,6 +26,7 @@ Vue.use<Options>(VueHighlightJS, {
 })
 Vue.component('demo-block', DemoBlok)
 Vue.component('api-doc', ApiDoc)
+Vue.component('design-tag', DesignTag)
 
 new Vue({
   // eslint-disable-line

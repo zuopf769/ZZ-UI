@@ -1,0 +1,166 @@
+@mixin reset-btn() {
+  box-sizing: border-box;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  font-weight: $btn-font-weight;
+  user-select: none;
+  // vertical-align: middle; // 防止内容为空时对齐出错
+}
+@mixin btn-size($fs, $mw, $h, $ph, $iconSize, $iconMarginRight) {
+  $borderHeight: 2px;
+  // font-size: 0; // 消除空格的影响
+  min-width: $mw;
+  height: $h;
+  // line-height: $h - $borderHeight;
+  padding: 0 $ph;
+  font-size: $fs;
+  $bi: $B + '-before';
+  .#{$bi} {
+    margin-right: $iconMarginRight;
+    font-size: $iconSize;
+    width: 1em;
+    // height: 1em;
+  }
+  > span {
+    line-height: $h - 2px;
+  }
+}
+
+@mixin btn-color(
+  $color,
+  $bgc,
+  $hoverColor,
+  $activeColor,
+  $disabledColor,
+  $disabledBgc,
+  $disabledBorderColor,
+  $disabledOpactiy
+) {
+  color: $color;
+  background: $bgc;
+  border-color: $bgc;
+  &:hover,
+  &.hover,
+  &:focus {
+    color: $color;
+    background: $hoverColor;
+    border-color: $hoverColor;
+  }
+  &:active,
+  &.active {
+    color: $color;
+    background: $activeColor;
+    border-color: $activeColor;
+  }
+  .#{$B + '-before'} {
+    color: currentColor;
+  }
+  $bd: $B + '-disabled';
+  $bl: $B + '-loading';
+  &.#{$bd} {
+    color: $disabledColor;
+    background: $disabledBgc;
+    border-color: $disabledBorderColor;
+    opacity: $disabledOpactiy;
+  }
+  &.#{$bl} {
+    color: $color;
+    background: $activeColor;
+    border-color: $activeColor;
+  }
+
+  &.mtd-btn-ghost {
+    background: transparent;
+    color: $bgc;
+    border-color: $bgc;
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: $hoverColor;
+      border-color: $hoverColor;
+    }
+    &:active {
+      background: transparent;
+      color: $activeColor;
+      border-color: $activeColor;
+    }
+    &.#{$bd} {
+      color: $btn-disabled-color;
+      background: $btn-disabled-bgc;
+      border-color: $btn-disabled-border-color;
+    }
+    &.#{$bl} {
+      color: $color;
+      background: $activeColor;
+      border-color: $activeColor;
+    }
+  }
+}
+
+@mixin btn-text-color($color, $hoverColor, $hoverBgc, $activeColor, $activeBgc, $disabledColor, $disabledOpacity) {
+  color: $color;
+  border-color: transparent !important;
+  background-color: transparent;
+  &:hover,
+  &.hover,
+  &:focus,
+  &:active,
+  &.active {
+    border-color: transparent;
+  }
+  &:hover,
+  &.hover,
+  &:focus {
+    color: $hoverColor;
+    background-color: $hoverBgc;
+  }
+  &:active,
+  &.active {
+    color: $activeColor;
+    background-color: $activeBgc;
+  }
+  &.#{$B + '-loading'} {
+    color: $activeColor;
+  }
+  &.#{$B + '-disabled'} {
+    color: $disabledColor;
+    background-color: transparent;
+    opacity: $disabledOpacity;
+  }
+}
+
+@mixin btn-icon-color($color, $hoverColor, $activeColor, $disableColor) {
+  color: $color;
+  &:hover,
+  &.hover,
+  &:focus {
+    color: $hoverColor;
+  }
+  &:active,
+  &.active {
+    color: $activeColor;
+  }
+  $bd: $B + '-disabled';
+  &.#{$bd} {
+    color: $disableColor;
+  }
+  &.#{$B + '-loading'} {
+    color: $activeColor;
+  }
+}
+
+@mixin btn-default-hover() {
+  color: $btn-hover-color;
+  border-color: $btn-hover-border-color;
+  background-color: $btn-hover-bgc;
+}
+@mixin btn-default-desiabled() {
+  color: $btn-disabled-color;
+  border-color: $btn-disabled-border-color;
+  background: $btn-disabled-bgc;
+  opacity: $btn-disabled-opacity;
+  cursor: not-allowed;
+}

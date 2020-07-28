@@ -1,0 +1,118 @@
+{
+  "props": [
+    {
+      "name": "size",
+      "desc": "大小,注意 icon 类型的 button 不支持",
+      "type": "string",
+      "optionalValue": ["small", "不设置", "large"],
+      "default": "",
+      "version": ""
+    },
+    {
+      "name": "html-type",
+      "desc": "设置 button 原生的 type 类型",
+      "type": "string",
+      "optionalValue": ["button", "submit", "reset"],
+      "default": "button",
+      "version": ""
+    },
+    {
+      "name": "loading",
+      "desc": "是否加载中状态",
+      "type": "boolean",
+      "optionalValue": "",
+      "default": "false",
+      "version": ""
+    },
+    {
+      "name": "disabled",
+      "desc": "是否是禁用状态",
+      "type": "boolean",
+      "optionalValue": "",
+      "default": "false",
+      "version": ""
+    },
+    {
+      "name": "icon",
+      "desc": "设置按钮左侧图标类型",
+      "type": "string",
+      "optionalValue": "",
+      "default": "",
+      "version": ""
+    },
+    {
+      "name": "type",
+      "desc": "类型",
+      "type": "string",
+      "optionalValue": ["primary", "text", "text-primary", "success", "warning", "danger", "不设置"],
+      "default": "",
+      "version": ""
+    },
+    {
+      "name": "dashed",
+      "desc": "是否是虚线边框",
+      "type": "boolean",
+      "optionalValue": "",
+      "default": "false",
+      "version": ""
+    },
+    {
+      "name": "ghost",
+      "desc": "幽灵属性，使按钮背景透明",
+      "type": "boolean",
+      "optionalValue": "",
+      "default": "false",
+      "version": "0.1.40"
+    },
+    {
+      "name": "href",
+      "desc": "点击跳转的地址，指定此属性将用 a 标签渲染组件",
+      "type": "string",
+      "optionalValue": "",
+      "default": "",
+      "version": "0.3.8"
+    },
+    {
+      "name": "target",
+      "desc": "相当于 a 链接的 target 属性，href 存在时生效",
+      "type": "string",
+      "optionalValue": "",
+      "default": "",
+      "version": "0.3.8"
+    },
+    {
+      "name": "to",
+      "desc": "同 router-link 组件 <a href='https://router.vuejs.org/zh/api/#to' target='_blank'>to 属性</a>，指定此属性将使用 router-link 渲染组件",
+      "type": ["string", "object"],
+      "optionalValue": "",
+      "default": "",
+      "version": "0.3.8"
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "desc": "click 事件 handler",
+      "signature": "function (event: Event)",
+      "args": "点击事件对象"
+    }
+  ],
+  "slots": [
+    {
+      "name": "icon",
+      "desc": "同 icon 属性"
+    }
+  ],
+  "methods": [
+    {
+      "name": "focus()",
+      "desc": "使 button 获取焦点",
+      "args": ""
+    },
+    {
+      "name": "blur()",
+      "desc": "使 button 失去焦点",
+      "args": ""
+    }
+  ]
+}

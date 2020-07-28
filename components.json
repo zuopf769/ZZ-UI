@@ -1,3 +1,5 @@
 {
-	"icon": "components/icon"
+  "button": "components/button",
+  "button-group": "components/button-group",
+  "icon": "components/icon"
 }
