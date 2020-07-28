@@ -1,5 +1,5 @@
 <template>
-  <i :class="'zzdicon zzicon-' + name" v-on="$listeners"></i>
+  <i :class="'mtdicon mtdicon-' + name" v-on="$listeners"></i>
 </template>
 <script>
 export default {

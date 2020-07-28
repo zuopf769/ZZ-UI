@@ -1,49 +1,49 @@
-@import './common/var';
-@import './fonts/icon';
+@import 'common/var';
+
+@import './fonts/icon.scss';
 
 @keyframes rotating {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mtdicon-loading {
+  display: inline-block;
+  &::before {
+    display: none;
+  }
+  &::after {
+    animation: rotating linear 1s infinite;
+    content: ' ';
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-radius: 50%;
+  }
 }
 
-.zzicon-loading {
-	display: inline-block;
-	&::before {
-		display: none;
-	}
-	&::after {
-		animation: rotating linear 1s infinite;
-		content: ' ';
-		display: block;
-		width: 1em;
-		height: 1em;
-		border: 2px solid transparent;
-		border-top-color: currentColor;
-		border-right-color: currentColor;
-		border-bottom-color: currentColor;
-		border-radius: 50%;
-	}
+.mtdicon {
+  display: inline-block;
 }
 
-.zzicon {
-	display: inline-block;
-}
+[class^='mtdicon-'],
+[class*=' mtdicon-'] {
+  font-family: 'mtdicon' !important;
+  speak: none;
+  font-style: normal;
 
-[class^='zzicon-'],
-[class*=' zzicon-'] {
-	font-family: 'mtdicon' !important;
-	speak: none;
-	font-style: normal;
-
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

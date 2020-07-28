@@ -6,7 +6,7 @@
 // =======================================
 
 // Icon
-$icon-font-path: '/components/theme-chalk/fonts' !default;
+$icon-font-path: '~@components/theme-chalk/fonts' !default;
 
 // Radius
 // -----------------
@@ -22,7 +22,7 @@ $radius-container-huge: 2px !default;
 // Font
 // ------------------
 $font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light, Hiragino Sans GB, Arial, Microsoft YaHei,
-	sans-serif !default;
+  sans-serif !default;
 $code-family: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 
 $font-size-normal: 14px !default;
@@ -55,24 +55,24 @@ $screen-xl: 1200px !default;
 $screen-xxl: 1600px !default;
 
 $breakpoints: (
-	'xs': (
-		max-width: $screen-sm,
-	),
-	'sm': (
-		min-width: $screen-sm,
-	),
-	'md': (
-		min-width: $screen-md,
-	),
-	'lg': (
-		min-width: $screen-lg,
-	),
-	'xl': (
-		min-width: $screen-xl,
-	),
-	'xxl': (
-		min-width: $screen-xxl,
-	),
+  'xs': (
+    max-width: $screen-sm,
+  ),
+  'sm': (
+    min-width: $screen-sm,
+  ),
+  'md': (
+    min-width: $screen-md,
+  ),
+  'lg': (
+    min-width: $screen-lg,
+  ),
+  'xl': (
+    min-width: $screen-xl,
+  ),
+  'xxl': (
+    min-width: $screen-xxl,
+  ),
 );
 
 // Z-Index

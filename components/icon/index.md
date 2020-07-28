@@ -8,13 +8,15 @@
 
 命名顺序：`[图标名]-[形状?]-[描线?]-[方向?]`。
 
+> ?为可选参数
+
 ## 基础样式
 
 :::demo 不需要`理由`的`理由`
 
 ```html
 <div id="demo-flip-disabled">
-  <zz-icon name="category" />
+  <zz-icon name="add" />
 </div>
 ```
 
