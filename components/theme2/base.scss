@@ -1,0 +1,13 @@
+// 各主题中独立维护
+@import '../theme-chalk/common/reset.scss';
+@import '../theme-chalk/common/transition.scss';
+@import '../theme-chalk/popper.scss';
+@import "./icon.scss";
+
+.mtd-lock-scroll{
+  overflow: hidden;
+}
+
+.mtd-visible-hidden{
+  visibility: hidden;
+}

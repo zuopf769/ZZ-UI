@@ -1,0 +1,4111 @@
+// @ignore
+$icon-font-path: 'fonts'!default;
+$icon-loading-spacing: 2px!default;
+// @end ignore
+// @module base
+/**
+* 基础变量
+* 参见: https://km.sankuai.com/page/147289627
+**/
+
+// @type screen 屏幕尺寸
+// @category base
+$screen-xs: 480px!default;
+$screen-sm: 576px!default;
+$screen-md: 768px!default;
+$screen-lg: 992px!default;
+$screen-xl: 1200px!default;
+$screen-xxl: 1600px!default;
+// @end category
+// @end type
+
+// @ignore
+$breakpoints: (
+'xs' : (max-width: $screen-sm),
+'sm' : (min-width: $screen-sm),
+'md' : (min-width: $screen-md),
+'lg' : (min-width: $screen-lg),
+'xl' : (min-width: $screen-xl),
+'xxl' : (min-width: $screen-xxl)
+);
+// @end ignore
+
+// @type font-family 字体
+// @category base
+$font-family: Helvetica Neue, Helvetica, Arial, PingFang SC,Heiti SC,Hiragino Sans GB,Microsoft YaHei,sans-serif!default;
+$code-family: Menlo, Monaco, Consolas, Courier New, monospace!default;
+// @end category
+// @end type
+
+// @type font-weight 字重
+// @category base
+// @name 继承父级
+$font-weight-inherit: inherit!default;
+$font-weight-regular: 400!default;
+$font-weight-medium: 500!default;
+$font-weight-semi-bold: 600!default;
+$font-weight-bold: 700!default;
+// @end category
+// @end type
+
+// @type font-size 字体大小
+// @category base
+$font-size-1: 12px!default;
+$font-size-2: 14px!default;
+$font-size-3: 16px!default;
+$font-size-4: 18px!default;
+$font-size-5: 20px!default;
+$font-size-6: 24px!default;
+$font-size-7: 30px!default;
+
+// @ignore
+$font-size-default: $font-size-2!default;
+// @end ignore
+
+// @end category
+// @end type
+
+// @type line-height 行高
+// @category base
+$line-height-1: 20px!default;
+$line-height-2: 22px!default;
+$line-height-3: 24px!default;
+$line-height-4: 26px!default;
+$line-height-5: 28px!default;
+$line-height-6: 32px!default;
+$line-height-7: 38px!default;
+
+// @ignore
+$line-height-default: $line-height-2 / $font-size-2!default;
+// @end ignore
+// @end category
+// @end type
+
+// @type border-width 边框
+// @category base
+
+// @unconfigurable
+$border-width-0: 0px!default;
+// @end unconfigurable
+
+$border-width-1: 1px!default;
+$border-width-2: 2px!default;
+// @end category
+// @end type
+
+// @type border-radius 圆角
+// @category base
+
+// @unconfigurable
+$border-radius-0: 0px!default;
+// @end unconfigurable
+
+$border-radius-1: 2px!default;
+$border-radius-2: 4px!default;
+$border-radius-3: 10px!default;
+$border-radius-round: 2000px!default; // 常用于制造圆角为高度的一半
+$border-radius-half: 50%!default;
+// @end category
+// @end type
+
+// @type shadow 阴影
+// @category base
+
+// @unconfigurable
+$shadow-0: none!default;
+// @end unconfigurable
+
+$shadow-1: 0 4px 14px 0 rgba(0, 0, 0,.04), 0 12px 16px 16px rgba(0, 0, 0,.04), 0 10px 16px 0 rgba(0, 0, 0,.04)!default;
+$shadow-2: 0 0 8px 0 rgba(0,0,0,0.04), 0 6px 12px 12px rgba(0,0,0,0.04), 0 6px 10px 0 rgba(0,0,0,0.08)!default;
+$shadow-3: 0 -2px 4px 0 rgba(0, 0, 0,.02), 0 2px 6px 6px rgba(0, 0, 0,.02), 0 2px 6px 0 rgba(0, 0, 0,.04)!default;
+$shadow-4: 0 2px 4px 0 rgba(0, 0, 0,.01), 0 3px 6px 3px rgba(0, 0, 0,.01), 0 2px 6px 0 rgba(0, 0, 0,.03)!default;
+// @end category
+// @end type
+
+
+// @type size 尺寸
+// @category base 基础尺寸
+// @unselected
+$s-base: 4px!default; // 基础尺寸
+$s-increase: $s-base!default; // 每档递增量
+// @end unselected
+
+// @unconfigurable
+$s-0: 0!default;
+$s-1: $s-base!default;
+$s-2: $s-1 + $s-increase!default;
+$s-3: $s-2 + $s-increase!default;
+$s-4: $s-3 + $s-increase!default;
+$s-5: $s-4 + $s-increase!default;
+$s-6: $s-5 + $s-increase!default;
+$s-7: $s-6 + $s-increase!default;
+$s-8: $s-7 + $s-increase!default;
+$s-9: $s-8 + $s-increase!default;
+$s-10: $s-9 + $s-increase!default;
+$s-11: $s-10 + $s-increase!default;
+$s-12: $s-11 + $s-increase!default;
+$s-13: $s-12 + $s-increase!default;
+$s-14: $s-13 + $s-increase!default;
+$s-15: $s-14 + $s-increase!default;
+$s-16: $s-15 + $s-increase!default;
+$s-17: $s-16 + $s-increase!default;
+$s-18: $s-17 + $s-increase!default;
+$s-19: $s-18 + $s-increase!default;
+$s-20: $s-19 + $s-increase!default;
+// @end unconfigurable
+// @end category
+// @end type
+
+// @type color 色彩
+// @category base
+// @unconfigurable
+
+// @name 白色
+$color-white: #fff!default;
+// @name 黑色
+$color-black: #000!default;
+// @name 透明
+$color-transparent: transparent!default;
+// @end unconfigurable
+// @end category
+
+// @category primary 主色
+// @name 主色
+$color-primary: #0A70F5!default;
+// @name 主色 hover
+$color-primary-1: #2A8EFE!default;
+// @name 主色激活
+$color-primary-2: #005ADE!default;
+// @name 主色禁用
+$color-primary-3: #BAE2FF!default;
+$color-primary-4: #EFF8FF!default;
+$color-primary-5: #85C9FF!default;
+$color-primary-6: transparent!default;
+$color-primary-7: transparent!default;
+$color-primary-8: transparent!default;
+$color-primary-9: transparent!default;
+// @end category
+
+// @category text 文字
+$color-text-1: rgba(0, 0, 0, .84)!default; // 含义
+$color-text-2: rgba(0, 0, 0, .72)!default;
+$color-text-3: rgba(0, 0, 0, .60)!default;
+$color-text-4: rgba(0, 0, 0, .36)!default;
+$color-text-5: rgba(0, 0, 0, .24)!default;
+$color-text-6: transparent!default;
+$color-text-7: transparent!default;
+$color-text-8: transparent!default;
+$color-text-9: transparent!default;
+$color-text-10: transparent!default;
+
+// @ignore
+$color-text-default: $color-text-1!default;
+// @end ignore
+
+// @end category
+
+// 预留字段
+
+// @category line 线条
+$color-line-1: rgba(0, 0, 0, .12)!default;
+$color-line-2: rgba(0, 0, 0, .06)!default;
+$color-line-3: transparent!default;
+$color-line-4: transparent!default;
+$color-line-5: transparent!default;
+$color-line-6: transparent!default;
+$color-line-7: transparent!default;
+$color-line-8: transparent!default;
+$color-line-9: transparent!default;
+$color-line-10: transparent!default;
+// @end category
+
+// @category fill 填充
+$color-fill-1: #F5F5F5!default;
+$color-fill-2: #F2F2F2!default;
+$color-fill-3: transparent!default;
+$color-fill-4: transparent!default;
+$color-fill-5: transparent!default;
+$color-fill-6: transparent!default;
+$color-fill-7: transparent!default;
+$color-fill-8: transparent!default;
+$color-fill-9: transparent!default;
+$color-fill-10: transparent!default;
+// @end category
+
+// @category link 链接
+// @name 链接色
+$color-link: #0A70F5!default;
+// @name 链接 hover
+$color-link-hover: #2A8EFE!default;
+// @name 链接按下
+$color-link-pressed: #005ADE!default;
+// @name 链接激活色
+$color-link-active: #BAE2FF!default;
+// @name 链接背景色
+$color-info-1: #EFF8FF!default;
+$color-info-2: transparent!default;
+$color-info-3: transparent!default;
+$color-info-4: transparent!default;
+$color-info-5: transparent!default;
+$color-info-6: transparent!default;
+$color-info-7: transparent!default;
+$color-info-8: transparent!default;
+$color-info-9: transparent!default;
+$color-info-10: transparent!default;
+// @end category
+
+// @category success 成功
+$color-success-1: #00B365!default;
+$color-success-2: #EFFCF2!default;
+$color-success-3: #1CCE72!default;
+$color-success-4: #009659!default;
+$color-success-5: #B3F9C8!default;
+$color-success-6: transparent!default;
+$color-success-7: transparent!default;
+$color-success-8: transparent!default;
+$color-success-9: transparent!default;
+$color-success-10: transparent!default;
+// @end category
+
+// @category danger 危险
+$color-danger-1: #F5483B!default;
+$color-danger-2: #FFF5F4!default;
+$color-danger-3: #FE6557!default;
+$color-danger-4: #DD3429!default;
+$color-danger-5: #FFD2CC!default;
+$color-danger-6: transparent!default; // todo
+$color-danger-7: transparent!default;
+$color-danger-8: transparent!default;
+$color-danger-9: transparent!default;
+$color-danger-10: transparent!default;
+// @end category
+
+// @category warning 警告
+$color-warning-1: #FFC300!default;
+$color-warning-2: #FFFAE0!default;
+$color-warning-3: #FFD420!default;
+$color-warning-4: #CC8C16!default;
+$color-warning-5: #FFF5AD!default;
+$color-warning-6: transparent!default; // todo
+$color-warning-7: transparent!default;
+$color-warning-8: transparent!default;
+$color-warning-9: transparent!default;
+$color-warning-10: transparent!default;
+// @end category
+// @end type
+
+// @unconfigurable
+// @type text-decoration 文本样式
+// @category base
+// @name 上划线
+$text-decoration-overline: overline!default;
+// @name 下划线
+$text-decoration-underline: underline!default;
+// @name 中划线
+$text-decoration-line-through	: line-through!default;
+// @name 虚线
+$text-decoration-dotted: dotted!default;
+// @name 无
+$text-decoration-none: none!default;
+// @end category
+// @end type
+// @end unconfigurable
+
+// @end module
+
+// @module component
+
+// @component link 链接
+// @category base
+// @propsValue default
+// @name 禁用-文字颜色
+$link-disabled-color: $color-text-4!default;
+// @name 文字-装饰
+$link-text-decoration: none!default;
+// @name 悬浮-文字-装饰
+$link-hover-text-decoration: $text-decoration-underline!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component anchor 锚点
+// @category base
+// @propsValue default
+// @name 竖直内边距
+$anchor-padding-vertical: $s-1!default;
+// @name 嵌套-竖直内边距
+$anchor-nested-padding-vertical: $s-1!default;
+// @name link-左内边距
+$anchor-link-padding-left: $s-3!default;
+// @name 字号
+$anchor-font-size: $font-size-1!default;
+// @name 行高
+$anchor-line-height: $line-height-1!default;
+// @name 动画-时间
+$anchor-transition-time: .2s!default;
+// @name 动画-属性
+$anchor-transition-property: ease-in-out!default;
+
+// @dom ink
+// @name ink-文字颜色
+$anchor-ink-color: $color-line-2!default;
+// @name ink-ball-高度
+$anchor-ink-ball-height: $anchor-line-height!default;
+// @name ink-ball-宽度
+$anchor-ink-ball-width: $border-width-2!default;
+// @name link-标题-文字颜色
+$anchor-link-title-color: $color-text-3!default;
+// @state active
+// @name link-激活-标题-文字颜色
+$anchor-link-active-title-color: $color-primary!default;
+// @name link-激活-字重
+$anchor-link-active-font-weight: $font-weight-medium!default;
+// @end state
+// @name y轴偏移
+$anchor-translate-y: ($anchor-line-height - $anchor-ink-ball-height)/2;
+// @end dom
+
+// @end propsValue
+// @end category
+// @end component
+
+// @component announcement 公告
+// @category base
+// @propsValue default
+
+// @dom message
+// @name 消息-字号
+$announcement-message-font-size: $font-size-2!default;
+// @name 消息-行高
+$announcement-message-line-height: $line-height-2!default;
+// @name 消息-字重
+$announcement-message-font-weight: $font-weight-regular!default;
+// @end dom
+
+// @refer color
+// @name 背景色
+$announcement-bgc: $color-warning-2!default;
+// @name 透明度
+$announcement-opacity: 1!default;
+// @name 动画-时长
+$announcement-transition-duration: .2s!default;
+// @name 文字颜色
+$announcement-color: $color-text-2!default;
+// @name 高度
+$announcement-height: $s-9!default;
+// @name 竖直内边距
+$announcement-padding-vertical: ($announcement-height - $announcement-message-line-height)/2;
+// @name 水平内边距
+$announcement-padding-horizontal: $s-3!default;
+// @name 可关闭-右内边距
+$announcement-closable-padding-right: $s-1!default;
+// @name 圆角
+$announcement-border-radius: $border-radius-2!default;
+
+// @dom description
+// @name 标题-字号
+$announcement-title-font-size: $font-size-2!default;
+// @name 标题-行高
+$announcement-title-line-height: $line-height-2!default;
+// @name 标题-字重
+$announcement-title-font-weight: $font-weight-medium!default;
+// @name 描述-字号
+$announcement-description-font-size: $font-size-1!default;
+// @name 描述-行高
+$announcement-description-line-height: $line-height-1 !default;
+// @name 描述-字重
+$announcement-description-font-weight: $font-weight-regular!default;
+// @name 描述-上外边距
+$announcement-description-margin-top: $s-1!default;
+// @name 描述-文字颜色
+$announcement-description-color: $color-text-4!default;
+// @name 描述-竖直内边距
+$announcement-description-padding-vertical: $s-3!default;
+// @name 描述-水平内边距
+$announcement-description-padding-horizontal: $s-4!default;
+// @end dom
+
+// @dom icon
+// @name 图标-右外边距
+$announcement-icon-margin-right: $s-2!default;
+// @name 图标-尺寸
+$announcement-icon-size: $font-size-5!default;
+// @end dom
+
+// @dom closeicon
+// @name 关闭按钮-尺寸
+$announcement-close-size: $font-size-5!default;
+// @name 关闭按钮-文字颜色
+$announcement-close-color: $color-text-3!default;
+// @name 关闭按钮-顶部
+$announcement-close-top: $s-2!default;
+// @name 关闭按钮-右侧
+$announcement-close-right: $s-3!default;
+// @end dom
+// @state hover
+// @name 悬浮-关闭按钮-文字颜色
+$announcement-hover-close-color: $color-text-2!default;
+// @end state
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue success
+// @name 文字-成功-文字颜色
+$announcement-text-success-color: #005238!default;
+// @name 成功-背景色
+$announcement-success-bgc: #EDFAF3!default;
+// @name 图标-成功-文字颜色
+$announcement-icon-success-color: $color-success-1!default;
+// @end propsValue
+
+// @propsValue info
+// @name 文字-信息-文字颜色
+$announcement-text-info-color: #042866!default;
+// @name 信息-背景色
+$announcement-info-bgc: $color-info-1!default;
+// @name 图标-信息-文字颜色
+$announcement-icon-info-color:$color-link!default;
+// @end propsValue
+
+// @propsValue warning
+// @name 文字-警告-文字颜色
+$announcement-text-warning-color:  #592D00!default;
+// @name 警告-背景色
+$announcement-warning-bgc: #fff9e6!default;
+// @name 图标-警告-文字颜色
+$announcement-icon-warning-color: $color-warning-1!default;
+// @end propsValue
+
+// @propsValue error
+// @name 文字-失败-文字颜色
+$announcement-text-danger-color:  #660E16!default;
+// @name 失败-背景色
+$announcement-danger-bgc: $color-danger-2!default;
+// @name 图标-失败-文字颜色
+$announcement-icon-danger-color: $color-danger-1!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component badge 徽章
+// @category base
+// @propsValue default
+// @name 高度
+$badge-height: $s-5!default;
+// @name 背景色
+$badge-bgc: $color-danger-1!default;
+// @name 文字颜色
+$badge-text-color: $color-white!default;
+// @name 字号
+$badge-font-size: $font-size-1!default;
+// @name 字重
+$badge-font-weight: $font-weight-regular!default;
+// @name 水平内边距
+$badge-padding-horizontal: $s-2!default;
+// @name 边框-宽度
+$badge-border-width: $border-width-1!default;
+// @name 圆角
+$badge-border-radius: $border-radius-round!default;
+// @name 边框颜色
+$badge-border-color: $color-white!default;
+// @end propsValue
+// @end category
+
+// @category dot
+// @propsValue true
+// @name 点-尺寸
+$badge-dot-size: $s-2!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component breadcrumb 面包屑
+// @category base
+// @propsValue default
+// @name 文字颜色
+$breadcrumb-color: $color-text-3!default;
+// @name 分割符-文字颜色
+$breadcrumb-sepreate-color: $color-text-5!default;
+// @name 悬浮-文字-装饰
+$breadcrumb-hover-text-decoration: $text-decoration-underline!default;
+// @name 项-最大宽
+$breadcrumb-item-max-width: 200px!default;
+// @dom current
+// @name 项-最大宽-当前
+$breadcrumb-item-current-max-width: 400px!default;
+// @name 当前-文字颜色
+$breadcrumb-current-color: $color-text-1!default;
+// @name 当前-字重
+$breadcrumb-current-font-weight: $font-weight-medium!default;
+// @end dom
+
+// @state hover
+// @name 悬浮-文字颜色
+$breadcrumb-hover-color: $color-text-1!default;
+// @end state
+
+// @state active
+// @name 激活-文字颜色
+$breadcrumb-active-color: $color-text-1!default;
+// @end state
+
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 字号
+$breadcrumb-font-size: $font-size-2!default;
+// @name 行高
+$breadcrumb-line-height: $line-height-2!default;
+// @name 分割符-间距
+$breadcrumb-sepreate-spacing: $s-1!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-字号
+$breadcrumb-small-font-size: $font-size-1!default;
+// @name 小号-行高
+$breadcrumb-small-line-height: $line-height-1!default;
+// @name 小号-分割符-间距
+$breadcrumb-small-sepreate-spacing: $s-1!default;
+// @end propsValue
+
+// @propsValue max
+// @name 大号-字号
+$breadcrumb-large-font-size: $font-size-3!default;
+// @name 大号-行高
+$breadcrumb-large-line-height: $line-height-3!default;
+// @name 大号-分割符-间距
+$breadcrumb-large-sepreate-spacing: $s-1!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component button 按钮
+// @category base
+// @propsValue default
+// @name 按钮-字重
+$btn-font-weight: $font-weight-regular!default;
+// @name 按钮-圆角
+$btn-border-radius: $border-radius-2!default;
+// @name 按钮-边框宽
+$btn-border-width: $border-width-1!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 按钮-最小宽
+$btn-min-width: $s-8!default;
+// @name 按钮-高度
+$btn-height: $s-8!default;
+// @name 按钮-水平内边距
+$btn-padding-horizontal: $s-3!default;
+// @name 按钮-字号
+$btn-font-size: $font-size-2!default;
+// @name 按钮-图标大小
+$btn-icon-size: 16px!default;
+// @name 按钮-图标右间距
+$btn-icon-margin-right: $s-1!default;
+// @end propsValue
+
+// @propsValue small
+// @name 按钮-最小宽-小号
+$btn-small-min-width: $s-6!default;
+// @name 按钮-小号-高度
+$btn-small-height: $s-6!default;
+// @name 按钮-小号-水平内边距
+$btn-small-padding-horizontal: $s-2!default;
+// @name 按钮-小号-字号
+$btn-small-font-size: $font-size-1!default;
+// @name 按钮-小号-图标大小
+$btn-small-icon-size: 14px!default;
+// @name 按钮-小号-图标右间距
+$btn-small-icon-margin-right: $s-1!default;
+// @end propsValue
+
+// @propsValue large
+// @name 按钮-最小宽-大号
+$btn-large-min-width: $s-10!default;
+// @name 按钮-大号-高度
+$btn-large-height: $s-10!default;
+// @name 按钮-大号-水平内边距
+$btn-large-padding-horizontal: $s-5!default;
+// @name 按钮-小号-图标大小
+$btn-large-icon-size: 18px!default;
+// @name 按钮-大号-字号
+$btn-large-font-size: $font-size-3!default;
+
+
+// @name 按钮-大号-图标右间距
+$btn-large-icon-margin-right: $s-1!default;
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue default
+
+// @name 按钮-文字颜色
+$btn-color: $color-text-1!default;
+// @name 按钮-背景色
+$btn-bgc: $color-white!default;
+// @name 按钮-边框颜色
+$btn-border-color: $color-line-1!default;
+
+// @state hover
+// @name 按钮-悬浮-文字颜色
+$btn-hover-color: $color-primary-1!default;
+// @name 按钮-悬浮-背景色
+$btn-hover-bgc: $color-white!default;
+// @name 按钮-悬浮-边框颜色
+$btn-hover-border-color:  $color-primary-1!default;
+// @end state
+
+// @state active
+// @name 按钮-激活-文字颜色
+$btn-active-color: $color-primary-2!default;
+// @name 按钮-激活-边框颜色
+$btn-active-border-color: $color-primary-2!default;
+// @name 按钮-激活-背景色
+$btn-active-bgc: $color-white!default;
+// @end state
+
+// @state disabled
+// @name 按钮-禁用-透明度
+$btn-disabled-opacity: .45!default;
+// @name 按钮-禁用-文字颜色
+$btn-disabled-color: $color-text-1!default;
+// @name 按钮-禁用-背景色
+$btn-disabled-bgc: $color-white!default;
+// @name 按钮-禁用-边框颜色
+$btn-disabled-border-color: $color-line-1!default;
+// @end state
+
+// @end propsValue
+
+// @propsValue primary
+// @name 按钮-主要-文字颜色
+$btn-primary-color: $color-white!default;
+// @name 按钮-主要-背景色
+$btn-primary-bgc: $color-primary!default;
+
+// @state hover
+// @name 按钮-主要-悬浮-背景色
+$btn-primary-hover-bgc: $color-primary-1!default;
+// @end state
+
+// @state active
+// @name 按钮-主要-激活-背景色
+$btn-primary-active-bgc: $color-primary-2!default;
+// @end state
+
+// @state disabled
+// @name 按钮-主要-禁用-背景色
+$btn-primary-disabled-bgc:$color-primary!default;
+// @name 按钮-主要-禁用-透明度
+$btn-primary-disabled-opacity: .45!default;
+// @name 按钮-主要-边框颜色-禁用
+$btn-primary-disabled-border-color: $color-primary!default;
+// @name 按钮-主要-禁用-文字颜色
+$btn-primary-disabled-color: $color-white!default;
+// @end state
+// @end propsValue
+
+// @propsValue success
+// @name 按钮-成功-文字颜色
+$btn-success-color: $color-white!default;
+// @name 按钮-成功-背景色
+$btn-success-bgc: $color-success-1!default;
+// @state hover
+// @name 按钮-成功-悬浮-背景色
+$btn-success-hover-bgc: $color-success-3!default;
+// @end state
+
+// @state active
+// @name 按钮-成功-激活-背景色
+$btn-success-active-bgc: $color-success-4!default;
+// @end state
+
+// @state disabled
+// @name 按钮-成功-禁用-背景色
+$btn-success-disabled-bgc: $color-success-1!default;
+// @name 按钮-成功-禁用-透明度
+$btn-success-disabled-opacity: .45!default;
+// @name 按钮-成功-边框颜色-禁用
+$btn-success-disabled-border-color: $color-success-1!default;
+// @name 按钮-成功-禁用-文字颜色
+$btn-success-disabled-color: $color-white!default;
+// @end state
+// @end propsValue
+
+// @propsValue warning
+// @name 按钮-警告-文字颜色
+$btn-warning-color: $color-white!default;
+// @name 按钮-警告-背景色
+$btn-warning-bgc: $color-warning-1!default;
+// @state hover
+// @name 按钮-警告-悬浮-背景色
+$btn-warning-hover-bgc: $color-warning-3!default;
+// @end state
+
+// @state active
+// @name 按钮-警告-激活-背景色
+$btn-warning-active-bgc: $color-warning-4!default;
+// @end state
+
+// @state disabled
+// @name 按钮-警告-禁用-背景色
+$btn-warning-disabled-bgc: $color-warning-1!default;
+// @name 按钮-警告-禁用-透明度
+$btn-warning-disabled-opacity: .45!default;
+// @name 按钮-警告-边框颜色-禁用
+$btn-warning-disabled-border-color: $color-warning-1!default;
+// @name 按钮-警告-禁用-文字颜色
+$btn-warning-disabled-color: $color-white!default;
+// @end state
+// @end propsValue
+
+// @propsValue danger
+// @name 按钮-失败-文字颜色
+$btn-danger-color: $color-white!default;
+// @name 按钮-失败-背景色
+$btn-danger-bgc: $color-danger-1!default;
+// @state hover
+// @name 按钮-失败-悬浮-背景色
+$btn-danger-hover-bgc: $color-danger-3!default;
+// @end state
+
+// @state active
+// @name 按钮-失败-激活-背景色
+$btn-danger-active-bgc: $color-danger-4!default;
+// @end state
+
+// @state disabled
+// @name 按钮-失败-禁用-背景色
+$btn-danger-disabled-bgc: $color-danger-1!default;
+// @name 按钮-失败-禁用-透明度
+$btn-danger-disabled-opacity: .45!default;
+// @name 按钮-失败-边框颜色-禁用
+$btn-danger-disabled-border-color: $color-danger-1!default;
+// @name 按钮-失败-禁用-文字颜色
+$btn-danger-disabled-color: $color-white!default;
+// @end state
+// @end propsValue
+
+// @propsValue text
+// @name 按钮-文字-图标-文字颜色
+$btn-text-icon-color: $color-primary!default;
+// @name 按钮-文字颜色
+$btn-text-color: $color-text-2!default;
+// @state hover
+// @name 按钮-文字-悬浮-文字颜色
+$btn-text-hover-color: $color-primary!default;
+// @name 按钮-文字-悬浮-背景色
+$btn-text-hover-bgc: $color-transparent!default;
+// @end state
+
+// @state active
+// @name 按钮-文字-激活-文字颜色
+$btn-text-active-color: $color-primary!default;
+// @name 按钮-文字-激活-背景色
+$btn-text-active-bgc: $color-transparent!default;
+// @end state
+
+// @state disabled
+// @name 按钮-文字-禁用-文字颜色
+$btn-text-disabled-color: $color-text-2!default;
+// @name 按钮-文字-禁用-透明度
+$btn-text-disabled-opacity: .45!default;
+// @end state
+// @end propsValue
+
+// @propsValue text-primary
+// @name 按钮-文字-主要-文字颜色
+$btn-text-primary-color: $color-primary!default;
+// @state hover
+// @name 按钮-文字-主要-悬浮-文字颜色
+$btn-text-primary-hover-color: $color-primary-1!default;
+// @name 按钮-文字-主要-悬浮-背景色
+$btn-text-primary-hover-bgc: $color-transparent!default;
+// @end state
+
+// @state active
+// @name 按钮-文字-主要-激活-文字颜色
+$btn-text-primary-active-color: $color-primary-2!default;
+// @name 按钮-文字-主要-激活-背景色
+$btn-text-primary-active-bgc: $color-transparent!default;
+
+// @end state
+
+// @state disabled
+// @name 按钮-文字-主要-禁用-文字颜色
+$btn-text-primary-disabled-color: $color-primary!default;
+// @name 按钮-文字-主要-禁用-透明度
+$btn-text-primary-disabled-opacity: .45!default;
+// @end state
+// @end propsValue
+
+// @end category
+// @end component
+
+// @component card 卡片
+// @category base
+// @propsValue default
+// @name 阴影
+$card-shadow: $shadow-4!default;
+// @name 边框-宽度
+$card-border-width: $border-width-1!default;
+// @refer color
+// @name 边框颜色
+$card-border-color: $color-line-2!default;
+// @name 圆角
+$card-border-radius: $border-radius-2!default;
+// @name 背景色
+$card-bgc: $color-white!default;
+// @name 水平内边距
+$card-padding-horizontal: $s-5!default;
+// @name divider-文字颜色
+$card-divider-color: $color-line-2!default;
+
+// @dom title
+// @name 标题-竖直内边距
+$card-title-padding-vertical: $s-5!default;
+// @name 标题-字号
+$card-title-font-size: $font-size-3!default;
+// @name 标题-字重
+$card-title-font-weight: $font-weight-medium!default;
+// @name 标题-行高
+$card-title-line-height: $line-height-3!default;
+// @name 标题-文字颜色
+$card-title-color: $color-text-1!default;
+// @end dom
+
+// @dom content
+// @name 内容-竖直内边距
+$card-content-padding-vertical: $s-5!default;
+// @end dom
+// @end propsValue
+// @end category
+// @end component
+
+// @component cascader 级联
+// @include select, input, loading
+
+// @category base
+// @propsValue default
+// @refer shadow
+// @name 菜单-阴影
+$cascader-menu-shadow: $shadow-3!default;
+// @name 菜单-字号
+$cascader-menu-font-size: $font-size-2!default;
+// @name 菜单-行高
+$cascader-menu-line-height: $line-height-2!default;
+
+// @name 菜单-内边距
+$cascader-menu-padding: $s-1!default;
+// @name 菜单-文字颜色
+$cascader-menu-color: $color-text-1!default;
+// @name 菜单-高度
+$cascader-menu-height: 180px!default;
+// @name 菜单-最大宽
+$cascader-menu-max-width: 300px!default;
+// @name 菜单-最小宽
+$cascader-menu-min-width: 160px!default;
+// @name 菜单-悬浮-文字颜色
+$cascader-menu-hover-color: $color-text-1!default;
+// @name 菜单-项-高度
+$cascader-menu-item-height: $s-9!default;
+// @name 菜单-项-竖直内边距
+$cascader-menu-item-padding-vertical: $s-4!default;
+// @name 菜单-项-悬浮-背景色
+$cascader-menu-item-hover-bgc: rgba(0, 0, 0, 0.04)!default;
+// @name 菜单-展开-图标-尺寸
+$cascader-menu-expand-icon-size: $font-size-3!default;
+// @name 菜单-展开-右外边距
+$cascader-menu-expand-margin-right: $s-2!default;
+// @name 菜单-展开-图标-文字颜色
+$cascader-menu-expand-icon-color: $color-text-4!default;
+// @name 菜单-边框颜色
+$cascader-menu-border-color: $color-line-2!default;
+// @name 菜单-禁用-文字颜色
+$cascader-menu-disabled-color: $color-text-5!default;
+// @name 菜单-激活-文字颜色
+$cascader-menu-active-color: $color-primary!default;
+// @name 菜单-激活-字重
+$cascader-menu-active-font-weight: $font-weight-medium!default;
+// @name 菜单-空状态-图标-右外边距
+$cascader-menu-empty-icon-margin-right: 6px!default;
+// @name 菜单-加载中-字号
+$cascader-menu-loading-font-size: $font-size-1!default;
+// @name 菜单-加载中-文字颜色
+$cascader-menu-loading-color: $color-text-3!default;
+
+// @end propsValue
+// @end category
+// @end component
+
+// @component checkbox 多选框
+// @category base
+// @propsValue default
+// @name 文字颜色
+$checkbox-text-color: $color-text-1!default;
+// @name 边框颜色
+$checkbox-border-color: $color-line-1!default;
+// @name 选中-背景色
+$checkbox-checked-bgc: $color-primary!default;
+// @name 每个-间隔
+$checkbox-each-interval: $s-8!default;
+// @name 边框-宽度
+$checkbox-border-width: $border-width-1;
+// @name 圆角
+$checkbox-border-radius: $border-radius-1!default;
+// @name 不确定状态-高度
+$checkbox-indeterminate-height: $s-1!default;
+// @refer color
+// @name 悬浮-文字颜色
+$checkbox-hover-color: $color-text-1!default;
+// @name 悬浮-边框颜色
+$checkbox-hover-border-color: $checkbox-checked-bgc!default;
+// @end propsValue
+// @end category
+
+// @category disabled 禁用
+// @propsValue true
+// @name 禁用-文字颜色
+$checkbox-disabled-text-color: $checkbox-text-color!default;
+// @refer color
+// @name 禁用-背景色
+$checkbox-disabled-bgc: $color-white!default;
+// @name 禁用-边框颜色
+$checkbox-disabled-border-color:  $color-line-1!default;
+// @name 禁用-选中-背景色
+$checkbox-disabled-checked-bgc: $checkbox-checked-bgc!default;
+// @name 禁用-透明度
+$checkbox-disabled-opacity: .45!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 尺寸
+$checkbox-size: $font-size-3!default;
+// @name 文字-外边距-左侧
+$checkbox-text-margin-left: $s-2!default;
+// @name 文字-字号
+$checkbox-text-font-size: $font-size-2!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-尺寸
+$checkbox-small-size: $font-size-2!default;
+// @name 小号-文字-外边距-左侧
+$checkbox-small-text-margin-left: $s-1!default;
+// @name 小号-文字-字号
+$checkbox-small-text-font-size: $font-size-1!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-尺寸
+$checkbox-large-size: $font-size-4!default;
+// @name 大号-文字-外边距-左侧
+$checkbox-large-text-margin-left: $s-2!default;
+// @name 大号-文字-字号
+$checkbox-large-text-font-size: $font-size-3!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component collapse 折叠面板
+// @category base
+// @propsValue default
+// @name 边框颜色
+$collapse-border-color: $color-line-2!default;
+// @name 边框宽度
+$collapse-border-width: $border-width-1!default;
+// @state disabled
+// @name 禁用-文字颜色
+$collapse-disabled-color: $color-text-4!default;
+// @refer color
+// @name 禁用-图标-文字颜色
+$collapse-disabled-icon-color: #DDD!default;
+// @end state
+
+// @dom header
+// @name 页头-字号
+$collapse-header-font-size: $font-size-2!default;
+// @name 页头-字重
+$collapse-header-font-weight: $font-weight-inherit!default;
+// @name 页头-行高
+$collapse-header-line-height: $line-height-2!default;
+// @name 页头-文字颜色
+$collapse-header-color: $color-text-1!default;
+// @name 页头-图标-文字颜色
+$collapse-header-icon-color: $color-text-3!default;
+// @name 页头-图标-字号
+$collapse-header-icon-font-size: $font-size-3!default;
+// @name 页头-背景色
+$collapse-header-bgc: $color-fill-1!default;
+// @name 页头-高度
+$collapse-header-height: $s-11!default;
+// @name 页头-竖直内边距
+$collapse-header-padding-vertical: ($collapse-header-height - $collapse-header-line-height)/2;
+// @name 页头-水平内边距
+$collapse-header-padding-horizontal: $s-3!default;
+// @end dom
+
+// @dom content
+// @name 内容-文字颜色
+$collapse-content-color: $color-text-2!default;
+// @name 内容-背景色
+$collapse-content-bgc: $color-white!default;
+// @name 内容-竖直内边距
+$collapse-content-padding-vertical: $s-4!default;
+// @name 内容-左内边距
+$collapse-content-padding-left: $s-9!default;
+// @name 内容-右内边距
+$collapse-content-padding-right: $s-3!default;
+// @end dom
+
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue simple
+// @name 简洁-页头-背景色
+$collapse-simple-header-bgc: $collapse-content-bgc!default;
+// @name 简洁-是否显示两侧边框
+$collapse-simple-border-horizontal: false!default;
+// @end propsValue
+
+// @propsValue area
+// @name 面型-页头-背景色
+$collapse-area-header-bgc: $color-fill-1!default;
+// @name 面型-背景色
+$collapse-area-bgc: $color-fill-1!default;
+// @name 面型-间距
+$collapse-area-offset: 2px!default;
+// @name 面型-阴影
+$collapse-area-shadow: $shadow-0!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component date-picker 日期选择器
+// @include input, button
+
+// @category base
+// @propsValue default
+// @name 禁用-文字颜色
+$date-picker-disabled-color: $color-text-4!default;
+// @name 激活-文字颜色
+$date-picker-active-color: $color-primary!default;
+// @name 禁用-背景色
+$date-picker-disabled-bgc: $color-fill-2!default;
+// @name 边框颜色
+$date-picker-border-color: $color-line-2!default;
+// @name 宽度
+$date-picker-width: 200px!default;
+
+// @name 字号
+$date-picker-font-size: $font-size-2!default;
+// @name 页头-高度
+$date-picker-header-height: $s-10!default;
+// @name 页头-行高
+$date-picker-header-line-height: $line-height-2!default;
+// @name 页头-竖直内边距
+$date-picker-header-padding-vertical: ($date-picker-header-height - $date-picker-header-line-height)/2;
+// @name 页头-水平内边距
+$date-picker-header-padding-horizontal: $s-5!default;
+// @name 页头-input-尺寸
+$date-picker-header-input-size: 100px!default;
+// @name 页头-input-间距
+$date-picker-header-input-offset: $s-3!default;
+// @name 页头-文字颜色
+$date-picker-header-color: $color-text-2!default;
+// @name 页头-悬浮-文字颜色
+$date-picker-header-hover-color: $color-primary!default;
+// @name 图标-按钮-尺寸
+$date-picker-icon-btn-size: $font-size-3!default;
+// @refer color
+// @name 图标-按钮-文字颜色
+$date-picker-icon-btn-color: $color-text-3!default;
+// @name 图标-按钮-悬浮-文字颜色
+$date-picker-icon-btn-hover-color: $color-text-3!default;
+
+// @name 侧边栏-宽度
+$date-picker-sidebar-width: 120px!default;
+// @name 侧边栏-边框-宽度
+$date-picker-sidebar-border-width: $border-width-1!default;
+// @name 侧边栏-边框颜色
+$date-picker-sidebar-border-color: $color-line-2!default;
+// @name shortcut-竖直内边距
+$date-picker-shortcut-padding-vertical: $s-0!default;
+// @name shortcut-水平内边距
+$date-picker-shortcut-padding-horizontal: $s-4!default;
+// @name shortcut-背景色
+$date-picker-shortcut-bgc: $color-white!default;
+// @name shortcut-下外边距
+$date-picker-shortcut-margin-bottom: $s-2!default;
+// @name shortcut-行高
+$date-picker-shortcut-line-height: $s-8!default;
+
+// @name shortcut-悬浮-背景色
+$date-picker-shortcut-hover-bgc: $color-fill-1!default;
+// @name shortcut-悬浮-文字颜色
+$date-picker-shortcut-hover-color: $color-primary!default;
+
+// @name 单元格-尺寸
+$date-picker-cell-size: $s-8!default;
+// @name 单元格-字号
+$date-picker-cell-font-size: $font-size-1!default;
+// @name 单元格-圆角
+$date-picker-cell-border-radius: $border-radius-2!default;
+// @name 单元格-竖直间距
+$date-picker-cell-offset: $s-1/2!default;
+// @name 单元格-水平间距
+$date-picker-cell-padding-horizontal: $s-0!default;
+// @name 单元格-悬浮-文字颜色
+$date-picker-cell-hover-color: $color-primary!default;
+// @name 单元格-悬浮-背景色
+$date-picker-cell-hover-bgc: $color-primary-4!default;
+// @name 单元格-选中-文字字重
+$date-picker-cell-selected-font-weight: $font-weight-regular!default;
+// @name 单元格-选中-文字颜色
+$date-picker-cell-selected-color: $color-white!default;
+// @name 单元格-选中-背景色
+$date-picker-cell-selected-bgc: $color-primary!default;
+
+// @name 单元格-文字颜色
+$date-picker-cell-color: $color-text-2!default;
+// @name 单元格-页头-文字颜色
+$date-picker-cell-header-color: $color-text-3!default;
+
+// @name 单元格-宽度
+$date-picker-cells-width: $date-picker-cell-size * 7 + 7 * 2 * $date-picker-cell-padding-horizontal;
+// @name 单元格-宽度-with-weeknumbers
+$date-picker-cells-width-with-weeknumbers: $date-picker-cell-size * 8 + 8 * 2 * $date-picker-cell-padding-horizontal;
+
+// @name 单元格-间距-vertical
+$date-picker-cells-offset-vertical: $s-3!default;
+// @name 单元格-间距-水平
+$date-picker-cells-offset-horizontal: $s-5!default;
+
+// @name 范围-背景色
+$date-picker-range-bgc: $color-primary-4!default;
+// @name outsize- 单元格-文字颜色
+$date-picker-outsize-cell-color: $color-text-5!default;
+// @name today-文字颜色
+$date-picker-today-color: $color-primary!default;
+// @name 禁用-背景色
+$date-picker-disabled-bgc: $color-fill-1!default;
+
+// @name 年- 单元格-高度
+$date-picker-year-cell-height: $s-8!default;
+// @name 月- 单元格-宽度
+$date-picker-month-cell-width: 42px!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component drawer 抽屉
+// @category base
+// @propsValue default
+// @name 背景色
+$drawer-bgc: $color-white!default;
+// @name 水平内边距
+$drawer-padding-horizontal: $s-6!default;
+// @dom header
+// @name 页头-竖直内边距
+$drawer-header-padding-vertical: $s-4!default;
+// @name 页头-行高
+$drawer-header-line-height: $line-height-3!default;
+// @name 页头-字号
+$drawer-header-font-size: $font-size-3!default;
+// @name 页头-文字颜色
+$drawer-header-color: $color-text-1!default;
+// @name 页头-字重
+$drawer-header-font-weight: $font-weight-medium!default;
+// @end dom
+// @name 内容-水平内边距
+$drawer-content-padding-horizontal: $s-4!default;
+
+// @name 关闭按钮-顶部
+$drawer-close-top: $s-4!default;
+// @name 关闭按钮-右侧
+$drawer-close-right: $s-4!default;
+// @name 关闭按钮-文字颜色
+$drawer-close-color: $color-text-1!default;
+// @name 关闭按钮-悬浮-文字颜色
+$drawer-close-hover-color: $color-text-1!default;
+// @name 关闭按钮-悬浮-背景色
+$drawer-close-hover-bgc: $color-line-2!default;
+// @name 关闭按钮-激活-文字颜色
+$drawer-close-active-color: $color-text-1!default;
+// @name 关闭按钮-激活-背景色
+$drawer-close-active-bgc: $color-line-2!default;
+// @name 关闭按钮-字号
+$drawer-close-font-size: $font-size-5!default;
+// @name 关闭按钮-尺寸
+$drawer-close-size: $s-7!default;
+// @name 关闭按钮-圆角
+$drawer-close-border-radius: $border-radius-half!default;
+
+
+// @state hover
+// @name 关闭按钮-悬浮-文字颜色
+$drawer-close-hover-color: $color-text-2!default;
+// @end state
+
+// @name 阴影
+$drawer-shadow: $shadow-2!default;
+// @name animation-动画-时长
+$drawer-animation-transition-duration: .3s!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+// @component dropdown-menu 下拉菜单
+// @category base
+// @propsValue default
+// @name 下拉-图标-文字颜色
+$dropdown-icon-color: $color-text-4!default;
+// @name 最大高
+$dropdown-menu-max-height: 300px!default;
+// @name 最小宽
+$dropdown-menu-min-width: 128px!default;
+// @name 竖直内边距
+$dropdown-menu-padding-vertical: $s-1!default;
+// @name 阴影
+$dropdown-menu-shadow: $shadow-3!default;
+// @name 边框-宽度
+$dropdown-menu-border-width: $border-width-1!default;
+// @refer color
+// @name 边框颜色
+$dropdown-menu-border-color: rgba(0,0,0,0.04)!default;
+// @name 圆角
+$dropdown-menu-border-radius: $border-radius-2!default;
+
+// @name 项-文字颜色
+$dropdown-menu-item-color: $color-text-1!default;
+// @name 项-悬浮-文字颜色
+$dropdown-menu-item-hover-color: $color-text-1!default;
+// @name 项-悬浮-背景色
+$dropdown-menu-item-hover-bgc: rgba(0, 0, 0, 0.04)!default;
+// @name 项-选中-文字颜色
+$dropdown-menu-item-selected-color: $color-primary!default;
+// @name 项-选中-文字字重
+$dropdown-menu-item-selected-font-weight: $font-weight-regular!default;
+
+// @name 项-禁用-文字颜色
+$dropdown-menu-item-disabled-color: $color-text-5!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 字号
+$dropdown-menu-font-size: $font-size-2!default;
+// @name 项-高度
+$dropdown-menu-item-height: $s-9!default;
+// @name 项-水平内边距
+$dropdown-menu-item-padding-horizontal: $s-4!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-字号
+$dropdown-menu-small-font-size: $font-size-1!default;
+// @name 项-小号-高度
+$dropdown-menu-item-small-height: $s-7!default;
+// @name 项-小号-水平内边距
+$dropdown-menu-item-small-padding-horizontal: $s-3!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component form 表单
+// @category base
+// @propsValue default
+// @name 内联-项-右外边距
+$form-inline-item-margin-right: 10px!default;
+// @name 内联-行高-标签
+$form-inline-label-line-height: $line-height-2!default;
+// @name 项-文字-间距
+$form-item-text-spacing: $s-1!default;
+// @name 项-下外边距
+$form-item-margin-bottom: $s-4!default;
+// @name 项-标签-字号
+$form-item-label-font-size: $font-size-2!default;
+// @name 项-标签-右内边距
+$form-item-label-padding-right: $s-3!default;
+// @name 项-标签-文字颜色
+$form-item-label-color: $color-text-3!default;
+// @name 项-行高-标签
+$form-item-label-line-height: $s-8!default;
+// @refer color
+// @name 项-必填-星号-文字颜色
+$form-item-required-asterisk-color: $color-danger-1!default;
+// @name 项-必填-星号-font-family
+$form-item-required-asterisk-font-family: SimSun,sans-serif!default;
+
+// @name 项-错误-提示-文字颜色
+$form-item-error-tip-color: $color-danger-1!default;
+// @name 项-错误-字号-提示
+$form-item-error-tip-font-size: $font-size-1!default;
+// @name 项-行高-错误-提示
+$form-item-error-tip-line-height: $line-height-1!default;
+// @name 项-错误-提示-上外边距
+$form-item-error-tip-margin-top: $s-0!default;
+// @name 项-错误-提示-右侧时-左外边距
+$form-item-error-tip-right-margin-left: $s-1!default;
+// @name 项-帮助文案-字号
+$form-item-helper-font-size: $font-size-1!default;
+// @name 项-帮助文案-文字颜色
+$form-item-helper-color: $color-text-4!default;
+// @name 项-行高-帮助文案
+$form-item-helper-line-height: $line-height-1!default;
+// @name 项-帮助文案-右侧-间距
+$form-item-helper-right-spacing: $s-3!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component icon-button 图标按钮
+// @category base
+// @propsValue default
+// @name iconbtn-间距
+$iconbtn-spacing: $s-1!default;
+// @name iconbtn-每个-间距
+$iconbtn-each-spacing: 10px!default;
+// @name iconbtn-禁用-文字颜色
+$iconbtn-disabled-color: $color-text-5!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name iconbtn-字号
+$iconbtn-font-size: $font-size-5!default;
+// @end propsValue
+
+// @propsValue small
+// @name iconbtn-小号-字号
+$iconbtn-small-font-size: $font-size-3!default;
+// @end propsValue
+
+// @propsValue large
+// @name iconbtn-大号-字号
+$iconbtn-large-font-size: $font-size-6!default;
+// @end propsValue
+// @end category
+
+// @category type
+
+// @propsValue default
+// @name iconbtn-默认颜色
+$iconbtn-color: $color-primary!default;
+// @name iconbtn-悬浮-颜色
+$iconbtn-hover-color: $color-primary!default;
+// @name iconbtn-悬浮-背景色
+$iconbtn-hover-bgc: $color-line-2!default;
+
+// @name iconbtn-激活-颜色
+$iconbtn-active-color: $color-primary!default;
+// @refer color
+// @name iconbtn-激活-背景色
+$iconbtn-active-bgc: $color-line-2!default;
+
+// @end propsValue
+
+// @propsValue secondary
+// @refer color
+// @name iconbtn-次级-文字颜色
+$iconbtn-secondary-color: $color-text-1!default;
+// @name iconbtn-次级-悬浮-文字颜色
+$iconbtn-secondary-hover-color: $color-primary!default;
+// @name iconbtn-次级-悬浮-背景色
+$iconbtn-secondary-hover-bgc: $color-line-2!default;
+// @name iconbtn-次级-激活-文字颜色
+$iconbtn-secondary-active-color: $color-primary!default;
+// @name iconbtn-次级-激活-背景色
+$iconbtn-secondary-active-bgc: $color-line-2!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component input 输入框
+// @category base
+// @propsValue default
+// @name 提示文案-文字颜色
+$placeholder-color: $color-text-5!default;
+// @name 文字颜色
+$input-color: $color-text-2!default;
+// @name 边框颜色
+$input-border-color: $color-line-1!default;
+// @name 圆角
+$input-border-radius: $border-radius-2!default;
+
+// @name 图标-文字颜色
+$input-icon-color: $color-text-4!default;
+// @name 悬浮-边框颜色
+$input-hover-border-color: $color-primary-1!default;
+// @name 聚焦-边框颜色
+$input-focus-border-color: $color-primary!default;
+// @name 聚焦-阴影
+$input-focus-shadow: none!default;
+// @name 禁用-边框颜色
+$input-disabled-border-color: $color-line-1!default;
+// @name 禁用-背景色
+$input-disabled-bgc: $color-fill-1!default;
+// @name 禁用-文字颜色
+$input-disabled-color: $color-text-2!default;
+// @name 禁用-图标颜色
+$input-disabled-icon-color: $color-text-4!default;
+// @name 禁用-透明度
+$input-disabled-opacity: .45!default;
+// @name 错误-边框颜色
+$input-invalid-border-color: $color-danger-1!default;
+
+// @name 组-额外-背景色
+$input-group-addon-bgc: $color-fill-1!default;
+// @end propsValue
+// @end category
+
+// @category genre
+// @propsValue area
+// @name 面型-背景色
+$input-area-bgc: $color-fill-1!default;
+// @name 面型-文字颜色
+$input-area-color: $color-text-2!default;
+// @name 面型-提示文案-文字颜色
+$input-area-placeholder-color: $color-text-5!default;
+
+// @state hover
+// @name 面型-悬浮-背景色
+$input-area-hover-bgc: $color-fill-1!default;
+// @end state
+
+// @state focus
+// @name 面型-聚焦-背景色
+$input-area-focus-bgc: $color-fill-1!default;
+// @name 面型-聚焦-阴影
+$input-area-focus-shadow: none!default;
+// @end state
+
+// @state invalid
+// @name 面型-错误-阴影
+$input-area-invalid-shadow: none!default;
+// @end state
+
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue small
+// @name 小号-字号
+$input-small-font-size: $font-size-1!default;
+// @name 小号-高度
+$input-small-height: $s-6!default;
+// @name 小号-宽度
+$input-small-width: 160px!default;
+// @name 小号-水平内边距
+$input-small-padding-horizontal: $s-2!default;
+// @end propsValue
+
+// @propsValue default
+// @name 字号
+$input-font-size: $font-size-2!default;
+// @name 高度
+$input-height: $s-8!default;
+// @name 宽度
+$input-width: 180px!default;
+// @name 水平内边距
+$input-padding-horizontal: $s-2!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-字号
+$input-large-font-size: $font-size-3!default;
+// @name 大号-高度
+$input-large-height: $s-10!default;
+// @name 大号-宽度
+$input-large-width: 200px!default;
+// @name 大号-水平内边距
+$input-large-padding-horizontal: $s-2!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component textarea 富文本框
+// @category base
+// @propsValue default
+// @name 竖直内边距
+$textarea-padding-vertical: $s-1!default;
+// @name 水平内边距
+$textarea-padding-horizontal: $s-2!default;
+// @name 行高
+$textarea-line-height: $line-height-2!default;
+// @name 最小高
+$textarea-min-height: 2*$textarea-padding-vertical + $textarea-line-height + 2px!default;
+// @name 宽度
+$textarea-width: 260px!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component input-number 数字输入框
+// @category base
+// @propsValue default
+// @name 禁用-透明度
+$input-number-disabled-opacity: .45!default;
+
+// @name 背景色
+$input-number-bgc: $color-white!default;
+// @name 禁用-背景色
+$input-number-disabled-bgc: $color-fill-1!default;
+
+// @name 字重
+$input-number-font-weight: $font-weight-regular!default;
+// @name 水平内边距
+$input-number-padding-horizontal: $s-2!default;
+
+// @name 文字颜色
+$input-number-text-color: $color-text-1!default;
+// @name 禁用-文字颜色
+$input-number-disabled-text-color: $color-text-5!default;
+
+// @name 边框-宽度
+$input-number-border-width: $border-width-1!default;
+// @name 圆角
+$input-number-border-radius: $border-radius-2!default;
+// @name 边框颜色
+$input-number-border-color: $color-line-1!default;
+// @name 聚焦-边框颜色
+$input-number-focus-border-color: $input-focus-border-color!default;
+// @name 错误-边框颜色
+$input-number-error-border-color: $input-invalid-border-color!default;
+// @name 禁用-边框颜色
+$input-number-disabled-border-color: $input-disabled-border-color!default;
+// @name 按钮-文字颜色
+$input-number-btn-color: $color-text-3!default;
+// @name 悬浮-按钮-文字颜色
+$input-number-hover-btn-color: $color-primary!default;
+// @name 按钮-背景色
+$input-number-btn-bgc: $color-fill-1!default;
+// @name 禁用-按钮-文字颜色
+$input-number-disabled-btn-color: $color-text-5!default;
+
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue small
+// @name 小号-字号
+$input-number-small-font-size: $font-size-1!default;
+// @name 小号-高度
+$input-number-small-height: $s-6!default;
+// @name 小号-宽度
+$input-number-small-width: 92px!default;
+// @end propsValue
+
+// @propsValue default
+// @name 字号
+$input-number-font-size: $font-size-2!default;
+// @name 宽度
+$input-number-width: 120px!default;
+// @name 高度
+$input-number-height: $s-8!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-字号
+$input-number-large-font-size: $font-size-2!default;
+// @name 大号-高度
+$input-number-large-height: $s-10!default;
+// @name 大号-宽度
+$input-number-large-width: 144px!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component list 列表
+// @category base
+// @propsValue default
+// @name 边框颜色
+$list-border-color: $color-line-2!default;
+// @name 边框-宽度
+$list-border-width: $border-width-1!default;
+// @name 圆角
+$list-border-radius: $border-radius-1!default;
+// @name 项-悬浮-文字颜色
+$list-item-hover-color: $color-fill-1!default;
+// @name 项-组-页头-竖直内边距
+$list-item-group-header-padding-vertical: 7px!default;
+// @name 项-组-页头-水平内边距
+$list-item-group-header-padding-horizontal: $s-4!default;
+// @name 项-组-背景色
+$list-item-group-bgc: $color-fill-1!default;
+// @name 项-组-文字颜色
+$list-item-group-color: $color-text-4!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue small
+// @name 项-小号-字号
+$list-item-small-font-size: $font-size-1!default;
+// @name 项-行高-小号
+$list-item-small-line-height: $line-height-1!default;
+// @name 项-小号-竖直内边距
+$list-item-small-padding-vertical: ($s-9 - $list-item-small-line-height)/2!default;
+// @name 项-小号-水平内边距
+$list-item-small-padding-horizontal: $s-4!default;
+// @end propsValue
+
+// @propsValue normal
+// @name 项-字号
+$list-item-font-size: $font-size-2!default;
+// @name 项-行高
+$list-item-line-height: $line-height-2!default;
+// @name 项-竖直内边距
+$list-item-padding-vertical: ($s-11 - $list-item-line-height)/2!default;
+// @name 项-水平内边距
+$list-item-padding-horizontal: $s-4!default;
+// @end propsValue
+
+// @propsValue large
+// @name 项-大号-字号
+$list-item-large-font-size: $font-size-3!default;
+// @name 项-行高-大号
+$list-item-large-line-height: $line-height-3!default;
+// @name 项-大号-竖直内边距
+$list-item-large-padding-vertical: ($s-13 - $list-item-large-line-height)/2!default;
+// @name 项-大号-水平内边距
+$list-item-large-padding-horizontal: $s-4!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component loading 加载
+// @category base
+// @propsValue default
+// @refer color
+// @name 消息-文字颜色
+$loading-message-color: $color-text-1!default;
+// @name 消息-字号
+$loading-message-font-size: $font-size-2!default;
+// @name 消息-字重
+$loading-message-font-weight: $font-weight-regular!default;
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue line-scale
+// @name 线-宽度
+$loading-line-width: 3px!default;
+// @name 行高
+$loading-line-height: 20px!default;
+// @name 线-间距
+$loading-line-spacing: 1px!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component modal 对话框
+// @category base
+// @propsValue default
+// @name 背景色
+$modal-bgc: $color-white!default;
+// @name 最小宽
+$modal-min-width: 400px!default;
+// @name 最小高
+$modal-min-height: auto!default;
+// @name 最大宽
+$modal-max-width: 90vw!default;
+// @name 最大高
+$modal-max-height: 82vh!default;
+// @name 圆角
+$modal-border-radius: $border-radius-3!default;
+// @name 阴影
+$modal-shadow: $shadow-0!default;
+// @name 蒙板-背景色
+$modal-mask-bgc: $color-text-4!default;
+
+// @name 关闭按钮-字号
+$modal-close-font-size: $font-size-5!default;
+// @name 关闭按钮-尺寸
+$modal-close-size: $s-7!default;
+// @name 关闭按钮-圆角
+$modal-close-border-radius: $border-radius-half!default;
+// @name 关闭按钮-文字颜色
+$modal-close-color: $color-text-3!default;
+// @name 关闭按钮-悬浮-文字颜色
+$modal-close-hover-color: $color-text-2!default;
+// @name 关闭按钮-悬浮-背景色
+$modal-close-hover-bgc: $color-line-2!default;
+// @name 关闭按钮-激活-文字颜色
+$modal-close-active-color: $color-text-2!default;
+// @name 关闭按钮-激活-背景色
+$modal-close-active-bgc: $color-line-2!default;
+// @name 关闭按钮-顶部
+$modal-close-top: $s-4!default;
+// @name 关闭按钮-右侧
+$modal-close-right: $s-6!default;
+
+// @name 页头-竖直内边距
+$modal-header-padding-vertical: $s-4!default;
+// @name 页头-水平内边距
+$modal-header-padding-horizontal: $s-6!default;
+// @refer color
+// @name 页头-文字颜色
+$modal-header-color: $color-text-1!default;
+// @name 页头-字号
+$modal-header-font-size: $font-size-4!default;
+// @name 页头-行高
+$modal-header-line-height: $line-height-4!default;
+// @name 页头-字重
+$modal-header-font-weight: $font-weight-medium!default;
+
+// @name 页脚-竖直内边距
+$modal-footer-padding-vertical: $s-4!default;
+// @name 页脚-水平内边距
+$modal-footer-padding-horizontal: $s-6!default;
+// @name 页脚-操作-间距
+$modal-footer-action-offset: $s-3!default;
+// @name 内容-竖直内边距
+$modal-content-padding-vertical: $s-4!default;
+// @name 内容-水平内边距
+$modal-content-padding-horizontal: $s-6!default;
+
+// @end propsValue
+// @end category
+// @end component
+
+// @component confirm 确认框
+// @include modal
+// @category base
+// @propsValue default
+// @name 顶部边框宽
+$confirm-border-top-width: $border-width-0!default;
+// @name 顶部边框颜色
+$confirm-border-top-color: $color-transparent!default;
+// @name 标题-文字颜色
+$confirm-title-color: $color-text-1!default;
+// @name 标题-字重
+$confirm-title-font-weight: $modal-header-font-weight!default;
+// @name 标题-字号
+$confirm-title-font-size: $font-size-3!default;
+// @name 标题-行高
+$confirm-title-line-height: $line-height-4!default;
+
+// @name 消息-文字颜色
+$confirm-message-color: $color-text-1!default;
+// @name 消息-字号
+$confirm-message-font-size: $font-size-2!default;
+// @name 消息-行高
+$confirm-message-line-height: $line-height-2!default;
+
+// @name 成功-文字颜色
+$confirm-success-color: $color-success-1!default;
+// @name 失败-文字颜色
+$confirm-danger-color: $color-danger-1!default;
+// @name 警告-文字颜色
+$confirm-warning-color: $color-warning-1!default;
+// @name 信息-文字颜色
+$confirm-info-color: $color-primary!default;
+// @name 图标-尺寸
+$confirm-icon-size: $font-size-6!default;
+// @name 标题-下外边距
+$confirm-title-margin-bottom: $s-2!default;
+// @name 图标-右外边距
+$confirm-icon-margin-right: $s-2!default;
+// @name 内容-竖直内边距
+$confirm-content-padding-vertical: $s-4!default;
+// @name 内容-水平内边距
+$confirm-content-padding-horizontal: $s-6!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component message 通知
+// @category base
+// @propsValue default
+// @name 字重
+$message-font-weight: $font-weight-inherit!default;
+// @name 最小宽
+$message-min-width: 220px!default;
+// @name 最大宽
+$message-max-width: 1000px!default;
+// @name 圆角
+$message-radius: $border-radius-2!default;
+// @name 背景色
+$message-bgc: $color-white!default;
+// @refer shadow
+// @name 阴影
+$message-shadow: $shadow-3!default;
+// @refer color
+// @name 边框颜色
+$message-border-color: #E8EBF3!default;
+// @name 边框-宽度
+$message-border-width: $border-width-1!default;
+// @name 顶部
+$message-top: $s-5!default;
+// @name 左侧
+$message-left: 50%!default;
+// @name x轴偏移
+$message-translate-x: -50%!default;
+
+// @name 内容-字号
+$message-content-font-size: $font-size-2!default;
+// @name 内容-行高
+$message-content-line-height: $line-height-2!default;
+// @name 内容-文字颜色
+$message-content-color: $color-text-1!default;
+
+// @name 高度
+$message-height: $s-9!default;
+// @name 竖直内边距
+$message-padding-vertical: ($message-height - $message-content-line-height - 2*$message-border-width)/2;
+// @name 水平内边距
+$message-padding-horizontal: $s-3!default;
+// @name 动画-透明度
+$message-transition-opacity: .3s!default;
+// @name 动画-transform
+$message-transition-transform: .4s!default;
+
+// @name 图标-字号
+$message-icon-font-size: $font-size-5!default;
+// @name 图标-右外边距
+$message-icon-margin-right: $s-2!default;
+
+// @name 关闭按钮-顶部
+$message-close-top: 50%!default;
+// @name 关闭按钮-右侧
+$message-close-right: $s-3!default;
+// @name 关闭按钮-y轴偏移
+$message-close-translate-y: -50%!default;
+// @name 关闭按钮-字号
+$message-close-font-size: $font-size-3!default;
+// @name 关闭按钮-文字颜色
+$message-close-color: $color-text-3!default;
+// @name 关闭按钮-悬浮-文字颜色
+$message-close-hover-color: $color-text-1!default;
+// @name 内容-可关闭-右内边距
+$message-content-closable-padding-right: $s-4!default;
+
+// @name fade-enter-透明度
+$message-fade-enter-opacity: 0!default;
+// @name fade-enter-x轴偏移
+$message-fade-enter-translate-x: -50%!default;
+// @name fade-enter-y轴偏移
+$message-fade-enter-translate-y: -100%!default;
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue success
+// @name 成功-图标颜色
+$message-success-color: $color-success-1!default;
+// @refer color
+// @name 成功-文字颜色
+$message-success-content-color: $message-content-color!default;
+// @refer color
+// @name 成功-背景色
+$message-success-bgc: $message-bgc!default;
+// @end propsValue
+
+// @propsValue info
+// @name 信息-图标颜色
+$message-info-color: $color-primary!default;
+// @refer color
+// @name 信息-文字颜色
+$message-info-content-color: $message-content-color!default;
+// @refer color
+// @name 信息-背景色
+$message-info-bgc: $message-bgc!default;
+// @end propsValue
+
+// @propsValue warning
+// @name 警告-图标颜色
+$message-warning-color: $color-warning-1!default;
+// @refer color
+// @name 警告-文字颜色
+$message-warning-content-color: $message-content-color!default;
+// @refer color
+// @name 警告-背景色
+$message-warning-bgc: $message-bgc!default;
+// @end propsValue
+
+// @propsValue error
+// @name 失败-图标颜色
+$message-danger-color: $color-danger-1!default;
+// @refer color
+// @name 失败-文字颜色
+$message-danger-content-color: $message-content-color!default;
+// @refer color
+// @name 失败-背景色
+$message-danger-bgc: $message-bgc!default;
+// @end propsValue
+
+// @propsValue loading
+// @name 加载中-图标颜色
+$message-loading-color: $color-primary!default;
+// @refer color
+// @name 加载中-文字颜色
+$message-loading-content-color: $message-content-color!default;
+// @refer color
+// @name 加载中-背景色
+$message-loading-bgc: $message-bgc!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component menu 导航菜单
+// @category base
+// @propsValue default
+// @name 字号
+$menu-font-size: $font-size-2!default;
+// @name 水平内边距
+$menu-padding-horizontal: $s-4!default;
+// @name 项-高度
+$menu-item-height: $s-10!default;
+// @name 项-水平-高度
+$menu-item-horizontal-height: $s-10!default;
+// @name 项-图标-尺寸
+$menu-item-icon-size: $font-size-3!default;
+// @name 项-图标-右外边距
+$menu-item-icon-margin-right: $s-2!default;
+// @name 下拉-宽度
+$submenu-dropdown-width: 180px!default;
+// @name 下拉-竖直间距
+$submenu-dropdown-padding-vertical: $s-1!default;
+// @end propsValue
+// @end category
+
+// @category collapse
+// @propsValue true
+// @name 收起-宽度
+$menu-collapse-width: 60px!default;
+// @end propsValue
+// @end category
+
+// @category theme
+// @propsValue light
+// @refer color
+// @name 浅色-文字颜色
+$menu-light-color: $color-text-1!default;
+// @refer color
+// @name 浅色-背景色
+$menu-light-bgc: $color-white!default;
+
+// @name 浅色-悬浮-文字颜色
+$menu-light-hover-color: $color-primary!default;
+// @name 浅色-悬浮-背景色
+$menu-light-hover-bgc: none!default;
+// @name 浅色-水平-悬浮-背景色
+$menu-light-horizontal-hover-bgc: none!default;
+
+// @name 浅色-激活-文字颜色
+$menu-light-active-color: $color-primary!default;
+// @name 浅色-激活-背景色
+$menu-light-active-bgc: $color-primary-4!default;
+// @name 浅色-水平-激活-背景色
+$menu-light-horizontal-active-bgc: none!default;
+
+// @name 浅色-禁用-文字颜色
+$menu-light-disabled-color: $menu-light-color;
+// @name 浅色-禁用-背景色
+$menu-light-disabled-bgc: none!default;
+// @name 浅色-禁用-透明度
+$menu-light-disabled-opacity: .45!default;
+// @end propsValue
+
+// @propsValue dark
+// @refer color
+// @name 深色-文字颜色
+$menu-dark-color: rgba($color-white, .7)!default;
+// @refer color
+// @name 深色-背景色
+$menu-dark-bgc: #042866!default;
+
+// @name 深色-悬浮-文字颜色
+$menu-dark-hover-color: $color-white!default;
+// @name 深色-悬浮-背景色
+$menu-dark-hover-bgc: none!default;
+// @name 深色-水平-悬浮-背景色
+$menu-dark-horizontal-hover-bgc: none!default;
+
+// @name 深色-激活-文字颜色
+$menu-dark-active-color: $color-white!default;
+// @name 深色-激活-背景色
+$menu-dark-active-bgc: $color-primary!default;
+// @name 深色-水平-激活-背景色
+$menu-dark-horizontal-active-bgc: none!default;
+
+// @name 深色-禁用-文字颜色
+$menu-dark-disabled-color: $menu-dark-color!default;
+// @name 深色-禁用-背景色
+$menu-dark-disabled-bgc: transparent!default;
+// @name 深色-禁用-透明度
+$menu-dark-disabled-opacity: .45!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+// @component notification 通知
+// @category base
+// @propsValue default
+// @name 宽度
+$notification-width: 340px!default;
+// @name 竖直内边距
+$notification-padding-vertical: $s-4!default;
+// @name 水平内边距
+$notification-padding-horizontal: $s-6!default;
+// @name 圆角
+$notification-radius: $border-radius-2!default;
+// @name 背景色
+$notification-bgc: $color-white!default;
+// @refer shadow
+// @name 阴影
+$notification-shadow: $shadow-3!default;// @refer color
+// @name 边框-宽度
+$notification-border-width: $border-width-0!default;
+// @name 边框颜色
+$notification-border-color: transparent!default;
+//
+// $notification-border-left-width: !default;
+//
+// $notification-border-left-color: !default;
+
+
+// @name 右侧
+$notification-right: $s-4!default;
+// @name 左侧
+$notification-left: $s-4!default;
+
+// @name 字号
+$notification-font-size: $font-size-2!default;
+// @name 文字颜色
+$notification-color: $color-text-3!default;
+// @name 标题-字号
+$notification-title-font-size: $font-size-3!default;
+// @name 标题-文字颜色
+$notification-title-color: $color-text-1!default;
+// @name 标题-行高
+$notification-title-line-height: $line-height-3!default;
+// @name 标题-字重
+$notification-title-font-weight: $font-weight-semi-bold!default;
+// @name 标题-下外边距
+$notification-title-margin-bottom: $s-2!default;
+// @name 图标-尺寸
+$notification-icon-size: $font-size-6!default;
+// @name 图标-右外边距
+$notification-icon-margin-right: $s-2!default;
+
+// @refer size
+// @name 关闭按钮-顶部
+$notification-close-top: 14px!default;
+
+// @name 关闭按钮-右侧
+$notification-close-right: 18px!default;
+// @name 关闭按钮-尺寸
+$notification-close-size: $s-7!default;
+// @name 关闭按钮-字号
+$notification-close-font-size: $font-size-3!default;
+// @name 关闭按钮-圆角
+$notification-close-border-radius: $border-radius-half!default;
+// @name 关闭按钮-文字颜色
+$notification-close-color: $color-text-3!default;
+// @name 关闭按钮-悬浮-文字颜色
+$notification-close-hover-color: $color-text-1!default;
+// @name 关闭按钮-悬浮-背景色
+$notification-close-hover-bgc: $color-line-2!default;
+// @name fade-enter-右侧
+$notification-fade-enter-right: 0!default;
+// @name fade-enter-x轴偏移-右侧
+$notification-fade-enter-right-translate-x: 100%!default;
+// @name fade-enter-左侧
+$notification-fade-enter-left: 0!default;
+// @name fade-enter-x轴偏移-左侧
+$notification-fade-enter-left-translate-x: -100%!default;
+// @name fade-leave-激活-透明度
+$notification-fade-leave-active-opacity: 0!default;
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue success
+// @name 成功-文字颜色
+$notification-success-color: $color-success-1!default;
+// @end propsValue
+
+// @propsValue warning
+// @name 警告-文字颜色
+$notification-warning-color: $color-warning-1!default;
+// @end propsValue
+
+// @propsValue info
+// @name 信息-文字颜色
+$notification-info-color: $color-primary!default;
+// @end propsValue
+
+// @propsValue error
+// @name 失败-文字颜色
+$notification-danger-color: $color-danger-1!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+// @component pagination 分页
+// @category base
+
+// @propsValue default
+// @name 文字颜色
+$pagination-color: $color-text-1!default;
+// @name 背景色
+$pagination-bgc: $color-white!default;
+// @refer color
+// @name 上一项-下一项-文字颜色
+$pagination-prev-next-color: $color-text-3!default;
+// @name 总计-文字颜色
+$pagination-total-color: $color-text-1!default;
+// @name 圆角
+$pagination-border-radius: $border-radius-2!default;
+// @name 边框-宽度
+$pagination-border-width: $border-width-1!default;
+// @name 边框颜色
+$pagination-border-color: $color-line-1!default;
+// @name 页数-内边距
+$pagination-page-padding: $s-1!default;
+// @name 额外-间距
+$pagination-addon-spacing: $s-3!default;
+// @name select-宽度
+$pagination-select-width: 100px!default;
+// @name 简洁-项-间距
+$pagination-simple-item-spacing: $s-1!default;
+
+// @state active
+// @name 激活-背景色
+$pagination-active-bgc: $color-white!default;
+// @name 激活-文字颜色
+$pagination-active-color: $color-primary!default;
+// @name 激活-边框颜色
+$pagination-active-border-color: $color-primary!default;
+// @end state
+
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 字号
+$pagination-font-size: $font-size-2!default;
+// @name 图标-字号
+$pagination-icon-font-size: $font-size-5!default;
+// @name 尺寸
+$pagination-size: $s-8!default;
+// @name 页数-外边距
+$pagination-page-margin: $s-2!default;
+// @name 跳转-宽度
+$pagination-jumper-width: $s-8!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-字号
+$pagination-small-font-size: $font-size-1!default;
+// @name 小号-图标-字号
+$pagination-small-icon-font-size: $font-size-3!default;
+// @name 小号-尺寸
+$pagination-small-size: $s-6!default;
+// @name 小号-页数-外边距
+$pagination-small-page-margin: $s-2!default;
+// @name 小号-跳转-宽度
+$pagination-small-jumper-width: $s-10!default;
+// @end propsValue
+// @end category
+
+// @category show-size-changer
+// @propsValue true
+// @name select-宽度
+$pagination-select-width: 100px!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component popover 弹出框
+// @category base
+// @propsValue default
+// @refer color
+// @name popper-间距
+$popper-offset: $s-1!default;
+// @name popper-阴影
+$popper-shadow: $shadow-3!default;
+// @name popper-背景色
+$popper-bgc: $color-white!default;
+// @name popper-边框颜色
+$popper-border-color: $popper-bgc!default;
+// @name popper-圆角
+$popper-border-radius: $border-radius-2!default;
+// @name popper-箭头-文字颜色
+$popper-arrow-color: #ebeef5!default;
+// @name popper-箭头-尺寸
+$popper-arrow-size: 6px!default;
+// @name 标题颜色
+$popover-title-color: $color-text-1!default;
+// @name 标题字重
+$popover-title-font-weight: $font-weight-medium!default;
+
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 字号
+$popover-font-size: $font-size-2!default;
+// @name 行高
+$popover-line-height: $line-height-2!default;
+// @name 竖直内边距
+$popover-padding-vertical: $s-2!default;
+// @name 水平内边距
+$popover-padding-horizontal: $s-3!default;
+// @name 标题字号
+$popover-title-font-size: $font-size-3!default;
+// @name 标题下间距
+$popover-title-margin-bottom: $s-2!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-字号
+$popover-small-font-size: $font-size-1!default;
+// @name 小号-行高
+$popover-small-line-height: $line-height-1!default;
+// @name 小号-竖直内边距
+$popover-small-padding-vertical: $s-2!default;
+// @name 小号-水平内边距
+$popover-small-padding-horizontal: $s-3!default;
+// @name 小号-标题字号
+$popover-small-title-font-size: $font-size-2!default;
+// @name 小号-标题下间距
+$popover-small-title-margin-bottom: $s-2!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component popconfirm 气泡确认框
+// @category base
+// @propsValue default
+// @name 竖直内边距
+$popconfirm-padding-vertical: $s-4!default;
+// @name 水平内边距
+$popconfirm-padding-horizontal: $s-6!default;
+
+// @name 图标右侧间距
+$popconfirm-icon-margin-right: $s-2!default;
+// @name 图标大小
+$popconfirm-icon-size: 24px!default;
+// @name 图标颜色
+$popconfirm-icon-color: $color-danger-1!default;
+
+// @name 内容-操作间间距
+$popconfirm-content-margin-vertical: $s-4!default;
+// @name 操作按钮间距
+$popconfirm-action-each-offset: $s-2!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component progress 进度条
+// @category base
+// @propsValue default
+// @name 圆角
+$progress-border-radius: 100px!default;
+// @name 背景色
+$progress-bgc: $color-line-2!default;
+// @name 文字-宽度
+$progress-text-width: $s-12!default;
+// @name 文字-外边距-左侧
+$progress-text-margin-left: $s-2!default;
+// @name 文字颜色
+$progress-text-color: $color-text-3!default;
+// @name 文字-字号
+$progress-text-font-size: $font-size-default!default;
+// @name 图标-字号
+$progress-icon-font-size: $font-size-3!default;
+// @end propsValue
+// @end category
+
+// @category status
+// @propsValue default
+// @name 默认-文字颜色
+$progress-default-color: $color-primary!default;
+// @end propsValue
+
+// @propsValue error
+// @name 错误-文字颜色
+$progress-error-color: $color-danger-1!default;
+// @end propsValue
+
+// @propsValue success
+// @name 成功-文字颜色
+$progress-success-color: $color-success-1!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+// @component radio 单选框
+// @category base
+// @propsValue default
+// @name 文字-右侧-间距
+$radio-text-right-spacing: $s-4!default;
+// @name 边框-宽度
+$radio-border-width: $border-width-1!default;
+// @name 边框颜色
+$radio-border-color: $color-line-1!default;
+// @refer color
+// @name 文字颜色
+$radio-text-color: $color-text-1!default;
+// @name 选中-边框颜色
+$radio-checked-border-color: $color-primary!default;
+// @name 选中-文字颜色
+$radio-checked-text-color: $color-text-2!default;
+// @name 选中-背景色
+$radio-checked-bgc: $color-primary!default;
+// @name 选中-点-背景色
+$radio-checked-dot-bgc: $color-white!default;
+// @end propsValue
+// @end category
+// @category size 大小
+// @propsValue default
+// @name 尺寸
+$radio-size: $font-size-3!default;
+// @name 文字-字号
+$radio-text-font-size: $font-size-2!default;
+// @name 文字-行高
+$radio-text-line-height: $line-height-2!default;
+// @name 点-尺寸
+$radio-dot-size: 6px!default;
+// @name 文字-左侧-间距
+$radio-text-left-spacing: $s-2!default;
+// @end propsValue
+// @propsValue small
+// @name 小号-尺寸
+$radio-small-size: $font-size-1!default;
+// @name 小号-行高-文字
+$radio-small-text-line-height: $line-height-1!default;
+// @name 小号-文字-字号
+$radio-small-text-font-size: $font-size-1!default;
+// @name 小号-点-尺寸
+$radio-small-dot-size: $s-1!default;
+// @name 小号-文字-左侧-间距
+$radio-small-text-left-spacing: $s-1!default;
+// @end propsValue
+// @propsValue large
+// @name 大号-文字-字号
+$radio-large-text-font-size: $font-size-3!default;
+// @name 大号-尺寸
+$radio-large-size: $font-size-4!default;
+// @name 大号-行高-文字
+$radio-large-text-line-height: $line-height-3!default;
+// @name 大号-点-尺寸
+$radio-large-dot-size: 6px!default;
+// @name 大号-文字-左侧-间距
+$radio-large-text-left-spacing: $s-2!default;
+// @end propsValue
+// @end category
+
+// @category disabled 禁用
+// @propsValue true
+// @name 禁用-透明度
+$radio-disabled-opacity: .45!default;
+// @name 禁用-文字颜色
+$radio-disabled-color: $color-text-1!default;
+// @name 禁用-背景色
+$radio-disabled-bgc: $color-white!default;
+// @name 禁用-点-背景色
+$radio-disabled-dot-bgc: $color-white!default;
+// @name 禁用-checkecd-背景色
+$radio-disabled-checkecd-bgc: $color-primary!default;
+
+// @name 禁用-边框颜色
+$radio-disabled-border-color: $radio-border-color!default;
+// @end propsValue
+// @end category
+
+// @category hover 滑过
+// @propsValue true
+
+// @refer color
+// @name 悬浮-文字颜色
+$radio-hover-color: $color-text-1!default;
+// @name 悬浮-边框颜色
+$radio-hover-border-color: $color-primary!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component radio-button 单选按钮
+// @include radio
+// @category base
+// @propsValue default
+// @name 边框-宽度
+$radio-button-border-width: $border-width-1!default;
+// @name 圆角
+$radio-button-border-radius: $border-radius-2!default;
+// @refer color
+// @name 文字颜色
+$radio-button-text-color: $color-text-1!default;
+// @name 背景色
+$radio-button-bgc: $color-white!default;
+// @name 边框颜色
+$radio-button-border-color: $color-line-1!default;
+// @name 文字-字号
+$radio-button-text-font-size: $font-size-2!default;
+
+// @name 悬浮-边框颜色
+$radio-button-hover-border-color: $color-primary-1!default;
+// @name 悬浮-文字颜色
+$radio-button-hover-text-color: $color-primary-1!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 最小宽
+$radio-button-min-width:0!default;
+// @name 高度
+$radio-button-height: $s-8!default;
+// @name 水平内边距
+$radio-button-padding-horizontal: $s-2!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-最小宽
+$radio-button-small-min-width:0!default;
+// @name 小号-高度
+$radio-button-small-height: $s-6!default;
+// @name 小号-水平内边距
+$radio-button-small-padding-horizontal: $s-1!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-最小宽
+$radio-button-large-min-width:0!default;
+// @name 大号-高度
+$radio-button-large-height: $s-10!default;
+// @name 大号-水平内边距
+$radio-button-large-padding-horizontal: $s-3!default;
+// @end propsValue
+// @end category
+
+// @category disabled
+// @propsValue true
+// @name 禁用-透明度
+$radio-button-disabled-opacity: 1!default;
+// @name 禁用-文字颜色
+$radio-button-disabled-text-color: $color-text-5!default;
+// @name 禁用-边框颜色
+$radio-button-disabled-border-color: $color-line-1!default;
+// @name 禁用-选中-边框颜色
+$radio-button-disabled-checked-border-color: $color-primary-3!default;
+// @name 禁用-选中-文字颜色
+$radio-button-disabled-checked-color: $color-primary-3!default;
+// @name 禁用-选中-背景色
+$radio-button-disabled-checked-bgc: $color-white!default;
+// @end propsValue
+// @end category
+
+// @category checked
+// @propsValue true
+// @name 选中-文字颜色
+$radio-button-checked-color: $color-primary!default;
+// @name 选中-边框颜色
+$radio-button-checked-border-color: $color-primary!default;
+// @name 选中-文字颜色
+$radio-button-checked-text-color: $color-primary!default;
+// @refer color
+// @name 选中-背景色
+$radio-button-checked-bgc: $color-white!default;
+// @name 选中-hover-文字颜色
+$radio-button-checked-hover-text-color: $radio-button-hover-text-color!default;
+// @end propsValue
+// @end category
+
+// @end component
+
+// @component rate 评分
+// @category base
+// @propsValue default
+// @name 图标-尺寸
+$rate-icon-size: $font-size-6!default;
+// @name 文字-字号
+$rate-text-font-size: $font-size-3!default;
+// @name 文字颜色
+$rate-text-color: $color-text-1!default;
+// @name 图标-激活-文字颜色
+$rate-icon-active-color: $color-warning-1!default;
+// @name 图标-文字颜色
+$rate-icon-color: $color-line-2!default;
+// @name 图标-外边距-水平
+$rate-icon-margin-horizontal: $s-2!default;
+// @name 文字-外边距-水平
+$rate-text-margin-horizontal: $s-2!default;
+// @name 文字-字重
+$rate-text-font-weight: $font-weight-regular!default;
+// @end propsValue
+// @end category
+// @end component
+
+
+// @component select 选择框
+// @include input, dropdown-menu
+// @category base
+// @propsValue default
+// @name tag-theme
+$select-tag-theme: gray!default;
+// @name tag-type
+$select-tag-type: pure!default;
+// @name tags-文字颜色
+$select-tags-text-color: $color-text-4!default;
+// @name tags-每个-间距
+$select-tags-each-spacing: 2px!default;
+
+// @name 空状态提示文字颜色
+$select-empty-color: $color-text-4!default;
+// @refer color
+// @name 空状态提示文字颜色
+$select-check-selected-color: inherit!default;
+// @name 组-标题-字号
+$select-group-title-font-size: $font-size-1!default;
+// @name 组-标题-高度
+$select-group-title-height: $s-8!default;
+// @name 组-标题-文字颜色
+$select-group-title-color: $color-text-4!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component slider 滑块
+// @category base
+// @propsValue default
+// @name mark-间距
+$slider-mark-offset: $s-4!default;
+// @name 下外边距
+$slider-margin-bottom: $s-10!default;
+// @name track-背景色
+$slider-track-bgc: $color-line-2!default;
+// @name 圆角
+$slider-radius: $border-radius-round!default;
+// @name 文字颜色
+$slider-color: $color-text-1!default;
+// @name track-激活-背景色
+$slider-track-active-bgc: $color-primary!default;
+// @name stop-圆角
+$slider-stop-radius: $border-radius-round!default;
+// @refer color
+// @name 固定的-bar-背景色
+$slider-fixed-bar-bgc: #EBEBEB!default;
+
+// @state disabled
+// @name 禁用-背景色
+$slider-disabled-bgc: $color-line-2!default;
+// @name bar-禁用-边框颜色
+$slider-bar-disabled-border-color: rgba(219,237,255,0.60)!default;
+// @end state
+
+// @dom button
+// @name 按钮-圆角
+$slider-button-radius: $border-radius-half!default;
+// @name 按钮-zIndex
+$slider-button-zIndex: 999!default;
+// @name 按钮-背景色
+$slider-button-bgc: $color-white!default;
+// @name 按钮-边框颜色
+$slider-button-border-color: $color-primary!default;
+// @name 按钮-阴影:
+$slider-button-shadow: $shadow-0!default;
+// @state hover
+// @name 按钮-悬浮-阴影
+$slider-button-hover-shadow: $shadow-3!default;
+// @end state
+
+// @state disabled
+// @refer color
+// @name 按钮-禁用-边框颜色
+$slider-button-disabled-border-color: #CECECE!default;
+// @end state
+// @end dom
+
+// @dom text
+// @name 文字-字号
+$slider-text-font-size: $font-size-2!default;
+// @name 文字-字重
+$slider-text-font-weight: $font-weight-regular!default;
+// @name 文字-行高
+$slider-text-line-height: $line-height-2!default;
+// @name 文字-上外边距
+$slider-text-margin-top: $s-2!default;
+// @end dom
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 高度
+$slider-height: $s-2!default;
+// @name 按钮-尺寸
+$slider-button-size: $s-5!default;
+// @name 按钮-边框-宽度
+$slider-button-border-width: 3px!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-高度
+$slider-small-height: $s-1!default;
+// @name 按钮-小号-尺寸
+$slider-button-small-size: $s-4!default;
+// @name 按钮-小号-边框-宽度
+$slider-button-small-border-width: 2px!default;
+// @end propsValue
+// @end category
+
+// @category hover
+// @name 悬浮-按钮-边框颜色
+$slider-hover-button-border-color: $color-primary!default;
+// @name 悬浮-按钮-阴影
+$slider-hover-button-shadow: $shadow-3!default;
+// @end category
+
+// @end component
+
+// @component steps 步骤条
+// @category base
+// @propsValue default
+// @name 最小宽
+$steps-min-width: 150px!default;
+// @name zindex
+$steps-zindex: 1!default;
+// @name main-zindex
+$steps-main-zindex: 2!default;
+// @name 默认-背景色
+$steps-default-bgc: $color-white!default;
+// @name 圆文字-字重
+$steps-circletext-font-weight: $font-weight-regular!default;
+// @name 状态文字-字重
+$steps-statustext-font-weight: $font-weight-regular!default;
+
+// @dom circle
+// @name 圆-边框-宽度
+$steps-circle-border-width: $border-width-1!default;
+// @end dom
+// @dom dot
+// @name 点-边框-宽度
+$steps-dot-border-width: $border-width-2!default;
+// @name 点-线-尺寸
+$steps-dot-line-size: $border-width-2!default;
+// @end dom
+// @dom line
+// @name 线-水平内边距
+$steps-line-padding-horizontal: $s-1!default;
+// @name 线-尺寸
+$steps-line-size: $border-width-1!default;
+// @end dom
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 圆-尺寸
+$steps-circle-size: $s-7!default;
+// @name 点-尺寸
+$steps-dot-size: 10px!default;
+// @name 图标-尺寸
+$steps-icon-size: $font-size-5!default;
+// @name 水平-状态文字-竖直外边距
+$steps-horizontal-statustext-margin-vertical: $s-2!default;
+// @name 水平-状态文字-外边距-水平
+$steps-horizontal-statustext-margin-horizontal: $s-1!default;
+// @name 状态文字-字号
+$steps-statustext-font-size: $font-size-2!default;
+// @name 状态文字-行高
+$steps-statustext-line-height: $line-height-2!default;
+// @name 圆文字-字号
+$steps-circletext-font-size: $font-size-2!default;
+// @name 圆文字-行高
+$steps-circletext-line-height: inherit!default;
+// @name 水平-右侧-状态文字-外边距-水平
+$steps-horizontal-right-statustext-margin-horizontal: 5px!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-圆-尺寸
+$steps-small-circle-size: $s-5!default;
+// @name 小号-点-尺寸
+$steps-small-dot-size: 9px!default;
+// @name 小号-图标-尺寸
+$steps-small-icon-size: $font-size-3!default;
+// @name 小号-水平-竖直外边距-状态文字
+$steps-small-horizontal-statustext-margin-vertical: $s-1!default;
+// @name 小号-水平-状态文字-外边距-水平
+$steps-small-horizontal-statustext-margin-horizontal: $s-1!default;
+// @name 小号-状态文字-字号
+$steps-small-statustext-font-size: $font-size-2!default;
+// @name 小号-行高-状态文字
+$steps-small-statustext-line-height: $line-height-2!default;
+// @name 小号-圆文字-字号
+$steps-small-circletext-font-size: $font-size-1!default;
+// @name 小号-行高-圆文字
+$steps-small-circletext-line-height: inherit!default;
+// @name 小号-水平-右侧-状态文字-外边距-水平
+$steps-small-horizontal-right-statustext-margin-horizontal: 5px!default;
+// @name 小号-水平-字号-描述
+$steps-small-horizontal-description-font-size: $steps-small-statustext-font-size - 2!default;
+// @name 小号-行高-水平-描述
+$steps-small-horizontal-description-line-height: $steps-small-statustext-line-height - 2!default;
+// @name 小号-vertical-点-项-宽度
+$steps-small-vertical-dot-item-width: 140px!default;
+// @end propsValue
+// @end category
+
+// @category direction
+// @propsValue horizontal
+// @name 水平-点-竖直外边距
+$steps-horizontal-dot-margin-vertical: $s-1!default;
+// @name 水平-点-外边距-水平
+$steps-horizontal-dot-margin-horizontal: $s-1!default;
+// @name 水平-右侧-竖直外边距-状态文字
+$steps-horizontal-right-statustext-margin-vertical: auto!default;
+// @name 水平-右侧-点-外边距-水平
+$steps-horizontal-right-dot-margin-horizontal: auto!default;
+// @name 水平-字号-标题
+$steps-horizontal-title-font-size: $font-size-1!default;
+// @name 水平-字重-标题
+$steps-horizontal-title-font-weight: $font-weight-regular!default;
+// @name 水平-行高-标题
+$steps-horizontal-title-line-height: $line-height-1!default;
+// @name 水平-字号-描述
+$steps-horizontal-description-font-size: $steps-statustext-font-size - 2!default;
+// @name 水平-行高-描述
+$steps-horizontal-description-line-height: $steps-statustext-line-height - 2!default;
+// @name 水平-字重-描述
+$steps-horizontal-description-font-weight: $font-weight-regular!default;
+// @name 水平-描述-竖直外边距
+$steps-horizontal-description-margin-vertical: 0!default;
+// @name 水平-描述-外边距-水平
+$steps-horizontal-description-margin-horizontal: $s-1!default;
+// @name 水平-右侧-项-宽度
+$steps-horizontal-right-item-width: 140px!default;
+// @end propsValue
+
+// @propsValue vertical
+// @name vertical-状态文字-外边距-水平
+$steps-vertical-statustext-margin-horizontal: $s-2!default;
+// @name vertical-描述-竖直外边距
+$steps-vertical-description-margin-vertical: $s-1!default;
+// @name vertical-描述-外边距-水平
+$steps-vertical-description-margin-horizontal: $s-1!default; // 1.0
+// @name vertical-字号-circel-描述
+$steps-vertical-circel-description-font-size: $steps-horizontal-description-font-size!default;
+// @name vertical-字重-circel-描述
+$steps-vertical-circel-description-font-weight: $steps-horizontal-description-font-weight!default;
+// @name vertical-行高-circel-描述
+$steps-vertical-circel-description-line-height: $steps-horizontal-description-line-height!default;
+// @name vertical-字号-点-描述
+$steps-vertical-dot-description-font-size: $steps-horizontal-description-font-size!default;
+// @name vertical-字重-点-描述
+$steps-vertical-dot-description-font-weight: $steps-horizontal-description-font-weight!default;
+// @name vertical-行高-点-描述
+$steps-vertical-dot-description-line-height: $steps-horizontal-description-line-height!default;
+// @name vertical-点-项-宽度
+$steps-vertical-dot-item-width: 216px!default;
+// @end propsValue
+// @end category
+
+// @category status
+// @propsValue wait
+// @name 等待-圆-背景色
+$steps-wait-circle-bgc: $color-white!default;
+// @name 等待-圆-边框颜色
+$steps-wait-circle-border-color: $color-text-4!default;
+// @name 等待-圆-文字颜色
+$steps-wait-circletext-color: $color-text-4!default;
+// @name 等待-字重-圆文字
+$steps-wait-circletext-font-weight: $font-weight-regular!default;
+// @name 等待-status-文字颜色
+$steps-wait-statustext-color: $color-text-3!default;
+// @name 等待-线-文字颜色
+$steps-wait-line-color: $color-line-1!default;
+// @name 等待-点-背景色
+$steps-wait-dot-bgc: $color-white!default;
+// @name 等待-点-边框颜色
+$steps-wait-dot-border-color: $color-text-4!default;
+// @name 等待-标题-文字颜色
+$steps-wait-title-color: $steps-wait-circle-bgc!default;
+// @name 等待-描述-文字颜色
+$steps-wait-description-color: $color-text-4!default;
+// @name 等待-图标-文字颜色
+$steps-wait-icon-color: $color-line-1!default;
+// @end propsValue
+
+// @propsValue process
+// @name 进行中-圆-阴影:
+$steps-process-circle-shadow: $shadow-0!default;
+// @name 进行中-圆-背景色
+$steps-process-circle-bgc: $color-primary!default;
+// @name 进行中-圆-边框颜色
+$steps-process-circle-border-color: $color-primary!default;
+// @name 进行中-圆-文字颜色
+$steps-process-circletext-color: $color-white!default;
+// @name 进行中-字重-圆文字
+$steps-process-circletext-font-weight: $font-weight-medium!default;
+// @name 进行中-status-文字颜色
+$steps-process-statustext-color: $color-text-1!default;
+// @name 进行中-线-文字颜色
+$steps-process-line-color: $color-primary-5!default;
+// @name 进行中-点-背景色
+$steps-process-dot-bgc: $color-primary!default;
+// @name 进行中-点-边框颜色
+$steps-process-dot-border-color: $color-primary!default;
+// @name 进行中-标题-文字颜色
+$steps-process-title-color: $steps-process-circle-bgc!default;
+// @name 进行中-描述-文字颜色
+$steps-process-description-color: $color-text-4!default;
+// @name 进行中-图标-文字颜色
+$steps-process-icon-color: $color-primary!default;
+// @end propsValue
+
+// @propsValue finish
+// @name 结束-圆-背景色
+$steps-finish-circle-bgc: $color-white!default;
+// @name 结束-圆-边框颜色
+$steps-finish-circle-border-color:$color-primary!default;
+// @name 结束-圆-文字颜色
+$steps-finish-circletext-color: $color-primary!default;
+// @name 结束-字重-圆文字
+$steps-finish-circletext-font-weight: $font-weight-regular!default;
+// @name 结束-status-文字颜色
+$steps-finish-statustext-color: $color-text-3!default;
+// @name 结束-线-文字颜色
+$steps-finish-line-color: $color-primary-5!default;
+// @name 结束-点-背景色
+$steps-finish-dot-bgc: $color-white!default;
+// @name 结束-点-边框颜色
+$steps-finish-dot-border-color:  $color-primary!default;
+// @name 结束-标题-文字颜色
+$steps-finish-title-color: $steps-finish-circle-bgc!default;
+// @name 结束-描述-文字颜色
+$steps-finish-description-color: $color-text-4!default;
+// @name 结束-图标-文字颜色
+$steps-finish-icon-color: $color-primary!default;
+// @end propsValue
+
+// @propsValue cancel
+// @name 取消-圆-背景色
+$steps-cancel-circle-bgc: $color-white!default;
+// @name 取消-圆-边框颜色
+$steps-cancel-circle-border-color: $color-warning-1!default;
+// @name 取消-圆-文字颜色
+$steps-cancel-circletext-color: $color-warning-1!default;
+// @name 取消-字重-圆文字
+$steps-cancel-circletext-font-weight: $font-weight-medium!default;
+// @name 取消-status-文字颜色
+$steps-cancel-statustext-color: $color-text-1!default;
+// @name 取消-线-文字颜色
+$steps-cancel-line-color: $color-warning-3!default;
+// @name 取消-点-背景色
+$steps-cancel-dot-bgc: $color-white!default;
+// @name 取消-点-边框颜色
+$steps-cancel-dot-border-color: $color-warning-1!default;
+// @name 取消-标题-文字颜色
+$steps-cancel-title-color: $steps-finish-circle-bgc!default;
+// @name 取消-描述-文字颜色
+$steps-cancel-description-color: $color-text-4!default;
+// @name 取消-图标-文字颜色
+$steps-cancel-icon-color: $color-warning-1!default;
+// @end propsValue
+
+// @propsValue error
+// @name 错误-圆-背景色
+$steps-error-circle-bgc: $color-white!default;
+// @name 错误-圆-边框颜色
+$steps-error-circle-border-color: $color-danger-1!default;
+// @name 错误-圆-文字颜色
+$steps-error-circletext-color: $color-danger-1!default;
+// @name 错误-字重-圆文字
+$steps-error-circletext-font-weight: $font-weight-medium!default;
+// @name 错误-status-文字颜色
+$steps-error-statustext-color: $color-text-1!default;
+// @name 错误-线-文字颜色
+$steps-error-line-color: $color-danger-3!default;
+// @name 错误-点-背景色
+$steps-error-dot-bgc: $color-white!default;
+// @name 错误-点-边框颜色
+$steps-error-dot-border-color: $color-danger-1!default;
+// @name 错误-标题-文字颜色
+$steps-error-title-color: $steps-finish-circle-bgc!default;
+// @name 错误-描述-文字颜色
+$steps-error-description-color: $color-text-4!default;
+// @name 错误-图标-文字颜色
+$steps-error-icon-color: $color-danger-1!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+
+// @component switch 开关
+// @category base
+// @propsValue default
+// @name 圆角
+$switch-border-radius: $border-radius-round!default; // larger than $switch-height/2
+// @name 背景色
+$switch-bgc: $color-text-5!default;
+// @name 激活-背景色
+$switch-active-bgc: $color-primary!default;
+// @name 禁用-透明度
+$switch-disabled-opacity: 0.45!default;
+// @name 加载中-透明度
+$switch-loading-opacity: 1!default;
+// @name 按钮-间距
+$switch-btn-spacing: 2px!default;
+// @name 按钮-背景色
+$switch-btn-bgc: $color-white!default;
+// @refer color
+// @name 按钮-边框颜色
+$switch-btn-border-color: transparent!default;
+// @name 按钮-边框-宽度
+$switch-btn-border-width: $border-width-0!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue default
+// @name 宽度
+$switch-width: $s-10!default;
+// @name 高度
+$switch-height: $s-6!default;
+// @name 加载中-尺寸
+$switch-loading-size: $font-size-3!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-宽度
+$switch-small-width: $s-8!default;
+// @name 小号-高度
+$switch-small-height: $s-5!default;
+// @name 小号-加载中-尺寸
+$switch-small-loading-size: $font-size-1!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+// @component table 表格
+// @category base
+// @propsValue default
+
+// @name 水平内边距
+$table-padding-horizontal: $s-3!default;
+
+// @name 文字颜色
+$table-color: $color-text-1!default;
+// @name 背景色
+$table-bgc: $color-white!default; // it use for fix table-column
+// @name 表头-文字颜色
+$table-header-color: $color-text-3!default;
+// @name 表头-背景色
+$table-header-bgc: $color-fill-1!default;
+
+// @dom
+// @name 表头-过滤器颜色
+$table-filter-color: $color-text-5!default;
+// @name 表头-过滤器宽度
+$table-filter-width: $s-8!default;
+// @name 表头-过滤器大小
+$table-filter-font-size: $font-size-2!default;
+// @name 表头-过滤器底部竖直内间距
+$table-filter-footer-padding-vertical: $s-2!default;
+// @name 表头-过滤器底部水平内边距
+$table-filter-footer-padding-horizontal: $s-3!default;
+// @name 表头-过滤器操作按钮间隔
+$table-filter-footer-action-offset: $s-2!default;
+// @name 表头-过滤器操作按钮颜色
+$table-filter-footer-action-color: $color-text-default!default;
+
+// @state hover
+// @name 表头-过滤器悬浮颜色
+$table-filter-hover-color: $color-text-5!default;
+// @refer color
+// @name 表头-过滤器悬浮背景色
+$table-filter-hover-bgc: rgba(0,0,0,0.04)!default;
+// @name 表头-过滤器操作按钮悬浮颜色
+$table-filter-footer-action-hover-color: $color-primary!default;
+// @end state
+
+// @state active
+// @refer color
+// @name 表头-过滤器激活颜色
+$table-filter-active-color: $color-primary-1!default;
+// @end state
+
+// @end dom
+
+// @name 表尾-背景色
+$table-footer-bgc: $color-white!default;
+// @name 表尾-字重
+$table-footer-font-weight: $font-weight-medium!default;
+// @name 空状态-高度
+$table-empty-height: 60px!default;
+
+// @name 展开-高度
+$table-expand-height: $s-5!default;
+// @name 展开-字号
+$table-expand-font-size: $font-size-1!default;
+// @name 展开-外边距
+$table-expand-margin: 5px!default;
+// @name 展开- 单元格-竖直内边距
+$table-expand-cell-padding-vertical: $s-5!default;
+// @name 展开- 单元格-水平内边距
+$table-expand-cell-padding-horizontal:50px!default;
+// @name 展开-图标-文字颜色
+$table-expand-icon-color: $color-text-3!default;
+// @refer color
+// @name 文字颜色-主要
+$table-color-primary: $color-primary!default;
+// @refer color
+// @name 文字颜色-文字-提示文案
+$table-color-text-placeholder: #c0c4cc!default;
+// @refer color
+
+// @name 边框颜色
+$table-border-color: $color-line-2!default;
+// @name 边框-宽度
+$table-border-width: $border-width-1!default;
+// @refer color
+// @refer color
+// @name row-悬浮-背景色
+$table-row-hover-bgc: $color-fill-1!default;
+// @refer color
+// @name 高亮行背景色
+$table-current-row-bgc: $color-primary-4!default;
+// @refer color
+// @refer shadow
+// @name 固定的-阴影
+$table-fixed-shadow: 0 0 10px rgba(0, 0, 0, .12)!default;
+// @refer shadow
+// @name column-阴影
+$table-column-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)!default;
+// @refer color
+// @end propsValue
+// @end category
+
+// @category striped
+// @propsValue true
+// @refer color
+// @name striped-背景色
+$table-striped-bgc: $color-fill-1!default;
+// @end propsValue
+// @end category
+
+// @category size
+
+// @propsValue default
+// @name 字号
+$table-font-size: $font-size-2!default;
+// @name 行高
+$table-line-height: $line-height-2!default;
+// @name 竖直内边距
+$table-padding-vertical: 11px!default;
+// @name 表头竖直内边距
+$table-header-padding-vertical: 7px!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-字号
+$table-small-font-size: $font-size-1!default;
+// @name 小号-行高
+$table-small-line-height: $line-height-1!default;
+// @name 小号-竖直内边距
+$table-small-padding-vertical: $s-2!default;
+// @name 小号-表头竖直内边距
+$table-small-header-padding-vertical: $s-2!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-字号
+$table-large-font-size: $font-size-2!default;
+// @name 大号-行高
+$table-large-line-height: $line-height-2!default;
+// @name 大号-竖直内边距
+$table-large-padding-vertical: $s-4!default;
+// @name 大号-表头竖直内边距
+$table-large-header-padding-vertical: 7px!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+
+// @component tabs 标签页
+// @category base
+// @propsValue default
+// @name 字重
+$tabs-font-weight: $font-weight-regular!default;
+// @name 激活-字重
+$tabs-active-font-weight: $font-weight-semi-bold!default;
+
+// @name nav-边框-底部-颜色
+$tabs-nav-border-bottom: $color-line-2!default;
+// @name 文字颜色
+$tabs-color: $color-text-3!default;
+// @name 图标-文字颜色
+$tabs-icon-color: $color-text-3!default;
+// @state hover
+// @name 悬浮-文字颜色
+$tabs-hover-color: $color-primary-1!default;
+// @name 悬浮-背景色
+$tabs-hover-bgc: $color-transparent!default;
+// @end state
+
+// @state active
+// @name 激活-文字颜色
+$tabs-active-color: $color-primary!default;
+// @end state
+
+// @state disabled
+// @name 禁用-文字颜色
+$tabs-disabled-color: $color-text-3!default;
+// @name 禁用-透明度
+$tabs-disabled-opacity: .45!default;
+// @end state
+
+// @name 操作-圆角
+$tabs-action-border-radius: $border-radius-2!default;
+// @name 操作-文字颜色
+$tabs-action-color: $color-text-3!default;
+// @name 操作-边框颜色
+$tabs-action-border-color: $color-line-1!default;
+// @name 操作-禁用-文字颜色
+$tabs-action-disabled-color: $color-text-4!default;
+// @name add-外边距-左侧
+$tabs-add-margin-left: 6px!default;
+// @name 关闭按钮-文字颜色
+$tabs-close-color: $color-text-3!default;
+// @name bar-z-index
+$tabs-bar-z-index: 1!default;
+// @name bar-背景色
+$tabs-bar-background-color: $color-primary!default;
+// @name bar-高度
+$tabs-bar-height: $border-width-2!default;
+// @name bar-圆角
+$tabs-bar-border-radius: $border-radius-0!default;
+// @name 滑块背景高度
+$tabs-slider-height: $border-width-1!default;
+
+// @name 项-边框-宽度
+$tabs-item-border-width: $border-width-1!default;
+// @name 项-边框颜色
+$tabs-item-border-color: $color-line-1!default;
+
+// @name 内容-边框-宽度
+$tabs-content-border-width: $border-width-1!default;
+// @name 内容-上外边距
+$tabs-content-margin-top: -$border-width-1!default;
+// @name scroll-边框-宽度
+$tabs-scroll-border-width: $border-width-2!default;
+
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue card
+// @name 卡片型-导航-背景色
+$tabs-card-nav-bgc: $color-transparent!default;
+// @name 卡片型-项-间距
+$tabs-card-item-spacing: 2px!default;
+// @name 卡片型-圆角
+$tabs-card-border-radius: $border-radius-2!default;
+
+// @name 卡片型-项-文字颜色
+$tabs-card-item-color: $color-white!default;
+// @name 卡片型-项-背景色
+$tabs-card-item-bgc: $color-white!default;
+// @name 卡片型-项-悬浮-文字颜色
+$tabs-card-item-hover-color: $color-primary-1!default;
+// @name 卡片型-项-悬浮-背景色
+$tabs-card-item-hover-bgc: $color-white!default;
+
+// @name 卡片型-项-激活-背景色
+$tabs-card-item-active-bgc: $color-white!default;
+// @name 卡片型-项-激活-字体颜色
+$tabs-card-item-active-color: $color-primary!default;
+// @name 卡片型-项-禁用-文字颜色
+$tabs-card-item-disabled-color: $tabs-color!default;
+// @name 卡片型-项-禁用-背景色
+$tabs-card-item-disabled-bgc: $color-white!default;
+// @name 卡片型-项-禁用-透明度
+$tabs-card-item-disabled-opacity: .45!default;
+// @end propsValue
+
+// @propsValue border-card
+// @name 卡片型-边框颜色
+$tabs-card-border-color: $color-line-2!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue small
+// @name 小号-高度
+$tabs-small-height: $s-7!default;
+// @name 小号-字号
+$tabs-small-font-size: $font-size-1!default;
+// @name 小号-最小宽
+$tabs-small-min-width: 56px!default;
+// @name 小号-最大宽
+$tabs-small-max-width: 170px!default;
+// @name 小号-最大宽-激活
+$tabs-small-active-max-width: 360px!default;
+// @name 小号-水平内边距
+$tabs-small-padding: $s-0!default;
+// @name 小号-右外边距
+$tabs-small-margin-right: $s-4!default;
+// @name 小号- 内容-内边距
+$tabs-small-content-padding: $s-2!default;
+// @name 小号-标题标签-水平内边距
+$tabs-small-label-padding-horizontal: $s-0!default;
+// @name 小号-图标-字号
+$tabs-small-icon-font-size: $font-size-2!default;
+// @name 小号-操作-字号
+$tabs-small-action-font-size: $font-size-3!default;
+// @name 小号-操作-高度
+$tabs-small-action-height: $s-5!default;
+
+// @name 小号-左侧-水平内边距
+$tabs-small-left-margin-right: $s-2!default;
+// @name 小号-左侧-下外边距
+$tabs-small-left-margin-bottom: $s-3!default;
+
+// @name 小号-card-内边距
+$tabs-small-card-padding: $s-2!default;
+// @name 小号-card-高度
+$tabs-small-card-height: $s-6!default;
+// @end propsValue
+
+// @propsValue default
+// @name 高度
+$tabs-height: $s-7!default;
+// @name 字号
+$tabs-font-size: $font-size-2!default;
+// @name 最小宽
+$tabs-min-width: 66px!default;
+// @name 最大宽
+$tabs-max-width: 220px!default;
+// @name 激活-最大宽
+$tabs-active-max-width: 400px!default;
+// @name 内边距
+$tabs-padding: $s-0!default;
+// @name 右外边距
+$tabs-margin-right: $s-4!default;
+// @name 内容-内边距
+$tabs-content-padding: $s-2!default;
+// @name 标题标签-水平内边距
+$tabs-label-padding-horizontal: $s-0!default;
+// @name 图标-字号
+$tabs-icon-font-size: $font-size-2!default;
+// @name 操作-字号
+$tabs-action-font-size: $font-size-3!default;
+// @name 操作-高度
+$tabs-action-height: $s-5!default;
+
+// @name 左侧-水平内边距
+$tabs-left-margin-right: $s-2!default;
+// @name 左侧-下外边距
+$tabs-left-margin-bottom: $s-3!default;
+
+// @name card-内边距
+$tabs-card-padding: $s-2!default;
+// @name card-高度
+$tabs-card-height: $s-6!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-高度
+$tabs-large-height: $s-10!default;
+// @name 大号-字号
+$tabs-large-font-size: $font-size-2!default;
+// @name 大号-最小宽
+$tabs-large-min-width: 80px!default;
+// @name 大号-最大宽
+$tabs-large-max-width: 270px!default;
+// @name 大号-最大宽-激活
+$tabs-large-active-max-width: 440px!default;
+// @name 大号-内边距
+$tabs-large-padding: $s-0!default;
+// @name 大号-右外边距
+$tabs-large-margin-right: $s-6!default;
+// @name 大号- 内容-内边距
+$tabs-large-content-padding: $s-4!default;
+// @name 大号-标题标签-水平内边距
+$tabs-large-label-padding-horizontal: $s-0!default;
+// @name 大号-图标-字号
+$tabs-large-icon-font-size: $font-size-3!default;
+// @name 大号-操作-高度
+$tabs-large-action-height: $s-6!default;
+// @name 大号-操作-字号
+$tabs-large-action-font-size: $font-size-3!default;
+
+// @name 左侧-水平内边距
+$tabs-large-left-margin-right: $s-2!default;
+// @name 大号-左侧-下外边距
+$tabs-large-left-margin-bottom: $s-3!default;
+
+// @name 大号-card-内边距
+$tabs-large-card-padding: $s-4!default;
+// @name 大号-card-高度
+$tabs-large-card-height: $s-8!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component tag 标签
+// @category base
+// @propsValue default
+// @name 边框-宽度
+$tag-border-width: $border-width-1!default;
+// @end propsValue
+// @end category
+
+// @category theme 颜色
+
+// @propsValue gray
+// @refer color
+// @name gray-文字颜色
+$tag-gray-color: $color-text-4!default;
+// @name gray-边框颜色
+$tag-gray-border-color: $color-text-4!default;
+// @name gray-背景色
+$tag-gray-bgc: $color-white!default;
+// @name gray-pure-背景色
+$tag-gray-pure-bgc: $color-line-2!default;
+// @name gray-pure-文字颜色
+$tag-gray-pure-color: $color-text-1!default;
+// @end propsValue
+
+// @propsValue blue
+// @name blue-文字颜色
+$tag-blue-color: $color-link!default;
+// @name blue-边框颜色
+$tag-blue-border-color: $color-link!default;
+// @name blue-背景色
+$tag-blue-bgc: $color-white!default;
+// @name blue-pure-背景色
+$tag-blue-pure-bgc: $color-link!default;
+// @name blue-pure-文字颜色
+$tag-blue-pure-color: $color-white!default;
+// @end propsValue
+
+// @propsValue green
+// @name green-文字颜色
+$tag-green-color: $color-success-1!default;
+// @name green-边框颜色
+$tag-green-border-color: $color-success-1!default;
+// @name green-背景色
+$tag-green-bgc: $color-white!default;
+// @name green-pure-背景色
+$tag-green-pure-bgc: $color-success-1!default;
+// @name green-pure-文字颜色
+$tag-green-pure-color: $color-white!default;
+// @end propsValue
+
+// @propsValue orange
+// @name orange-文字颜色
+$tag-orange-color: #F78745!default;
+// @name orange-边框颜色
+$tag-orange-border-color: #F78745!default;
+// @name orange-背景色
+$tag-orange-bgc: $color-white!default;
+// @name orange-pure-背景色
+$tag-orange-pure-bgc: #F78745!default;
+// @name orange-pure-文字颜色
+$tag-orange-pure-color: $color-white!default;
+// @end propsValue
+
+// @propsValue red
+// @name red-文字颜色
+$tag-red-color: $color-danger-1!default;
+// @name red-边框颜色
+$tag-red-border-color: $color-danger-1!default;
+// @name red-背景色
+$tag-red-bgc: $color-white!default;
+// @name red-pure-背景色
+$tag-red-pure-bgc: $color-danger-1!default;
+// @name red-pure-文字颜色
+$tag-red-pure-color: $color-white!default;
+// @end propsValue
+
+// @propsValue purple
+// @refer color
+// @name purple-文字颜色
+$tag-purple-color: #C75AEF!default;
+// @name purple-边框颜色
+$tag-purple-border-color: #C75AEF!default;
+// @name purple-背景色
+$tag-purple-bgc: $color-white!default;
+// @name purple-pure-背景色
+$tag-purple-pure-bgc: $tag-purple-color!default;
+// @name purple-pure-文字颜色
+$tag-purple-pure-color: $color-white!default;
+// @end propsValue
+// @end category
+
+// @category disabled
+// @propsValue true
+// @name 禁用-透明度
+$tag-disabled-opacity: 1!default;
+// @name 禁用-背景色
+$tag-disabled-bgc: $color-fill-1!default;
+// @name 禁用-文字颜色
+$tag-disabled-color: $color-text-4!default;
+// @refer color
+// @name 禁用-边框颜色
+$tag-disabled-border-color: #E2E6ED!default;
+// @refer color
+// @name 禁用-关闭按钮-文字颜色
+$tag-disabled-close-color: #D7DBE2!default;
+// @end propsValue
+// @end category
+
+// @category size
+// @propsValue small
+// @name 小号-最小宽
+$tag-small-min-width: 28px!default;
+// @name 小号-最大宽
+$tag-small-max-width: 170px!default;
+// @name 小号-高度
+$tag-small-height: $s-4!default;
+// @name 小号-内边距
+$tag-small-padding: $s-1!default;
+// @name 小号-字号
+$tag-small-font-size: $font-size-1!default;
+// @name 小号-圆角
+$tag-small-border-radius: $border-radius-1!default;
+// @name 小号-关闭按钮-外边距-左侧
+$tag-small-close-margin-left: $s-1!default;
+// @end propsValue
+
+// @propsValue default
+// @name 最小宽
+$tag-min-width: 32px!default;
+// @name 最大宽
+$tag-max-width: 220px!default;
+// @name 高度
+$tag-height: $s-5!default;
+// @name 字号
+$tag-font-size: $font-size-1!default;
+// @refer font-weight
+// @name 字重
+$tag-font-weight: $font-weight-inherit!default;
+// @name 内边距
+$tag-padding: $s-1!default;
+// @name 圆角
+$tag-border-radius: $border-radius-1!default;
+// @name 关闭按钮-外边距-左侧
+$tag-close-margin-left: $s-1!default;
+// @end propsValue
+
+// @propsValue large
+// @name 大号-最小宽
+$tag-large-min-width: 44px!default;
+// @name 大号-最大宽
+$tag-large-max-width: 270px!default;
+// @name 大号-高度
+$tag-large-height: $s-6!default;
+// @name 大号-字号
+$tag-large-font-size: $font-size-2!default;
+// @name 大号-内边距
+$tag-large-padding: $s-2!default;
+// @name 大号-圆角
+$tag-large-border-radius: $border-radius-1!default;
+// @name 大号-关闭按钮-外边距-左侧
+$tag-large-close-margin-left: $s-1!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component time-picker 时间选择器
+// @include input
+// @category base
+// @propsValue default
+// @name 最大高
+$time-picker-max-height: 180px!default;
+// @name 边框颜色
+$time-picker-border-color: $color-line-2!default;
+// @name 单元格-宽度
+$time-picker-cells-width: 50px!default;
+// @name 单元格-高度
+$time-picker-cell-height: 30px!default;
+// @refer color
+// @name 单元格-悬浮-背景色
+$time-picker-cell-hover-bgc: $color-primary-4!default;
+// @name 单元格-选中-字重
+$time-picker-cell-selected-font-weight: $font-weight-medium!default;
+// @name 单元格-选中-文字颜色
+$time-picker-cell-selected-color: $color-primary!default;
+// @refer color
+// @name 单元格-选中-背景色
+$time-picker-cell-selected-bgc: $color-fill-1!default;
+// @refer color
+// @name 单元格-禁用-文字颜色
+$time-picker-cell-disabled-color: $color-text-5!default;
+// @end propsValue
+// @end category
+// @end component
+
+
+// @component timeline 时间线
+// @category base
+// @propsValue default
+// @name 项-最小高
+$timeline-item-min-height: $s-12!default;
+// @name 项-下外边距
+$timeline-item-margin-bottom: $s-5!default;
+// @name 项-custom-下外边距
+$timeline-item-custom-margin-bottom: 38px!default;
+// @dom dot
+// @name 项-点-宽度
+$timeline-item-dot-width: 10px!default;
+// @end dom
+
+// @dom track
+// @name 项-track-间距
+$timeline-item-track-spacing: $s-1!default;
+// @name 项-track-宽度
+$timeline-item-track-width: $border-width-2!default;
+// @name 项-track-背景色
+$timeline-item-track-bgc: $color-line-2!default;
+// @end dom
+// @dom title
+// @name 项-标题-宽度
+$timeline-item-title-width: $s-10!default;
+// @name 项-标题-文字颜色
+$timeline-item-title-color: $color-text-default!default;
+// @name 项-标题-字号
+$timeline-item-title-font-size: $font-size-1!default;
+// @name 项-行高-标题
+$timeline-item-title-line-height: $line-height-2!default;
+// @end dom
+// @dom content
+// @name 项- 内容-上外边距
+$timeline-item-content-margin-top: -7px!default;
+// @name 项- 内容-外边距-水平
+$timeline-item-content-margin-horizontal: $s-3!default;
+// @end dom
+
+// @end propsValue
+// @end category
+
+// @category type
+// @propsValue default
+// @name 项-点-尺寸
+$timeline-item-dot-size: 10px!default;
+// @name 项-点-背景色
+$timeline-item-dot-bgc: $color-primary!default;
+// @name 项-点-边框-宽度
+$timeline-item-dot-border-width: $border-width-1!default;
+// @name 项-点-边框颜色
+$timeline-item-dot-border-color: $color-primary!default;
+// @name 项-点-阴影
+$timeline-item-dot-shadow: $shadow-0!default;
+// @end propsValue
+
+// @propsValue master
+// @name 项-主要-点-尺寸
+$timeline-item-master-dot-size: 10px!default;
+// @name 项-主要-点-背景色
+$timeline-item-master-dot-bgc: $color-primary!default;
+// @name 项-主要-点-边框-宽度
+$timeline-item-master-dot-border-width: $border-width-0!default;
+// @name 项-主要-边框颜色-点
+$timeline-item-master-dot-border-color: $color-primary!default;
+// @name 项-主要-点-阴影
+$timeline-item-master-dot-shadow: 0px 0px 0px 4px rgba(78, 115, 255, 0.12)!default;
+// @end propsValue
+
+// @propsValue hollow
+// @name 项-次要-点-尺寸
+$timeline-item-hollow-dot-size: 10px!default;
+// @name 项-次要-点-背景色
+$timeline-item-hollow-dot-bgc: transparent!default;
+// @name 项-次要-点-边框-宽度
+$timeline-item-hollow-dot-border-width: $border-width-2!default;
+// @name 项-次要-边框颜色-点
+$timeline-item-hollow-dot-border-color: $color-primary!default;
+// @name 项-次要-点-阴影
+$timeline-item-hollow-dot-shadow: $shadow-0!default;
+// @end propsValue
+
+// @end category
+// @end component
+
+
+// @component tooltip 文字提示
+// @category base
+// @propsValue default
+// @name 圆角
+$tooltip-border-radius: $border-radius-2!default;
+// @name 最大宽
+$tooltip-max-width: 300px!default;
+// @name 阴影
+$tooltip-shadow: $shadow-3!default;
+// @name 字重
+$tooltip-font-weight: $font-weight-regular!default;
+// @end propsValue
+// @end category
+
+// @category theme
+// @propsValue default
+// @name 文字颜色
+$tooltip-color: $color-white!default;
+// @refer color
+// @name 背景色
+$tooltip-bgc: #212121!default;
+// @name 边框-宽度
+$tooltip-border-width: 0px!default;
+// @name 边框颜色
+$tooltip-border-color: $tooltip-bgc!default;
+// @end propsValue
+
+// @propsValue light
+// @name 浅色-文字颜色
+$tooltip-light-color: $color-text-1!default;
+// @name 浅色-背景色
+$tooltip-light-bgc: $color-white!default;
+// @name 浅色-边框-宽度
+$tooltip-light-border-width: 0px!default;
+// @name 浅色-边框颜色
+$tooltip-light-border-color: $color-white!default;
+// @end propsValue
+// @end category
+
+// @category size 尺寸
+// @propsValue default
+// @name 竖直内边距
+$tooltip-padding-vertical: $s-1!default;
+// @name 水平内边距
+$tooltip-padding-horizontal: $s-2!default;
+// @name 字号
+$tooltip-font-size: $font-size-2!default;
+// @name 行高
+$tooltip-line-height: $line-height-2!default;
+// @end propsValue
+
+// @propsValue small
+// @name 小号-竖直内边距
+$tooltip-small-padding-vertical: $s-1!default;
+// @name 小号-水平内边距
+$tooltip-small-padding-horizontal: $s-2!default;
+// @name 小号-字号
+$tooltip-small-font-size: $font-size-1!default;
+// @name 小号-行高
+$tooltip-small-line-height: $line-height-1!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component transfer 穿梭框
+// @include checkbox,button,input
+// @category base
+// @propsValue default
+// @name 页头-高度
+$transfer-header-height: $s-10!default;
+// @name 面板-宽度
+$transfer-panel-width: 240px!default;
+// @name 面板-竖直内边距
+$transfer-panel-padding-vertical: $s-1!default;
+// @name 面板-水平内边距
+$transfer-panel-padding-horizontal: $s-4!default;
+// @name 面板-body-高度
+$transfer-panel-body-height: 240px!default;
+// @name 面板-页头-边框颜色
+$transfer-panel-header-border-color: $color-line-2!default;
+// @name 面板-页头-边框-宽度
+$transfer-panel-header-border-width: $border-width-1!default;
+// @name select-右外边距
+$transfer-select-margin-right: $s-2!default;
+// @name 按钮-高度
+$transfer-button-height: $s-8!default;
+// @name 按钮-宽度
+$transfer-button-width:  $s-8!default;
+// @name 按钮-下外边距
+$transfer-button-margin-bottom: $s-3!default;
+// @name 按钮-图标-字号
+$transfer-button-icon-font-size: $font-size-2!default;
+// @name buttons-水平内边距
+$transfer-buttons-padding-horizontal: $s-5!default;
+// @name 过滤-竖直外边距
+$transfer-filter-margin-vertical: $s-1!default;
+// @name 页脚-高度
+$transfer-footer-height: $s-10!default;
+// @name 页脚-水平内边距
+$transfer-footer-padding-horizontal: 0!default;
+// @refer color
+// @name 标题-文字颜色
+$transfer-title-color: #ADADAD!default;
+// @name 标题-字号
+$transfer-title-font-size: $font-size-3!default;
+// @name 标题-字重
+$transfer-title-font-weight: normal!default;
+// @name 标题-行高
+$transfer-title-line-height: 40px!default;
+// @name 总数-外边距-左侧
+$transfer-counter-margin-left: $s-2!default;
+// @name 总数-文字颜色
+$transfer-counter-color: $color-text-4!default;
+// @name 总数-字号
+$transfer-counter-font-size: $font-size-2!default;
+// @name 总数-字重
+$transfer-counter-font-weight: normal!default;
+// @name 总数-行高
+$transfer-counter-line-height: 40px!default;
+// @name 字号
+$transfer-font-size: $font-size-2!default;
+// @name 文字颜色
+$transfer-color: $color-text-3!default;
+// @name 按钮-文字颜色
+$transfer-button-color: $color-white!default;
+// @refer color
+// @name 按钮-背景色
+$transfer-button-bgcolor: $color-primary!default;
+// @name 按钮-圆角
+$transfer-button-border-radius: $border-radius-2!default;
+// @name 按钮-with-texts-圆角
+$transfer-button-with-texts-border-radius: $border-radius-2!default;
+// @name 按钮-禁用-边框-宽度
+$transfer-button-disabled-border-width: $border-width-1!default;
+// @name 按钮-禁用-边框颜色
+$transfer-button-disabled-border-color: $color-line-2!default;
+// @name 按钮-禁用-背景色
+$transfer-button-disabled-bgcolor: $color-fill-1!default;
+// @name 按钮-禁用-文字颜色
+$transfer-button-disabled-color: $color-line-2!default;
+// @name 面板-边框颜色
+$transfer-panel-border-color: $color-line-2!default;
+// @name 面板-圆角
+$transfer-panel-border-radius: $border-radius-2!default;
+// @name 面板-background
+$transfer-panel-background: $color-white!default;
+// @name 面板-页脚-高度
+$transfer-panel-footer-height: $s-10!default;
+// @name 面板-list-高度
+$transfer-panel-list-height: $transfer-panel-body-height!default;
+// @name 项-高度
+$transfer-item-height:  $s-9!default;
+// @name 项-行高
+$transfer-item-line-height: $transfer-item-height!default;
+// @name 复选框-标签-文字颜色
+$transfer-checkbox-label-color: $transfer-color!default; ;
+// @name 项-悬浮-背景色
+$transfer-item-hover-bgc: $color-line-2!default;
+// @name 项-悬浮-文字颜色
+$transfer-item-hover-color:  $transfer-color!default;
+// @name 面板-页头-背景色
+$transfer-panel-header-bgcolor: $color-white!default;
+// @name 面板-页头-文字颜色
+$transfer-panel-header-color: $color-text-4!default;
+// @name 面板-页头-标签-文字颜色
+$transfer-panel-header-label-color: $color-black!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component tree 树
+// @category base
+// @propsValue default
+// @name 字号
+$tree-font-size: $font-size-2!default;
+// @name 行高
+$tree-line-height: $line-height-2!default;
+// @name 文字颜色
+$tree-color: $color-text-3!default;
+
+// @name 拖拽成子集时背景色
+$tree-drop-inner-bgc: $color-primary-4!default;
+// @name 拖拽指示器颜色
+$tree-drag-drop-indicator-color: $color-primary!default;
+// @name 拖拽指示器高
+$tree-drag-drop-indicator-height: 2px!default;
+
+// @name 节点-高度
+$tree-node-height: $s-9!default;
+// @name 节点-展开-图标-文字颜色
+$tree-node-expand-icon-color: $color-text-3!default;
+// @name 节点-图标-尺寸
+$tree-node-icon-size: $s-5!default;
+// @name 节点-图标-字号
+$tree-node-icon-font-size: $font-size-5!default;
+// @name 节点-图标-右外边距
+$tree-node-icon-margin-right: $s-0!default;
+// @name 节点-加载中-字号
+$tree-node-loading-font-size: $font-size-1!default;
+// @name 节点-复选框-右外边距
+$tree-node-checkbox-margin-right: $s-2!default;
+// @name 节点-悬浮-背景色
+$tree-node-hover-bgc: rgba(0,0,0,0.04)!default;
+// @name 节点-悬浮-文字颜色
+$tree-node-hover-color: $color-text-1!default;
+// @name 节点-选中-文字颜色
+$tree-node-selected-color: $color-primary!default;
+// @name 节点-禁用-文字颜色
+$tree-node-disabled-color: $color-text-5!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @component upload 上传
+// @include progress
+// @category base
+// @propsValue default
+// @name itemlist-上外边距
+$upload-itemlist-margin-top: 10px!default;
+// @dom item
+// @name 项-背景色
+$upload-item-bgc: inherit!default;
+// @name 项-宽度
+$upload-item-width: 100%!default;
+// @name 项-水平内边距
+$upload-item-padding-horizontal: $s-0!default;
+// @name 项-文件名-文字颜色
+$upload-item-filename-color: $color-text-2!default;
+// @name 项-文件描述-上外边距
+$upload-item-filedescription-margin-top: $s-0!default;
+// @name 项-文件名-字号
+$upload-item-filename-font-size: $font-size-2!default;
+// @name 项-文件名-字重
+$upload-item-filename-font-weight: $font-weight-regular!default;
+// @name 项-行高-文件名
+$upload-item-filename-line-height: $line-height-2!default;
+// @name 项-文件描述-字号
+$upload-item-filedescription-font-size: inherit!default;
+// @name 项-文件描述-字重
+$upload-item-filedescription-font-weight: inherit!default;
+// @name 项-行高-文件描述
+$upload-item-filedescription-line-height: inherit!default;
+// @end dom
+// @dom operateicon
+// @name 操作图标-尺寸
+$upload-operateicon-size: inherit!default;
+// @name 操作图标-间距
+$upload-operateicon-spacing: 15px!default;
+// @name 操作图标-文字颜色
+$upload-operateicon-color: $color-success-1!default;
+// @end dom
+// @dom filetypeicon
+// @name 文件类型-右外边距
+$upload-filetypeicon-margin-right: 7px!default;
+// @name 文件类型-尺寸
+$upload-filetypeicon-size: inherit!default;
+// @end dom
+// @end propsValue
+// @end category
+
+// @category hover
+// @propsValue default
+// @name 悬浮-背景色
+$upload-hover-bgc: #f5f7fa!default;
+// @name 悬浮-项-文件名-文字颜色
+$upload-hover-item-filename-color: inherit!default;
+// @name 悬浮-操作图标-文字颜色
+$upload-hover-operateicon-color: inherit!default;
+// @end propsValue
+// @end category
+
+// @category fail
+// @propsValue default
+// @name 错误-项-文件名-文字颜色
+$upload-error-item-filename-color: $color-danger-1!default;
+// @end propsValue
+// @end category
+// @end component
+
+// @ignore
+// @ignore
+$navbar-zIndex: 1000!default;
+$affix-zIndex: 1900!default;
+
+// ColorPicker
+$color-picker-hover-tint-percent: 20%!default;
+$color-picker-large-height: $s-10!default;
+$color-picker-height: $s-8!default;
+$color-picker-small-height: $s-6!default;
+$color-picker-border-radius: 2px!default;
+
+// @end ignore
+
+// @name 侧边栏-宽度
+$sidebar-width: 200px!default;
+// @name 侧边栏-收起-宽度
+$sidebar-collapse-width: 60px!default;
+// @name 侧边栏-背景色
+$sidebar-bgc: $color-white!default;
+
+// @name 侧边栏-页头-高度
+$sidebar-header-height: $s-14!default;
+// @name 侧边栏-页头-文字颜色
+$sidebar-header-color: $color-text-1!default;
+// @name 侧边栏-页头-字号
+$sidebar-header-font-size: $font-size-3!default;
+// @name 侧边栏-字重-页头
+$sidebar-header-font-weight: $font-weight-regular!default;
+// @name 侧边栏-页头-图标-尺寸
+$sidebar-header-icon-size: $font-size-5!default;
+// @name 侧边栏-页头-图标-文字颜色
+$sidebar-header-icon-color: $color-text-1!default;
+// @name 侧边栏-页头-图标-顶部
+$sidebar-header-icon-top: 0px!default;
+// @name 侧边栏-页头-图标-右侧
+$sidebar-header-icon-right: $s-4!default;
+
+// Navbar
+// @name navbar-高度
+$navbar-height: 56px!default;
+
+// @name navbar-user-字号
+$navbar-user-font-size: $font-size-2!default;
+// @name navbar-user-水平内边距
+$navbar-user-padding-horizontal: 10px!default;
+// @name navbar-user-箭头-文字颜色
+$navbar-user-arrow-color: #697597!default;
+
+// @name navbar-avatar-尺寸
+$navbar-avatar-size: 34px!default;
+// @name navbar-avatar-边框颜色
+$navbar-avatar-border-color: rgba(#757BA7, .6)!default;
+
+// @name navbar-brand-宽度
+$navbar-brand-width: 200px!default;
+// @name navbar-项-字号
+$navbar-item-font-size: $font-size-2!default;
+// @name navbar-最小宽-项
+$navbar-item-min-width: 80px!default;
+// @name navbar-项-水平内边距
+$navbar-item-padding-horizontal: $s-5!default;
+// @name navbar-项-下拉-阴影
+$navbar-item-dropdown-shadow: $shadow-4!default;
+
+// @name navbar-图标-项-水平内边距
+$navbar-icon-item-padding-horizontal: 15px!default;
+// @name navbar-图标-字号-项
+$navbar-icon-item-font-size: 18px!default;
+
+// @name navbar-search-水平内边距
+$navbar-search-padding-horizontal: 10px!default;
+// @name navbar-search-宽度
+$navbar-search-width: 220px!default;
+// @name navbar-search-高度
+$navbar-search-height: 30px!default;
+// @name navbar-行高-search
+$navbar-search-line-height: 20px!default;
+// @name navbar-search-字号
+$navbar-search-font-size: $font-size-2!default;
+// @name navbar-search-input-水平内边距
+$navbar-search-input-padding-horizontal: $s-3!default;
+// @name navbar-search-图标-内边距
+$navbar-search-icon-padding: ($navbar-search-height - 2px - $navbar-search-font-size)/2!default;
+// Navbar Dark
+// @name navbar-深色-文字颜色
+$navbar-dark-color: #ACB8DB!default;
+// @name navbar-深色-背景色
+$navbar-dark-bgc: #252F47!default;
+// @name navbar-深色-阴影
+$navbar-dark-shadow: 0 1px 3px 0 rgba(8, 28, 66, 0.45)!default;
+// @name navbar-深色-激活-文字颜色
+$navbar-dark-active-color: #EEEEF7!default;
+// @name navbar-深色-激活-背景色
+$navbar-dark-active-bgc: #222D4D!default;
+// @name navbar-深色-search-文字颜色
+$navbar-dark-search-color: #7D8CB3!default;
+// @name navbar-深色-search-背景色
+$navbar-dark-search-bgc: #3E4A6C!default;
+// @name navbar-深色-search-激活-文字颜色
+$navbar-dark-search-active-color: $color-white!default;
+// @name navbar-深色-search-激活-图标-文字颜色
+$navbar-dark-search-active-icon-color: #D2D8E9!default;
+// @name navbar-深色-search-激活-背景色
+$navbar-dark-search-active-bgc: #454F6F!default;
+// Navbar Light
+// @name navbar-浅色-文字颜色
+$navbar-light-color: #8C99C1!default;
+// @name navbar-浅色-背景色
+$navbar-light-bgc: $color-white!default;
+// @name navbar-浅色-阴影
+$navbar-light-shadow: 0 1px 3px 0 rgba(8, 28, 66, 0.10)!default;
+// $navbar-light-icon-color:!default;
+// @name navbar-浅色-激活-文字颜色
+$navbar-light-active-color: #666!default;
+// @name navbar-浅色-激活-背景色
+$navbar-light-active-bgc: $navbar-light-bgc!default;
+// @name navbar-浅色-search-文字颜色
+$navbar-light-search-color: #bbb!default;
+// @name navbar-浅色-search-背景色
+$navbar-light-search-bgc: $color-white!default;
+// @name navbar-浅色-边框颜色-search
+$navbar-light-search-border-color: #DEE3F0!default;
+// @name navbar-浅色-search-激活-文字颜色
+$navbar-light-search-active-color: $navbar-light-active-color!default;
+// @name navbar-浅色-search-激活-图标-文字颜色
+$navbar-light-search-active-icon-color: #B9C1D9!default;
+// @name navbar-浅色-边框颜色-search-激活
+$navbar-light-search-active-border-color: $navbar-light-search-border-color!default;
+// @name navbar-浅色-search-激活-背景色
+$navbar-light-search-active-bgc: $color-white!default;
+
+// Carousel
+// @name 内部-点-bg-文字颜色
+$carousel-inside-dot-bgc: rgba(255, 255, 255, .2)!default;
+// @name 内部-激活-点-bg-文字颜色
+$carousel-inside-active-dot-bgc: $color-white!default;
+// @name 超出-点-bg-文字颜色
+$carousel-outside-dot-bgc: $color-line-2!default;
+// @name 超出-激活-点-bg-文字颜色
+$carousel-outside-active-dot-bgc: $color-text-3!default;
+// @name indicator-distance
+$carousel-indicator-distance: $s-4!default;
+// @name indicator-点-宽度
+$carousel-indicator-dot-width: 18px!default;
+// @name indicator-点-高度
+$carousel-indicator-dot-height: 2px!default;
+// @name indicator-点-外边距-左侧
+$carousel-indicator-dot-margin-left: $s-1!default;
+// @name 按钮-i-文字颜色
+$carousel-btn-color: $color-white!default;
+// @name 按钮-bg-文字颜色
+$carousel-btn-bgc: rgba(255, 255, 255, .05)!default;
+// @name 按钮-bg-文字颜色
+$carousel-btn-font-size: $font-size-3!default;
+// @name 按钮-宽度
+$carousel-btn-width: $s-7!default;
+// @name 按钮-高度
+$carousel-btn-height: $s-7!default;
+// @name 按钮-圆角
+$carousel-btn-border-radius: $border-radius-half!default;
+// @name 按钮-上一项-左侧
+$carousel-btn-prev-left: $s-4!default;
+// @name 按钮-下一项-右侧
+$carousel-btn-next-right: $s-4!default;
+
+// @end ignore
+
+// @end module

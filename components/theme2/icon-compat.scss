@@ -1,0 +1,39 @@
+@import './common/var.scss';
+@import './fonts/icon.scss';
+.mtdicon-cards-view{
+  @extend .mtdicon-theme!optional;
+}
+.mtdicon-code{
+  @extend .mtdicon-code-on!optional;
+}
+.mtdicon-link{
+  @extend .mtdicon-link-o!optional;
+}
+.mtdicon-paste-o, .mtdicon-paste{
+  @extend .mtdicon-copy-o!optional;
+}
+.mtdicon-undo{
+  @extend .mtdicon-undo-o!optional;
+}
+.mtdicon-triangle{
+  @extend .mtdicon-triangle-down!optional;
+}
+.mtdicon-visibility-off{
+  @extend .mtdicon-visibility-off-o!optional;
+}
+// remove thick
+.mtdicon-check-thick{
+  @extend .mtdicon-check!optional;
+}
+.mtdicon-close-thick{
+  @extend .mtdicon-close!optional;
+}
+.mtdicon-add-thick{
+  @extend .mtdicon-add!optional;
+}
+.mtdicon-success-circle-thick{
+  @extend .mtdicon-success-o!optional;
+}
+.mtdicon-error-circle-thick-o{
+  @extend .mtdicon-error-o!optional;
+}

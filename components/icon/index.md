@@ -109,7 +109,7 @@ const icons = [
   'expand',
 ];
 export default {
-  data () {
+  data() {
     return {
       icons: icons,
     };

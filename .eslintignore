@@ -2,4 +2,5 @@
 /config/
 /dist/
 /*.js
+/components/**/*.md
 /test/unit/coverage/

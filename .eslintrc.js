@@ -35,6 +35,7 @@ module.exports = {
     'brace-style': 2,
     'comma-dangle': [2, 'always-multiline'],
     'object-curly-spacing': [2, 'always'],
+    'prefer-spread': 0,
     'vue/camelcase': 2,
     'vue/require-component-is': 0,
     'vue/require-default-prop': 0,
@@ -84,6 +85,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-use-before-define': 0,
-    '@typescript-eslint/no-explicit-any': 0, // TODO
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/adjacent-overload-signatures': 0,
   },
 }
