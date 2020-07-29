@@ -60,6 +60,7 @@ module.exports = {
         math: 'always',
       },
     ],
+    'vue/no-v-html': 0,
     // 设置 typescript-eslint 规则
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
     '@typescript-eslint/camelcase': 0,
