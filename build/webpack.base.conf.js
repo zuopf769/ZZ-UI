@@ -1,21 +1,23 @@
 'use strict'
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
 const { VueLoaderPlugin } = require('vue-loader')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+
+const { isProd } = require('../config')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
 module.exports = {
-  mode: process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
+  mode: isProd ? 'production' : 'development',
   context: path.resolve(__dirname, '../'),
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name].[hash:7].js',
-    publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
+    path: resolve('lib'),
+    filename: '[name].js',
+    publicPath: '/',
+    globalObject: 'this',
   },
   resolve: {
     extensions: ['.js', '.vue', '.json', '.ts'],
@@ -36,7 +38,6 @@ module.exports = {
             loader: 'vue-loader',
             options: {
               compilerOptions: {
-                whitespace: 'condense',
                 preserveWhitespace: false,
               },
             },
@@ -114,16 +115,4 @@ module.exports = {
       checkSyntacticErrors: true,
     }),
   ],
-  node: {
-    // prevent webpack from injecting useless setImmediate polyfill because Vue
-    // source contains it (although only uses it if it's native).
-    setImmediate: false,
-    // prevent webpack from injecting mocks to Node native modules
-    // that does not make sense for the client
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty',
-  },
 }

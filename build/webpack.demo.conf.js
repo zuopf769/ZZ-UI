@@ -5,8 +5,8 @@ const config = require('../config')
 const merge = require('webpack-merge')
 const path = require('path')
 const baseWebpackConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 const portfinder = require('portfinder')
@@ -78,15 +78,22 @@ const overrideEntryConfig = Object.assign({}, baseWebpackConfig, {
   externals: {},
 })
 
-const devWebpackConfig = merge(overrideEntryConfig, {
+const demoWebpackConfig = merge(overrideEntryConfig, {
   entry: {
     docs: resolve('examples/index.ts'),
+  },
+  output: {
+    path: resolve('dist'),
+    filename: '[name].[hash:7].js',
+    chunkFilename: config.isProd ? '[name].[hash:7].js' : '[name].js',
+    publicPath: isProd ? '/mtd/vue/' : '/',
   },
   module: {
     rules: [
       ...utils.styleLoaders({
-        sourceMap: config.dev.cssSourceMap,
+        sourceMap: config.cssSourceMap,
         usePostCSS: true,
+        extract: config.extract,
       }),
       {
         test: /\.md$/,
@@ -228,9 +235,6 @@ const devWebpackConfig = merge(overrideEntryConfig, {
       },
     ],
   },
-  // cheap-module-eval-source-map is faster for development
-  devtool: config.dev.devtool,
-
   // these devServer options should be customized in /config/index.js
   devServer: {
     clientLogLevel: 'warning',
@@ -266,16 +270,60 @@ const devWebpackConfig = merge(overrideEntryConfig, {
       template: resolve('examples/index.html'),
       inject: true,
     }),
-    // copy custom static assets
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../static'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*'],
-      },
-    ]),
   ],
+  optimization: {},
+  devtool: config.devtool,
 })
+
+if (config.isProd) {
+  demoWebpackConfig.plugins.push(
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // all options are optional
+      filename: '[name].[contenthash:7].css',
+      chunkFilename: '[id].[contenthash:7].css',
+      ignoreOrder: false, // Enable to remove warnings about conflicting order
+    }),
+  )
+
+  demoWebpackConfig.optimization = {
+    //取代 new UglifyJsPlugin
+    minimize: true,
+    // 识别package.json中的sideEffects以剔除无用的模块，用来做tree-shake
+    // 依赖于optimization.providedExports和optimization.usedExports
+    sideEffects: true,
+    // 取代 new webpack.optimize.ModuleConcatenationPlugin()
+    concatenateModules: true,
+    // 取代 new webpack.NoEmitOnErrorsPlugin()，编译错误时不打印输出资源。
+    noEmitOnErrors: true,
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          minChunks: 2,
+          test: /[\\/]node_modules[\\/]/,
+          // 可选 'initial | async | all'，
+          // 分别代表，初始化时加载、异步加载、两者皆使用
+          chunks: 'initial',
+          // 代表权重值，值越大，打包优先级越高
+          priority: 10,
+        },
+        'async-vendors': {
+          test: /[\\/]node_modules[\\/]/,
+          minChunks: 2,
+          chunks: 'async',
+          name: 'async-vendors',
+        },
+      },
+    },
+    // webpack 相关代码打包到一个文件
+    // 新模块加入给新模块加一个id
+    // 规避长缓存问题
+    runtimeChunk: {
+      name: 'runtime',
+    },
+  }
+}
 
 module.exports = new Promise((resolve, reject) => {
   portfinder.basePort = process.env.PORT || config.dev.port
@@ -286,18 +334,18 @@ module.exports = new Promise((resolve, reject) => {
       // publish the new Port, necessary for e2e tests
       process.env.PORT = port
       // add port to devServer config
-      devWebpackConfig.devServer.port = port
+      demoWebpackConfig.devServer.port = port
 
       // Add FriendlyErrorsPlugin
-      devWebpackConfig.plugins.push(
+      demoWebpackConfig.plugins.push(
         new FriendlyErrorsPlugin({
           compilationSuccessInfo: {
-            messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+            messages: [`Your application is running here: http://${demoWebpackConfig.devServer.host}:${port}`],
           },
           onErrors: config.dev.notifyOnErrors ? utils.createNotifierCallback() : undefined,
         }),
       )
-      resolve(devWebpackConfig)
+      resolve(demoWebpackConfig)
     }
   })
 })

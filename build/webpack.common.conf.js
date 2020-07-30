@@ -1,5 +1,4 @@
 'use strict'
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const path = require('path')
@@ -20,14 +19,6 @@ module.exports = merge(baseWebpackConfig, {
     libraryExport: 'default',
     libraryTarget: 'commonjs2',
     library: 'ZZ',
-  },
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue',
-    },
   },
   devtool: false,
   optimization: {

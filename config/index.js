@@ -4,14 +4,20 @@
 
 const path = require('path')
 const isProd = process.env.NODE_ENV === 'production'
+const isTest = process.env.BABEL_ENV === 'test'
 
 module.exports = {
   namespace: 'zz',
   pkgName: 'zz-ui', // 包名改动可能需要手动更改代码中 import 的包名
   fullName: '@zz/zz-ui',
-  themes: ['theme-chalk'],
+  themes: ['theme-chalk', 'theme2'],
   isProd: isProd,
-  isTest: process.env.BABEL_ENV === 'test',
+  isTest: isTest,
+  publicPath: isProd ? '/zz-ui/' : '/',
+  devtool: isProd ? '#source-map' : 'cheap-module-eval-source-map',
+  cssSourceMap: isProd ? false : true,
+  extract: isProd ? true : false,
+  assetsSubDirectory: 'static',
   dev: {
     // Paths
     assetsSubDirectory: 'static',
