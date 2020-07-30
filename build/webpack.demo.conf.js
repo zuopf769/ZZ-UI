@@ -86,7 +86,7 @@ const demoWebpackConfig = merge(overrideEntryConfig, {
     path: resolve('dist'),
     filename: '[name].[hash:7].js',
     chunkFilename: config.isProd ? '[name].[hash:7].js' : '[name].js',
-    publicPath: isProd ? '/mtd/vue/' : '/',
+    publicPath: config.publicPath,
   },
   module: {
     rules: [

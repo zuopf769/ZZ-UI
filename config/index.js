@@ -13,7 +13,7 @@ module.exports = {
   themes: ['theme-chalk', 'theme2'],
   isProd: isProd,
   isTest: isTest,
-  publicPath: isProd ? '/zz-ui/' : '/',
+  publicPath: isProd ? '/ZZ-UI/' : '/',
   devtool: isProd ? '#source-map' : 'cheap-module-eval-source-map',
   cssSourceMap: isProd ? false : true,
   extract: isProd ? true : false,
