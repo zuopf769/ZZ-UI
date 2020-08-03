@@ -1,4 +1,4 @@
-name: Gh Pages Deploy #action名称
+name: Gh Pages Deploy
 on:
   push:
     braches:
@@ -6,12 +6,11 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest #运行环境
+    runs-on: ubuntu-latest
     name: build
     steps:
-      # check out the repository
       - name: Checkout
-        uses: actions/checkout@v2 #这里使用了github官方提供的action,checkout项目到虚拟机上
+        uses: actions/checkout@v2
         with:
           persist-credentials: false
       - name: Install Dependencies
