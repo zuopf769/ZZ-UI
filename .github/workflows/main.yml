@@ -15,5 +15,9 @@ jobs:
           persist-credentials: false
       - name: Install Dependencies
         run: npm run bootstrap
-      - name: Build And Deploy
-        run: npm run deploy
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
