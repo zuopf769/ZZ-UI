@@ -1,4 +1,4 @@
-name: Gh Pages Deploy
+name: GitHub Actions Build and Deploy
 on:
   push:
     braches:
