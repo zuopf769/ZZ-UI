@@ -1,0 +1,31 @@
+.demo-icon .source>i{font-size:24px;margin:0 20px}
+
+
+.icon-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.icon-item{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.icon-item .mtdicon{
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.icon-name{
+  display: block;
+}
+.demo-icon .source >i {
+  font-size: 24px;
+  margin: 0px 20px;
+}
+
+
+/*# sourceMappingURL=3.e4f85ad.css.map*/
